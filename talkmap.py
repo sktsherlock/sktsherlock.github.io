@@ -10,9 +10,11 @@
 # and Javascript for a standalone cluster map.
 #
 # Requires: glob, getorg, geopy
+# This is for your code
 
-import glob
 import getorg
+import glob
+
 from geopy import Nominatim
 
 g = glob.glob("*.md")

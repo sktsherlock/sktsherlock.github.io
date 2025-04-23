@@ -3,6 +3,63 @@
   <head>
     <meta charset="utf-8">
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <style>
+      /* 默认亮模式 */
+      body {
+        background-color: #ffffff;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s;
+      }
+    
+      /* 夜间模式 */
+      body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+    
+      /* 夜间模式切换按钮样式 */
+      .theme-toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1000;
+        transition: background-color 0.3s;
+      }
+    
+      .theme-toggle:hover {
+        background-color: #0056b3;
+      }
+
+        /* 导航栏悬停效果 */
+  .masthead__menu-item a:hover {
+    color: #007bff; /* 悬停时文字颜色变为蓝色 */
+    text-decoration: underline; /* 添加下划线 */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+
+  /* 按钮悬停效果 */
+  .theme-toggle:hover {
+    background-color: #0056b3; /* 悬停时背景颜色变深 */
+    transform: scale(1.1); /* 放大按钮 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* 图片悬停效果 */
+  img:hover {
+    transform: scale(1.05); /* 放大图片 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+    </style>
+
 <!-- begin SEO -->
 
 <title>Hao Yan(颜浩) - Homepage</title>
@@ -63,7 +120,7 @@
   </head>
 
   <body>
-
+    <button class="theme-toggle" id="theme-toggle" style="padding: 5px 10px; font-size: 12px;">Toggle Night Mode</button>
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
@@ -95,6 +152,19 @@
     </div>
   </div>
 </div>
+
+<script>
+  // 页面加载时为导航栏添加淡入效果
+  anime({
+    targets: '.masthead__menu-item',
+    opacity: [0, 1], // 从透明到完全显示
+    translateY: [-20, 0], // 从上方滑入
+    delay: anime.stagger(100), // 每个导航项依次延迟 100ms
+    duration: 1000, // 动画持续时间 1 秒
+    easing: 'easeOutExpo', // 缓动效果
+  });
+</script>
+
 
     <div id="main" role="main">
       
@@ -366,10 +436,11 @@ My name is Hao Yan. Currently, I am a Phd Student in the Department of Computer 
 </style>
 
 
-<!-- <h1 id="-visitors">👀 Visitors</h1>
-<div style="float: left;">
-<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=280&amp;t=tt&amp;d=jHHwvpNeh_7brAFqjgZgpAQM64XBZm_LZ-pLBIJqDts"></script>
-</div> -->
+<h1 id="-visitors">👀 Visitors</h1>
+<div style="text-align: center; margin-bottom: 20px;">
+  <!-- ClustrMaps 访客地图 -->
+  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=FCUENZeaN7qR2-1Pr-li5zDUeKFrL9RhwTor6_iK-qk&cl=ffffff&w=a"></script>
+</div>
 
           </section>
         </div>
@@ -407,6 +478,25 @@ My name is Hao Yan. Currently, I am a Phd Student in the Department of Computer 
             });
         });
     })
+</script>
+
+<script>
+  // 获取按钮和 body 元素
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // 检查本地存储中的主题设置
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  // 切换主题模式
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme); // 保存用户选择的主题到本地存储
+  });
 </script>
 
 

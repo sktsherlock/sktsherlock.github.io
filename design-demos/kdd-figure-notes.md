@@ -2,7 +2,23 @@
 
 Checked 2026-09-29.
 
-## Replacement image
+## Active thumbnail: Figure 1 (user selected)
+
+- Asset: `images/homepage/magb-data-example-arxiv-v2.png`
+- Source: https://arxiv.org/pdf/2410.09132v2
+- Figure 1, PDF page 2: **Illustration of a Multimodal Attributed Graph example.**
+- The caption describes the graph topology on the left and detailed multimodal node attributes on the right. The example combines a bird photograph with a short textual description.
+- Source version: arXiv v2, submitted 27 February 2025; the most recent arXiv version listed on the abstract page when checked.
+- Extraction: rendered the complete original artwork from the source PDF at 6 pixels per point, excluding the paper caption and surrounding text. No scientific content was redrawn or modified.
+- Output: 1410 x 792 px, 407,548 bytes, losslessly optimized PNG. Visually inspected: the full title, all six nodes, graph edges, arrow, photograph, textual description and enclosing panel are intact.
+- Reproducible PDF crop: page index 1, PDFium crop `(left=320, bottom=578, right=57, top=82)` points on a 612 x 792 pt page.
+- Layout: suitable for a compact landscape thumbnail on the left; preserve the entire image with `object-fit: contain` rather than cropping its content.
+- Suggested English caption: "A multimodal attributed graph with image and text attributes. Figure 1, arXiv v2."
+- Suggested Chinese caption: "多模态属性图示例：图节点关联图像与文本属性。图 1，arXiv v2。"
+- Suggested English alt text: "A six-node multimodal graph and an expanded node showing a bird photograph with its text description."
+- Suggested Chinese alt text: "由六个节点组成的多模态属性图，以及一个节点对应的鸟类照片和文本描述。"
+
+## Preserved earlier option: Figure 2
 
 - Asset: `images/homepage/magb-gnn-predictor-arxiv-v2.png`
 - Source: https://arxiv.org/pdf/2410.09132v2
@@ -15,7 +31,7 @@ Checked 2026-09-29.
 
 ## What changed from the old thumbnail
 
-The existing `images/MAG.jpg` depicts the earlier three-panel attribute/topology/MAG overview corresponding to the October 2024 v1 design. The February 2025 v2 reorganizes the paper around two prediction paradigms and contains distinct new figures: Figure 1 (MAG data example, page 2), Figure 2 (GNN-as-Predictor, page 3), and Figure 3 (VLM-as-Predictor, page 4). Figure 2 is the recommended replacement because it conveys the benchmark's encoders, multimodal representations, graph processing and two downstream tasks in one self-contained panel.
+The existing `images/MAG.jpg` depicts the earlier three-panel attribute/topology/MAG overview corresponding to the October 2024 v1 design. The February 2025 v2 reorganizes the paper around two prediction paradigms and contains distinct new figures: Figure 1 (MAG data example, page 2), Figure 2 (GNN-as-Predictor, page 3), and Figure 3 (VLM-as-Predictor, page 4). Following the user's explicit preference, Figure 1 is the active thumbnail. Figure 2 remains available as an unused asset documenting the earlier option.
 
 ## Paper content for homepage
 
@@ -28,7 +44,8 @@ The paper benchmarks three Amazon networks (Movies, Toys, Grocery) and two Reddi
 ## Provenance and version limit
 
 - Latest public preprint: https://arxiv.org/abs/2410.09132v2
-- Rendered HTML artwork: https://arxiv.org/html/2410.09132v2/MEGNN-New.png
+- Figure 1 HTML artwork: https://arxiv.org/html/2410.09132v2/MAG-Illustration.png
+- Figure 2 HTML artwork: https://arxiv.org/html/2410.09132v2/MEGNN-New.png
 - Author repository linked by the paper: https://github.com/sktsherlock/MAGB
 - Publisher record: https://doi.org/10.1145/3711896.3737404
 - Previous version for comparison: https://arxiv.org/html/2410.09132v1

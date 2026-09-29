@@ -14,7 +14,7 @@ const byTier = (a, b) => a.ccf.localeCompare(b.ccf);
 const firstAuthor = content.publications.filter(paper => paper.firstAuthor).sort(byTier);
 const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort(byTier);
 const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
-  <figure><a href="${escape(paper.image)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.image)}" alt="${escape(paper.caption)}" loading="lazy"></a><figcaption>${escape(paper.caption)}</figcaption></figure>
+  <figure><a href="${escape(paper.image)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.image)}" alt="${escape(paper.caption)}" loading="lazy"></a>${paper.figureLabel ? `<figcaption>${escape(paper.figureLabel)}</figcaption>` : ''}</figure>
   <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
 </article>`).join('\n');
 const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');

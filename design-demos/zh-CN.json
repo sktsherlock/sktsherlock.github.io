@@ -53,10 +53,6 @@
       "结合语义子图提取与跨尺度混合增强，平衡语义一致性和数据增强的多样性。"
     ],
     [
-      "GNN-as-Predictor: text, image, and vision–language encoders provide node features for graph learning. Figure 2, arXiv v2.",
-      "GNN-as-Predictor：通过文本、图像及视觉语言编码器构建节点特征，用于图学习。来源：arXiv 第2版图2。"
-    ],
-    [
       "Venue ratings follow the <a href=\"https://www.ccf.org.cn/Academic_Evaluation/By_category/\">CCF 2026 catalogue</a>.",
       "会议与期刊评级依据 <a href=\"https://www.ccf.org.cn/Academic_Evaluation/By_category/\">CCF 2026 版目录</a>。"
     ],
@@ -83,6 +79,10 @@
     [
       "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
       "我正将研究拓展至大模型推理、智能体系统与循环 Transformer 架构。"
+    ],
+    [
+      "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
+      "由六个节点组成的多模态属性图，以及一个节点对应的鸟类照片和文本描述。"
     ],
     [
       "Hao Yan — graph learning, language models, multimodal learning, and scientific agents.",
@@ -287,6 +287,10 @@
     [
       "Display preferences",
       "显示偏好"
+    ],
+    [
+      "Figure 1 · arXiv v2",
+      "图 1 · arXiv 第2版"
     ],
     [
       "Technical practice",

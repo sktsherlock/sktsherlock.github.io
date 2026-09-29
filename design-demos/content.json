@@ -18,13 +18,14 @@
       "authors": "Hao Yan, Chaozhuo Li, Jun Yin, et al.",
       "venue": "KDD 2025",
       "selected": true,
-      "image": "../images/homepage/magb-gnn-predictor-arxiv-v2.png",
+      "image": "../images/homepage/magb-data-example-arxiv-v2.png",
       "summary": "Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.",
       "paper": "https://doi.org/10.1145/3711896.3737404",
       "firstAuthor": true,
       "ccf": "A",
-      "caption": "GNN-as-Predictor: text, image, and vision–language encoders provide node features for graph learning. Figure 2, arXiv v2.",
-      "code": "https://github.com/sktsherlock/MAGB"
+      "caption": "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
+      "code": "https://github.com/sktsherlock/MAGB",
+      "figureLabel": "Figure 1 · arXiv v2"
     },
     {
       "id": "mokgnn",

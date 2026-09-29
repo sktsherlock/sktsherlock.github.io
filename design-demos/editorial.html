@@ -58,22 +58,33 @@ asset is supplied. Native disclosure keeps the full paper record usable without 
 .legacy-anchor{display:block;position:absolute;width:0;height:0;scroll-margin-top:28px}
 @media(max-width:700px){.masthead{display:block}.masthead-label{display:block;max-width:none;padding:0;margin-bottom:3px}.masthead nav{justify-content:flex-start;gap:18px;font-size:13px}}
 
-/* All first-author papers receive the same figure-and-text treatment. */
+/* Compact publication rows emphasize titles and authors. */
 .venue{display:flex;flex-wrap:wrap;align-items:center;gap:9px;letter-spacing:.06em}
 .ccf-badge{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid #d6b7a9;border-radius:3px;padding:1px 6px;font:500 10px/1.7 var(--sans);letter-spacing:.035em;color:var(--accent)}
-.publication-note{font-size:12px;color:var(--muted);margin:-9px 0 23px}
+.publication-note{font-size:12px;color:var(--muted);margin:-9px 0 17px}
 .publication-note a{text-decoration-color:#bbb4ac}
-.paper,.paper-1,.paper-2{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);padding-left:0;gap:42px}
-.paper figure>a{padding:12px;background:#fbfaf8;border:1px solid #eeebe6}
-.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:28px}
+.paper,.paper-1,.paper-2{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:center;padding:23px 0}
+.paper+.paper{padding-top:23px}
+.paper figure>a{display:flex;align-items:center;justify-content:center;height:164px;padding:7px;background:#fbfaf8;border:1px solid #eeebe6}
+.paper img{display:block;width:100%;height:100%;object-fit:contain}
+.paper figcaption{font-size:10px;line-height:1.5;padding-top:6px}
 .paper-copy{min-width:0}
+.paper figure,.paper .paper-copy{order:0}
+.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:24px;line-height:1.25;letter-spacing:-.012em;text-wrap:pretty}
+.paper .venue{font-size:10px;margin-bottom:7px}
+.paper .authors{font-size:13px;line-height:1.65;margin-top:8px}
+.paper .authors strong,.archive-paper .authors strong{color:var(--accent);font-weight:600}
+.paper-summary{font-size:13px;line-height:1.65;margin-top:7px}
+.paper .paper-links{gap:20px;margin-top:9px}
+.paper .text-link{font-size:12px}
 .archive-venue{display:flex;align-items:flex-start;flex-direction:column;gap:7px}
 .archive-paper .paper-links:empty{display:none}
 .archive-paper .paper-links{margin-top:7px}
 .archive-paper .text-link{margin-top:0}
 .publication-record{margin-top:10px}
-@media(max-width:1000px){.paper,.paper-1,.paper-2{gap:28px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:25px}}
-@media(max-width:700px){.paper,.paper-1,.paper-2{gap:21px}.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:28px}.publication-note{margin-top:0}.archive-venue{flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px}.paper figure>a{padding:8px}}
+@media(max-width:1000px){.paper,.paper-1,.paper-2{grid-template-columns:190px minmax(0,1fr);gap:24px}.paper figure>a{height:146px}.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:23px}}
+@media(max-width:700px){.paper,.paper-1,.paper-2{grid-template-columns:160px minmax(0,1fr);gap:20px}.paper figure>a{height:132px}.publication-note{margin-top:0}.archive-venue{flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px}}
+@media(max-width:600px){.paper,.paper-1,.paper-2{display:flex;flex-direction:column;align-items:stretch;gap:14px;padding:20px 0}.paper+.paper{padding-top:20px}.paper-copy{order:0}.paper figure{order:1;width:min(100%,260px)}.paper figure>a{height:166px}.paper-copy h3,.paper-1 .paper-copy h3,.paper-2 .paper-copy h3{font-size:24px}.paper .authors{font-size:12px}.paper-summary{font-size:13px}}
 
 /* Shared day/night palette and compact language/theme controls. */
 :root{color-scheme:light;--bg:#fff;--figure-bg:#fbfaf8;--figure-line:#eeebe6;--link-line:#c7a392;--badge-line:#d6b7a9;--zh-sans:'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif}
@@ -99,7 +110,7 @@ html[lang="zh-CN"] .section-heading h2{font-size:34px}
 html[lang="zh-CN"] .hero-bio>p{line-height:1.9}
 html[lang="zh-CN"] .hero-bio [lang="zh-CN"]{font-family:var(--zh-sans)}
 html[lang="zh-CN"] .publication-record summary,html[lang="zh-CN"] .masthead,html[lang="zh-CN"] .display-control{font-family:var(--zh-sans)}
-html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-height:1.18}
+html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-height:1.25}
 @media(max-width:1000px) and (min-width:701px){.masthead{gap:15px}.masthead nav{gap:16px}.masthead-label{font-size:11px;letter-spacing:.075em}}
 @media(max-width:700px){.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px;padding:12px 0 7px}.masthead-label{font-size:10px;letter-spacing:.055em;margin:0;line-height:1.6;max-width:145px}.masthead nav{grid-column:1/-1;grid-row:2;gap:20px}.display-controls{grid-column:2;grid-row:1;gap:6px}.display-control{min-width:48px;padding:7px 9px;font-size:12px}.research-direction{font-size:14px}html[lang="zh-CN"] .section-heading h2{font-size:30px}}
 @media print{:root,:root[data-theme="dark"]{--bg:#fff;--ink:#262623;--muted:#696863;--line:#dedbd5;--accent:#a44a2f}.display-controls{display:none}}
@@ -128,23 +139,23 @@ html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-heig
 <div class="section-heading"><h2 id="research-title">First-author research</h2><p>5 first-author papers · 14 publications in total</p></div>
 <p class="publication-note">Venue ratings follow the <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/">CCF 2026 catalogue</a>.</p>
 <article class="paper paper-0" id="magb">
-  <figure><a href="../images/homepage/magb-gnn-predictor-arxiv-v2.png" aria-label="Open full figure for When Graph Meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graph Learning"><img src="../images/homepage/magb-gnn-predictor-arxiv-v2.png" alt="GNN-as-Predictor: text, image, and vision–language encoders provide node features for graph learning. Figure 2, arXiv v2." loading="lazy"></a><figcaption>GNN-as-Predictor: text, image, and vision–language encoders provide node features for graph learning. Figure 2, arXiv v2.</figcaption></figure>
+  <figure><a href="../images/homepage/magb-data-example-arxiv-v2.png" aria-label="Open full figure for When Graph Meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graph Learning"><img src="../images/homepage/magb-data-example-arxiv-v2.png" alt="A six-node multimodal graph and an expanded node showing a bird photograph with its text description." loading="lazy"></a><figcaption>Figure 1 · arXiv v2</figcaption></figure>
   <div class="paper-copy"><p class="eyebrow venue"><span>KDD 2025</span><span class="ccf-badge">CCF-A</span></p><h3>When Graph Meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graph Learning</h3><p class="authors"><strong>Hao Yan</strong>, Chaozhuo Li, Jun Yin, et al.</p><p class="paper-summary">Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.</p><div class="paper-links"><a class="text-link" href="https://doi.org/10.1145/3711896.3737404">Read paper <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/sktsherlock/MAGB">View code <span aria-hidden="true">↗</span></a></div></div>
 </article>
 <article class="paper paper-1" id="tag">
-  <figure><a href="../images/CSTAG.png" aria-label="Open full figure for A Comprehensive Study on Text-attributed Graphs: Benchmarking and Rethinking"><img src="../images/CSTAG.png" alt="Benchmarking language and graph models for text-attributed graph learning." loading="lazy"></a><figcaption>Benchmarking language and graph models for text-attributed graph learning.</figcaption></figure>
+  <figure><a href="../images/CSTAG.png" aria-label="Open full figure for A Comprehensive Study on Text-attributed Graphs: Benchmarking and Rethinking"><img src="../images/CSTAG.png" alt="Benchmarking language and graph models for text-attributed graph learning." loading="lazy"></a></figure>
   <div class="paper-copy"><p class="eyebrow venue"><span>NeurIPS 2023</span><span class="ccf-badge">CCF-A</span></p><h3>A Comprehensive Study on Text-attributed Graphs: Benchmarking and Rethinking</h3><p class="authors"><strong>Hao Yan</strong>, Chaozhuo Li, Ruosong Long, et al.</p><p class="paper-summary">A systematic benchmark for evaluating language models and graph neural networks on text-attributed graphs.</p><div class="paper-links"><a class="text-link" href="https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf">Read paper <span aria-hidden="true">↗</span></a></div></div>
 </article>
 <article class="paper paper-2" id="mokgnn">
-  <figure><a href="../images/MokGNN.jpg" aria-label="Open full figure for MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models"><img src="../images/MokGNN.jpg" alt="Generic and task-specific language models meet graph representation learning." loading="lazy"></a><figcaption>Generic and task-specific language models meet graph representation learning.</figcaption></figure>
+  <figure><a href="../images/MokGNN.jpg" aria-label="Open full figure for MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models"><img src="../images/MokGNN.jpg" alt="Generic and task-specific language models meet graph representation learning." loading="lazy"></a></figure>
   <div class="paper-copy"><p class="eyebrow venue"><span>WSDM 2025 · Oral</span><span class="ccf-badge">CCF-B</span></p><h3>MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models</h3><p class="authors"><strong>Hao Yan</strong>, Chaozhuo Li, Jun Yin, et al.</p><p class="paper-summary">Combining generic and task-specific language models to improve representation learning on text-attributed graphs.</p><div class="paper-links"><a class="text-link" href="https://github.com/sktsherlock/MoKGNN">View code <span aria-hidden="true">↗</span></a></div></div>
 </article>
 <article class="paper paper-3" id="cake">
-  <figure><a href="../images/TKDD.jpg" aria-label="Open full figure for Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning"><img src="../images/TKDD.jpg" alt="Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning." loading="lazy"></a><figcaption>Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.</figcaption></figure>
+  <figure><a href="../images/TKDD.jpg" aria-label="Open full figure for Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning"><img src="../images/TKDD.jpg" alt="Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning." loading="lazy"></a></figure>
   <div class="paper-copy"><p class="eyebrow venue"><span>ACM TKDD 2025</span><span class="ccf-badge">CCF-B</span></p><h3>Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning</h3><p class="authors"><strong>Hao Yan</strong>, Senzhang Wang, Chaozhuo Li, Jun Yin, Philip S. Yu, Jianxin Wang</p><p class="paper-summary">Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity.</p><div class="paper-links"><a class="text-link" href="https://doi.org/10.1145/3728646">Read paper <span aria-hidden="true">↗</span></a></div></div>
 </article>
 <article class="paper paper-4" id="higcl">
-  <figure><a href="../images/HIGCL.jpg" aria-label="Open full figure for Hierarchical Graph Contrastive Learning"><img src="../images/HIGCL.jpg" alt="Within-level and cross-level contrastive learning over a hierarchy of pooled graphs." loading="lazy"></a><figcaption>Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.</figcaption></figure>
+  <figure><a href="../images/HIGCL.jpg" aria-label="Open full figure for Hierarchical Graph Contrastive Learning"><img src="../images/HIGCL.jpg" alt="Within-level and cross-level contrastive learning over a hierarchy of pooled graphs." loading="lazy"></a></figure>
   <div class="paper-copy"><p class="eyebrow venue"><span>ECML-PKDD 2023</span><span class="ccf-badge">CCF-B</span></p><h3>Hierarchical Graph Contrastive Learning</h3><p class="authors"><strong>Hao Yan</strong>, Senzhang Wang, Jun Yin, et al.</p><p class="paper-summary">Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy.</p><div class="paper-links"><a class="text-link" href="https://link.springer.com/chapter/10.1007/978-3-031-43415-0_41">Read paper <span aria-hidden="true">↗</span></a></div></div>
 </article>
 <details class="publication-record" open><summary>More Publications <span>9 collaborative works</span></summary><article class="archive-paper" id="relmoss"><p class="archive-venue"><span>ICML 2026 · Accepted</span><span class="ccf-badge">CCF-A</span></p><div><h3>Rel-MOSS: Towards Imbalanced Relational Deep Learning on Relational Databases</h3><p class="authors">Jun Yin, Peng Huo, Bangguo Zhu, <strong>Hao Yan</strong>, et al.</p><div class="paper-links"><a class="text-link" href="https://arxiv.org/abs/2603.07916">Read paper <span aria-hidden="true">↗</span></a></div></div></article>

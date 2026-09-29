@@ -18,10 +18,10 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 ## Content conventions
 
 - Keep published/accepted papers separate from preprints and ongoing projects.
-- Show every first-author publication with its figure and summary, regardless of venue tier. Keep collaborative work in More Publications, expanded by default.
+- Show every first-author publication with a compact, uncropped thumbnail and summary, regardless of venue tier. Desktop rows reserve 240px for figures and give the remaining width to titles and authors; mobile rows stack with smaller figures. Clicking a thumbnail opens the full figure. Keep collaborative work in More Publications, expanded by default.
 - Within the first-author and collaborative groups, list CCF-A before CCF-B, retaining the existing order within each tier.
 - CCF badges use the 2026 seventh edition consistently, including IJCAI B and ICLR A. See `design-demos/publication-sources.md` for verification and the original catalogue PDF.
-- The MAGB thumbnail is Figure 2 from arXiv:2410.09132v2; see `design-demos/kdd-figure-notes.md` for provenance and the publisher-version limitation.
+- The MAGB thumbnail is Figure 1 from arXiv:2410.09132v2; see `design-demos/kdd-figure-notes.md` for provenance and the publisher-version limitation.
 - Prefer verified publisher, arXiv, OpenReview, or author repository links.
 - Keep the expected June 2027 graduation date explicitly qualified.
 - MSRA internship: July 2022–January 2023. STCA: February 2023–January 2024, remote.

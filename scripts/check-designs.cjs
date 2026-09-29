@@ -67,7 +67,7 @@ const base = process.env.PREVIEW_URL || 'http://127.0.0.1:8768';
             assert.equal(await item.locator('figure img').count(), 1, `First-author figure missing: ${paper.id}`);
           }
         }
-        assert((await page.locator('#magb img').getAttribute('src')).includes('magb-gnn-predictor-arxiv-v2.png'), 'KDD thumbnail still uses old figure');
+        assert((await page.locator('#magb img').getAttribute('src')).includes('magb-data-example-arxiv-v2.png'), 'KDD thumbnail still uses old figure');
       }
       assert(text.includes('remote'), `${name}: STCA remote missing`);
       for (const project of content.projects) assert(text.includes(normalize(project.name)), `${name}: missing project ${project.name}`);

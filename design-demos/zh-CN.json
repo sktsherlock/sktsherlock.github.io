@@ -77,8 +77,16 @@
       "面向文本属性图学习，系统评测语言模型与图模型。"
     ],
     [
+      "<em>Hyouka</em> and <em>Arcane</em> are among my favorite animated series.",
+      "我喜欢的动画作品包括<em>《冰菓》</em>和<em>《双城之战》</em>。"
+    ],
+    [
       "First-class Academic Scholarship, Central South University · 2024, 2025",
       "中南大学一等学业奖学金 · 2024、2025年"
+    ],
+    [
+      "I also enjoy playing <em>League of Legends</em> and <em>Arknights</em>.",
+      "游戏方面，我喜欢<em>《英雄联盟》</em>和<em>《明日方舟》</em>。"
     ],
     [
       "Joint Ph.D. Supervision Scheme · funded Research Assistant",
@@ -181,12 +189,20 @@
       "中南大学"
     ],
     [
+      "A few personal interests",
+      "我的一些兴趣爱好"
+    ],
+    [
       "Microsoft Research Asia",
       "微软亚洲研究院"
     ],
     [
       "Graduating in June 2027",
       "预计2027年6月毕业"
+    ],
+    [
+      "Call +86 158 6973 2997",
+      "拨打电话 +86 158 6973 2997"
     ],
     [
       "9 collaborative works",
@@ -225,6 +241,10 @@
       "图 1 · arXiv 第2版"
     ],
     [
+      "Video &amp; editing",
+      "视频与剪辑"
+    ],
+    [
       "More Publications",
       "更多论文"
     ],
@@ -255,6 +275,10 @@
     [
       "Main navigation",
       "主导航"
+    ],
+    [
+      "Beyond research",
+      "研究之外"
     ],
     [
       "Microsoft STCA",
@@ -289,6 +313,10 @@
       ">教育经历<"
     ],
     [
+      ">Animation<",
+      ">动画<"
+    ],
+    [
       ">About me<",
       ">关于我<"
     ],
@@ -315,6 +343,10 @@
     [
       ">About<",
       ">关于<"
+    ],
+    [
+      ">Games<",
+      ">游戏<"
     ]
   ]
 }

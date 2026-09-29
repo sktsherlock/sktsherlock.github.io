@@ -225,5 +225,20 @@
   "ccfSource": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
   "ccfEdition": "2026 (7th edition)",
   "researchDirection": "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
-  "avatar": "../images/homepage/hao-avatar.webp"
+  "avatar": "../images/homepage/hao-avatar.webp",
+  "phone": "+86 158-6973-2997",
+  "personalInterests": [
+    {
+      "title": "Video & editing",
+      "description": "Outside research, I enjoy video creation and editing."
+    },
+    {
+      "title": "Animation",
+      "description": "Hyouka and Arcane are among my favorite animated series."
+    },
+    {
+      "title": "Games",
+      "description": "I also enjoy playing League of Legends and Arknights."
+    }
+  ]
 }

@@ -118,12 +118,24 @@ html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-heig
 .service-body p{font-family:var(--serif);font-size:25px;line-height:1.5;text-wrap:pretty}
 .honors-section{padding-bottom:37px}
 .personal-section{padding-bottom:38px}
-.personal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.personal-intro{font-size:14px;line-height:1.8;color:var(--muted);margin:-5px 0 26px}
+.personal-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:38px}
+.personal-grid article{min-width:0}
 .personal-grid article+article{border-left:1px solid var(--line);padding-left:30px}
-.personal-grid h3{font-size:25px;line-height:1.25;margin-bottom:10px}
-.personal-grid p{font-size:14px;line-height:1.8;color:var(--muted)}
-.personal-grid em{font-style:normal;color:var(--ink)}
-@media(max-width:700px){.personal-section{padding-bottom:28px}.personal-grid{grid-template-columns:1fr;gap:18px}.personal-grid article+article{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.personal-grid h3{font-size:24px;margin-bottom:6px}.contact-links{row-gap:4px;column-gap:20px}}
+.personal-grid h3{font-size:25px;line-height:1.25;margin-bottom:18px}
+.animation-shelf{display:grid;grid-template-columns:148px minmax(0,1fr);gap:22px}
+.animation-shelf figure{min-width:0}
+.interest-image{display:block;width:fit-content;max-width:100%;text-decoration:none}
+.animation-shelf img{display:block;width:auto;max-width:100%;height:210px;object-fit:contain;object-position:left center}
+.animation-shelf figcaption{font-size:15px;line-height:1.6;margin-top:12px}
+.game-shelf{display:grid;gap:18px}
+.game-entry{display:grid;grid-template-columns:88px minmax(0,1fr);align-items:center;gap:20px}
+.game-entry img{display:block;width:88px;height:88px;object-fit:contain}
+.game-entry figcaption{font-family:var(--serif);font-size:23px;line-height:1.3}
+html[lang="zh-CN"] .game-entry figcaption{font-family:var(--zh-sans);font-size:20px}
+@media(max-width:1000px){.personal-grid{grid-template-columns:minmax(0,1.65fr) minmax(210px,1fr);gap:26px}.personal-grid article+article{padding-left:24px}.animation-shelf{grid-template-columns:112px minmax(0,1fr);gap:18px}.animation-shelf img{height:158px}.game-entry{grid-template-columns:64px minmax(0,1fr);gap:14px}.game-entry img{width:64px;height:64px}.game-entry figcaption{font-size:21px}}
+@media(max-width:700px){.personal-section{padding-bottom:28px}.personal-intro{margin:0 0 24px}.personal-grid{grid-template-columns:1fr;gap:25px}.personal-grid article+article{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.personal-grid h3{font-size:24px;margin-bottom:16px}.animation-shelf{grid-template-columns:100px minmax(0,1fr);gap:18px}.animation-shelf img{height:142px}.animation-shelf figcaption{font-size:14px;margin-top:9px}.game-shelf{gap:15px}.game-entry{grid-template-columns:64px minmax(0,1fr);gap:18px}.contact-links{row-gap:4px;column-gap:20px}}
+@media(max-width:380px){.animation-shelf{grid-template-columns:85px minmax(0,1fr);gap:14px}.animation-shelf img{height:120px}}
 .honors-section .section-heading{padding-bottom:20px}
 .honors-section ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 42px;margin:0;padding-left:19px;font-size:14px;line-height:1.7}
 html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}

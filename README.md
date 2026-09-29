@@ -29,7 +29,7 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 - Present reviewing for NeurIPS, ICLR, ICML, KDD, and CIKM (2024–2026) in an independent academic-service section.
 - Research interests may describe expansion into LLMs, agents, LLM reasoning, and looped Transformers. Keep this direction distinct from completed research. The introduction states availability for Research Assistant and Algorithm Engineer positions.
 - Keep the public phone number in the contact row, with a working `tel:` link. It matches the latest resume.
-- Keep a compact bilingual Beyond research section after honors. Video creation/editing comes from the existing profile; favorite animation (Hyouka, Arcane) and games (League of Legends, Arknights) come from the original homepage (`fca1399`).
+- Keep a compact bilingual Beyond research section after honors. Video creation/editing comes from the existing profile; favorite animation (Hyouka, Arcane) and games (League of Legends, Arknights) come from the original homepage (`fca1399`). Reuse its artwork in an animation spread and two game-icon rows, with uncropped images, bilingual captions/alt text, and links to the originals. See `design-demos/personal-assets.md`.
 - Add a downloadable CV only when its PDF is confirmed to match the latest source.
 
 ## Identity and organization images

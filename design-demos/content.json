@@ -1,0 +1,177 @@
+{
+  "name": "Hao Yan",
+  "chineseName": "颜浩",
+  "email": "csuyh1999@csu.edu.cn",
+  "github": "https://github.com/sktsherlock",
+  "bio": "My name is Hao Yan (颜浩), and I also go by Sherirto. I am a Ph.D. student in Computer Science at Central South University, supervised by Prof. Senzhang Wang, with expected graduation in June 2027. From September 2025 to August 2026, I participated in the Joint Ph.D. Supervision Scheme at The Hong Kong Polytechnic University as a fully funded Research Assistant, supervised by Prof. Chengqi Zhang. I also receive research supervision from Prof. Shirui Pan.",
+  "availability": "Seeking research and engineering opportunities for 2027 in multimodal learning, graph–language models, and agent systems.",
+  "topics": [
+    "Graph & language models",
+    "Multimodal learning",
+    "Scientific agents"
+  ],
+  "publications": [
+    {
+      "id": "magb",
+      "title": "When Graph meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graphs Learning",
+      "authors": "Hao Yan, Chaozhuo Li, Jun Yin, et al.",
+      "venue": "KDD 2025",
+      "selected": true,
+      "image": "../images/MAG.jpg",
+      "summary": "A benchmark and systematic evaluation of graph and vision–language approaches to multimodal attributed graphs.",
+      "paper": "https://arxiv.org/abs/2410.09132"
+    },
+    {
+      "id": "mokgnn",
+      "title": "MoKGNN: Boosting Graph Neural Networks via Mixture of Generic and Task-Specific Language Models",
+      "authors": "Hao Yan, Chaozhuo Li, Jun Yin, et al.",
+      "venue": "WSDM 2025 · Oral",
+      "selected": true,
+      "image": "../images/MokGNN.jpg",
+      "summary": "Combining generic and task-specific language models to improve representation learning on text-attributed graphs.",
+      "code": "https://github.com/sktsherlock/MoKGNN"
+    },
+    {
+      "id": "tag",
+      "title": "A Comprehensive Study on Text-attributed Graphs: Benchmarking and Rethinking",
+      "authors": "Hao Yan, Chaozhuo Li, Ruosong Long, et al.",
+      "venue": "NeurIPS 2023",
+      "selected": true,
+      "image": "../images/CSTAG.png",
+      "summary": "A systematic benchmark for evaluating language models and graph neural networks on text-attributed graphs.",
+      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf"
+    },
+    {
+      "id": "relmoss",
+      "title": "Rel-MOSS: Towards Imbalanced Relational Deep Learning on Relational Databases",
+      "authors": "Jun Yin, Peng Huo, Bangguo Zhu, Hao Yan, et al.",
+      "venue": "ICML 2026 · Accepted",
+      "paper": "https://arxiv.org/abs/2603.07916"
+    },
+    {
+      "id": "proto",
+      "title": "Paradigm Shift of GNN Explainer from Label Space to Prototypical Representation Space",
+      "authors": "Jun Yin, Senzhang Wang, Ziluowen Luo, Peng Huo, Hao Yan, et al.",
+      "venue": "ICLR 2026",
+      "paper": "https://openreview.net/forum?id=X7eYISNf01"
+    },
+    {
+      "id": "dualindex",
+      "title": "Unleash LLMs Potential for Sequential Recommendation by Coordinating Dual Dynamic Index Mechanism",
+      "authors": "Jun Yin, Zhengxin Zeng, Mingzheng Li, Hao Yan, et al.",
+      "venue": "WWW 2025 · Oral"
+    },
+    {
+      "id": "cake",
+      "title": "Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning",
+      "authors": "Hao Yan, Senzhang Wang, Chaozhuo Li, et al.",
+      "venue": "ACM TKDD"
+    },
+    {
+      "id": "higcl",
+      "title": "Hierarchical Graph Contrastive Learning",
+      "authors": "Hao Yan, Senzhang Wang, Jun Yin, et al.",
+      "venue": "ECML-PKDD 2023",
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43415-0_41"
+    },
+    {
+      "id": "adgcl",
+      "title": "Adversarial Hard Negative Generation for Complementary Graph Contrastive Learning",
+      "authors": "Senzhang Wang, Hao Yan, Jinlong Du, et al.",
+      "venue": "SDM 2023",
+      "paper": "https://epubs.siam.org/doi/10.1137/1.9781611977653.ch19"
+    },
+    {
+      "id": "pignn",
+      "title": "Train Once and Explain Everywhere: Pre-training Interpretable Graph Neural Networks",
+      "authors": "Jun Yin, Chaozhuo Li, Hao Yan, Jianxun Lian, Senzhang Wang",
+      "venue": "NeurIPS 2023",
+      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/6ecd51685e2d765bc0ad32a2e73faf62-Paper-Conference.pdf"
+    },
+    {
+      "id": "wsip",
+      "title": "WSiP: Wave Superposition Inspired Pooling for Dynamic Interactions-Aware Trajectory Prediction",
+      "authors": "Renzhi Wang, Senzhang Wang, Hao Yan, Xiang Wang",
+      "venue": "AAAI 2023",
+      "paper": "https://doi.org/10.1609/aaai.v37i4.25592"
+    },
+    {
+      "id": "glem",
+      "title": "Learning on Large-scale Text-attributed Graphs via Variational Inference",
+      "authors": "Jianan Zhao, Meng Qu, Chaozhuo Li, Hao Yan, et al.",
+      "venue": "ICLR 2023 · Oral",
+      "paper": "https://arxiv.org/abs/2210.14709"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scientific agents for synthesis process design",
+      "date": "Jun. 2026–present",
+      "role": "Core contributor",
+      "description": "Built a MinerU-based pipeline for batch PDF-to-Markdown conversion and multimodal chart descriptions. Collaborated on tool interfaces and reusable Skills for correlation analysis and inverse screening of process conditions. Designed visual workflows for inspecting analysis steps and tracing results."
+    },
+    {
+      "name": "SUPRA · Robust multimodal graph learning",
+      "date": "Feb. 2026–present",
+      "role": "Principal investigator · CSU graduate research project",
+      "description": "Investigating robustness to missing modalities and noisy topology. Designed a decoupled, prior-retaining architecture, with theoretical analysis and experimental validation.",
+      "link": "https://arxiv.org/abs/2605.24684",
+      "linkLabel": "Preprint · under review"
+    },
+    {
+      "name": "Research Skills & knowledge workflows",
+      "date": "Ongoing practice",
+      "role": "Personal research workflow",
+      "description": "Developing reusable paper-learning Skills for literature search, close reading, and method evolution analysis, with structured research notes in Obsidian."
+    }
+  ],
+  "education": [
+    {
+      "organization": "Central South University",
+      "date": "Sep. 2021–Jun. 2027 (expected)",
+      "role": "Combined M.Sc./Ph.D. in Computer Science and Technology",
+      "description": "Advisor: Prof. Senzhang Wang.",
+      "link": "https://senzhangwangcsu.github.io/index.html"
+    },
+    {
+      "organization": "The Hong Kong Polytechnic University",
+      "date": "Sep. 2025–Aug. 2026",
+      "role": "Joint Ph.D. Supervision Scheme · funded Research Assistant",
+      "description": "Joint supervisor: Prof. Chengqi Zhang. Additional research supervision: Prof. Shirui Pan."
+    },
+    {
+      "organization": "Hefei University of Technology",
+      "date": "Sep. 2017–Jun. 2021",
+      "role": "B.Sc. in Mathematics and Applied Mathematics",
+      "description": ""
+    }
+  ],
+  "experience": [
+    {
+      "organization": "Microsoft STCA",
+      "date": "Feb. 2023–Jan. 2024 · Remote",
+      "role": "Research Intern",
+      "description": "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han."
+    },
+    {
+      "organization": "Microsoft Research Asia",
+      "date": "Jul. 2022–Jan. 2023",
+      "role": "Research Intern · Social Computing Group",
+      "description": "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li."
+    }
+  ],
+  "awards": [
+    "National Scholarship for Doctoral Students · 2024, 2025",
+    "Outstanding Student, Central South University · 2025",
+    "First-class Academic Scholarship, Central South University · 2024, 2025",
+    "Microsoft Research Asia Stars of Tomorrow · Feb. 2023"
+  ],
+  "service": "Reviewer for NeurIPS, ICLR, ICML, KDD, and CIKM (2024–2026).",
+  "tools": "Python, PyTorch, PyG, DGL, Git, and LaTeX. Agent development and research workflows with reusable Skills.",
+  "personal": "Outside research, I enjoy video creation and editing.",
+  "englishName": "Sherirto",
+  "additionalSupervisor": {
+    "name": "Shirui Pan",
+    "url": "https://shiruipan.github.io/"
+  }
+}

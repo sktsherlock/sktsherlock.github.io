@@ -4,7 +4,7 @@ Static homepage for [sktsherlock.github.io](https://sktsherlock.github.io/), mai
 
 ## Edit and preview
 
-The selected, editable source is `design-demos/editorial.html`. It contains the page content and styles. `design-demos/content.json` is a factual reference; it is not a live rendering dependency. Update both when changing biographical facts.
+The selected, editable source is `design-demos/editorial.html`. It contains the layout, biography, and styles. Publications are maintained in `design-demos/content.json`: the build updates the publication section in both the design preview and production page. Other biographical fields in the JSON remain a factual reference; update both files when changing those facts.
 
 ```sh
 node scripts/build-homepage.mjs
@@ -16,6 +16,9 @@ Open `http://127.0.0.1:8768/` for the production page or `/design-demos/editoria
 ## Content conventions
 
 - Keep published/accepted papers separate from preprints and ongoing projects.
+- Show every first-author publication with its figure and summary, regardless of venue tier. Keep collaborative work in More Publications, expanded by default.
+- CCF badges use the 2026 seventh edition consistently, including IJCAI B and ICLR A. See `design-demos/publication-sources.md` for verification and the original catalogue PDF.
+- The MAGB thumbnail is Figure 2 from arXiv:2410.09132v2; see `design-demos/kdd-figure-notes.md` for provenance and the publisher-version limitation.
 - Prefer verified publisher, arXiv, OpenReview, or author repository links.
 - Keep the expected June 2027 graduation date explicitly qualified.
 - MSRA internship: July 2022–January 2023. STCA: February 2023–January 2024, remote.

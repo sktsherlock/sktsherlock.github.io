@@ -58,6 +58,16 @@ const base = process.env.PREVIEW_URL || 'http://127.0.0.1:8768';
       assert(text.includes('2027'), `${name}: graduation missing`);
       if (name === 'editorial') {
         for (const fact of ['Sherirto', 'Senzhang Wang', 'Chengqi Zhang', 'Shirui Pan', 'July 2022', 'June 2027']) assert(text.includes(normalize(fact)), `Missing confirmed biographical fact: ${fact}`);
+        for (const paper of content.publications) {
+          const item = page.locator(`article[id="${paper.id}"]`);
+          assert.equal(await item.count(), 1, `Publication missing or duplicated: ${paper.id}`);
+          assert.equal(await item.locator('.ccf-badge').textContent(), `CCF-${paper.ccf}`, `Incorrect venue badge: ${paper.id}`);
+          if (paper.firstAuthor) {
+            assert.equal(await item.evaluate(el => !!el.closest('details')), false, `First-author paper hidden in disclosure: ${paper.id}`);
+            assert.equal(await item.locator('figure img').count(), 1, `First-author figure missing: ${paper.id}`);
+          }
+        }
+        assert((await page.locator('#magb img').getAttribute('src')).includes('magb-gnn-predictor-arxiv-v2.png'), 'KDD thumbnail still uses old figure');
       }
       assert(text.includes('remote'), `${name}: STCA remote missing`);
       for (const project of content.projects) assert(text.includes(normalize(project.name)), `${name}: missing project ${project.name}`);

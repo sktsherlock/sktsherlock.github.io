@@ -2,6 +2,30 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
 let html = await readFile(new URL('design-demos/editorial.html', root), 'utf8');
+const content = JSON.parse(await readFile(new URL('design-demos/content.json', root), 'utf8'));
+const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+const authors = value => escape(value).replace(/\bHao Yan\b/g, '<strong>Hao Yan</strong>');
+const links = paper => [
+  paper.paper && `<a class="text-link" href="${escape(paper.paper)}">Read paper <span aria-hidden="true">↗</span></a>`,
+  paper.code && `<a class="text-link" href="${escape(paper.code)}">View code <span aria-hidden="true">↗</span></a>`
+].filter(Boolean).join('');
+const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge">CCF-${escape(paper.ccf)}</span>`;
+const firstAuthor = content.publications.filter(paper => paper.firstAuthor);
+const collaborations = content.publications.filter(paper => !paper.firstAuthor);
+const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
+  <figure><a href="${escape(paper.image)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.image)}" alt="${escape(paper.caption)}" loading="lazy"></a><figcaption>${escape(paper.caption)}</figcaption></figure>
+  <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
+</article>`).join('\n');
+const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');
+const publications = `<section id="research" aria-labelledby="research-title">
+<div class="section-heading"><h2 id="research-title">First-author research</h2><p>${firstAuthor.length} first-author papers · ${content.publications.length} publications in total</p></div>
+<p class="publication-note">Venue ratings follow the <a href="${escape(content.ccfSource)}">CCF 2026 catalogue</a>.</p>
+${featured}
+<details class="publication-record" open><summary>More Publications <span>${collaborations.length} collaborative works</span></summary>${archive}</details>
+</section>`;
+html = html.replace(/<section id="research"[\s\S]*?(?=<section id="projects")/, publications);
+// Keep the chosen design preview and the production page on the same publication record.
+await writeFile(new URL('design-demos/editorial.html', root), html);
 const style = html.match(/<style>([\s\S]*?)<\/style>/);
 if (!style) throw new Error('Editorial source is missing its stylesheet.');
 await mkdir(new URL('css/', root), { recursive: true });

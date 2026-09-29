@@ -13,13 +13,17 @@
   "publications": [
     {
       "id": "magb",
-      "title": "When Graph meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graphs Learning",
+      "title": "When Graph Meets Multimodal: Benchmarking and Meditating on Multimodal Attributed Graph Learning",
       "authors": "Hao Yan, Chaozhuo Li, Jun Yin, et al.",
       "venue": "KDD 2025",
       "selected": true,
-      "image": "../images/MAG.jpg",
-      "summary": "A benchmark and systematic evaluation of graph and vision–language approaches to multimodal attributed graphs.",
-      "paper": "https://arxiv.org/abs/2410.09132"
+      "image": "../images/homepage/magb-gnn-predictor-arxiv-v2.png",
+      "summary": "Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.",
+      "paper": "https://doi.org/10.1145/3711896.3737404",
+      "firstAuthor": true,
+      "ccf": "A",
+      "caption": "GNN-as-Predictor: text, image, and vision–language encoders provide node features for graph learning. Figure 2, arXiv v2.",
+      "code": "https://github.com/sktsherlock/MAGB"
     },
     {
       "id": "mokgnn",
@@ -29,7 +33,23 @@
       "selected": true,
       "image": "../images/MokGNN.jpg",
       "summary": "Combining generic and task-specific language models to improve representation learning on text-attributed graphs.",
-      "code": "https://github.com/sktsherlock/MoKGNN"
+      "code": "https://github.com/sktsherlock/MoKGNN",
+      "firstAuthor": true,
+      "ccf": "B",
+      "caption": "Generic and task-specific language models meet graph representation learning."
+    },
+    {
+      "id": "cake",
+      "title": "Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning",
+      "authors": "Hao Yan, Senzhang Wang, Chaozhuo Li, Jun Yin, Philip S. Yu, Jianxin Wang",
+      "venue": "ACM TKDD 2025",
+      "firstAuthor": true,
+      "selected": true,
+      "ccf": "B",
+      "image": "../images/TKDD.jpg",
+      "paper": "https://doi.org/10.1145/3728646",
+      "caption": "Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.",
+      "summary": "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity."
     },
     {
       "id": "tag",
@@ -39,68 +59,103 @@
       "selected": true,
       "image": "../images/CSTAG.png",
       "summary": "A systematic benchmark for evaluating language models and graph neural networks on text-attributed graphs.",
-      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf"
-    },
-    {
-      "id": "relmoss",
-      "title": "Rel-MOSS: Towards Imbalanced Relational Deep Learning on Relational Databases",
-      "authors": "Jun Yin, Peng Huo, Bangguo Zhu, Hao Yan, et al.",
-      "venue": "ICML 2026 · Accepted",
-      "paper": "https://arxiv.org/abs/2603.07916"
-    },
-    {
-      "id": "proto",
-      "title": "Paradigm Shift of GNN Explainer from Label Space to Prototypical Representation Space",
-      "authors": "Jun Yin, Senzhang Wang, Ziluowen Luo, Peng Huo, Hao Yan, et al.",
-      "venue": "ICLR 2026",
-      "paper": "https://openreview.net/forum?id=X7eYISNf01"
-    },
-    {
-      "id": "dualindex",
-      "title": "Unleash LLMs Potential for Sequential Recommendation by Coordinating Dual Dynamic Index Mechanism",
-      "authors": "Jun Yin, Zhengxin Zeng, Mingzheng Li, Hao Yan, et al.",
-      "venue": "WWW 2025 · Oral"
-    },
-    {
-      "id": "cake",
-      "title": "Have Our Cake and Eat It: Augmentation Diversity and Semantic Consistency Balanced Graph Contrastive Learning",
-      "authors": "Hao Yan, Senzhang Wang, Chaozhuo Li, et al.",
-      "venue": "ACM TKDD"
+      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf",
+      "firstAuthor": true,
+      "ccf": "A",
+      "caption": "Benchmarking language and graph models for text-attributed graph learning."
     },
     {
       "id": "higcl",
       "title": "Hierarchical Graph Contrastive Learning",
       "authors": "Hao Yan, Senzhang Wang, Jun Yin, et al.",
       "venue": "ECML-PKDD 2023",
-      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43415-0_41"
+      "paper": "https://link.springer.com/chapter/10.1007/978-3-031-43415-0_41",
+      "firstAuthor": true,
+      "selected": true,
+      "ccf": "B",
+      "image": "../images/HIGCL.jpg",
+      "caption": "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
+      "summary": "Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy."
+    },
+    {
+      "id": "ps2",
+      "title": "PS²: Parameterized Control for Fine-Grained Student Proficiency Simulation",
+      "authors": "Ruochen Liu, Zhiyuan Wen, Hao Yan, Jun Yin, Senzhang Wang, Jiannong Cao",
+      "venue": "CIKM 2026 · Accepted",
+      "firstAuthor": false,
+      "ccf": "B",
+      "paper": "https://arxiv.org/abs/2602.00850"
+    },
+    {
+      "id": "otk",
+      "title": "One-Turn Knockout: Traceable and Editable Proxy Unlearning under Asymmetric Access Constraints",
+      "authors": "Ziluowen Luo, Jun Yin, Hao Yan, Ruochen Liu, Ming Cheng, Senzhang Wang",
+      "venue": "IJCAI 2026",
+      "firstAuthor": false,
+      "ccf": "B",
+      "paper": "https://www.ijcai.org/proceedings/2026/78"
+    },
+    {
+      "id": "relmoss",
+      "title": "Rel-MOSS: Towards Imbalanced Relational Deep Learning on Relational Databases",
+      "authors": "Jun Yin, Peng Huo, Bangguo Zhu, Hao Yan, et al.",
+      "venue": "ICML 2026 · Accepted",
+      "paper": "https://arxiv.org/abs/2603.07916",
+      "firstAuthor": false,
+      "ccf": "A"
+    },
+    {
+      "id": "proto",
+      "title": "Paradigm Shift of GNN Explainer from Label Space to Prototypical Representation Space",
+      "authors": "Jun Yin, Senzhang Wang, Ziluowen Luo, Peng Huo, Hao Yan, et al.",
+      "venue": "ICLR 2026",
+      "paper": "https://openreview.net/forum?id=X7eYISNf01",
+      "firstAuthor": false,
+      "ccf": "A"
+    },
+    {
+      "id": "dualindex",
+      "title": "Unleash LLMs Potential for Sequential Recommendation by Coordinating Dual Dynamic Index Mechanism",
+      "authors": "Jun Yin, Zhengxin Zeng, Mingzheng Li, Hao Yan, et al.",
+      "venue": "WWW 2025 · Oral",
+      "firstAuthor": false,
+      "ccf": "A"
     },
     {
       "id": "adgcl",
       "title": "Adversarial Hard Negative Generation for Complementary Graph Contrastive Learning",
       "authors": "Senzhang Wang, Hao Yan, Jinlong Du, et al.",
       "venue": "SDM 2023",
-      "paper": "https://epubs.siam.org/doi/10.1137/1.9781611977653.ch19"
+      "paper": "https://epubs.siam.org/doi/10.1137/1.9781611977653.ch19",
+      "firstAuthor": false,
+      "ccf": "B"
     },
     {
       "id": "pignn",
       "title": "Train Once and Explain Everywhere: Pre-training Interpretable Graph Neural Networks",
       "authors": "Jun Yin, Chaozhuo Li, Hao Yan, Jianxun Lian, Senzhang Wang",
       "venue": "NeurIPS 2023",
-      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/6ecd51685e2d765bc0ad32a2e73faf62-Paper-Conference.pdf"
+      "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/6ecd51685e2d765bc0ad32a2e73faf62-Paper-Conference.pdf",
+      "firstAuthor": false,
+      "ccf": "A"
     },
     {
       "id": "wsip",
       "title": "WSiP: Wave Superposition Inspired Pooling for Dynamic Interactions-Aware Trajectory Prediction",
       "authors": "Renzhi Wang, Senzhang Wang, Hao Yan, Xiang Wang",
       "venue": "AAAI 2023",
-      "paper": "https://doi.org/10.1609/aaai.v37i4.25592"
+      "paper": "https://doi.org/10.1609/aaai.v37i4.25592",
+      "firstAuthor": false,
+      "ccf": "A"
     },
     {
       "id": "glem",
       "title": "Learning on Large-scale Text-attributed Graphs via Variational Inference",
       "authors": "Jianan Zhao, Meng Qu, Chaozhuo Li, Hao Yan, et al.",
       "venue": "ICLR 2023 · Oral",
-      "paper": "https://arxiv.org/abs/2210.14709"
+      "paper": "https://arxiv.org/abs/2210.14709",
+      "firstAuthor": false,
+      "ccf": "A"
     }
   ],
   "projects": [
@@ -173,5 +228,7 @@
   "additionalSupervisor": {
     "name": "Shirui Pan",
     "url": "https://shiruipan.github.io/"
-  }
+  },
+  "ccfSource": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
+  "ccfEdition": "2026 (7th edition)"
 }

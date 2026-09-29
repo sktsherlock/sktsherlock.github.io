@@ -17,18 +17,22 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 
 ## Content conventions
 
-- Keep published/accepted papers separate from preprints and ongoing projects.
+- Focus on publications, education, internships, academic service, and honors. Project details and tool-skills lists belong in the CV and are not shown on this academic homepage.
 - Show every first-author publication with a compact, uncropped thumbnail and summary, regardless of venue tier. Desktop rows reserve 240px for figures and give the remaining width to titles and authors; mobile rows stack with smaller figures. Clicking a thumbnail opens the full figure. Keep collaborative work in More Publications, expanded by default.
-- Within the first-author and collaborative groups, list CCF-A before CCF-B, retaining the existing order within each tier.
+- First-author papers retain CCF-A-first ordering. More Publications sorts by publication year descending, then CCF-A before CCF-B within each year; publication years are explicit in the JSON record.
 - CCF badges use the 2026 seventh edition consistently, including IJCAI B and ICLR A. See `design-demos/publication-sources.md` for verification and the original catalogue PDF.
 - The MAGB thumbnail is Figure 1 from arXiv:2410.09132v2; see `design-demos/kdd-figure-notes.md` for provenance and the publisher-version limitation.
 - Prefer verified publisher, arXiv, OpenReview, or author repository links.
 - Keep the expected June 2027 graduation date explicitly qualified.
 - MSRA internship: July 2022–January 2023. STCA: February 2023–January 2024, remote.
 - Supervisor: Senzhang Wang. PolyU joint supervisor: Chengqi Zhang. Additional research supervision: Shirui Pan.
-- Agent projects describe development, tools, Skills, and research workflows. Do not imply completed LLM post-training experiments.
+- Present reviewing for NeurIPS, ICLR, ICML, KDD, and CIKM (2024–2026) in an independent academic-service section.
 - Research interests may describe expansion into LLMs, agents, LLM reasoning, and looped Transformers. Keep this direction distinct from completed research. The introduction states availability for Research Assistant and Algorithm Engineer positions.
 - Add a downloadable CV only when its PDF is confirmed to match the latest source.
+
+## Identity and organization images
+
+The portrait and favicon are optimized web-size copies of the user-supplied anime avatar. Institutional marks are unaltered assets from official CSU, PolyU, HFUT, and Microsoft sources; see `design-demos/organization-assets.md`. Preserve their aspect ratios and colors, with a white logo area in both themes. The two Microsoft internships remain distinct entries.
 
 ## Typography
 

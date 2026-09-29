@@ -28,12 +28,25 @@ fs.mkdirSync(output, { recursive: true });
   }
   const theme = (page, value) => page.waitForFunction(expected => document.documentElement.dataset.theme === expected, value);
   async function publications(page) {
+    assert.equal(data.publications.length, 14);
     assert.equal(await page.locator('article.paper, article.archive-paper').count(), data.publications.length);
     assert.equal(firstAuthors.length, 5);
     for (const selector of ['article.paper', 'article.archive-paper']) {
       const ids = await page.locator(selector).evaluateAll(items => items.map(item => item.id));
-      const grades = ids.map(id => { assert(papers.has(id), `Unknown paper: ${id}`); return papers.get(id).ccf; });
-      assert.deepEqual(grades, [...grades].sort(), `${selector}: CCF-A must precede CCF-B`);
+      const records = ids.map(id => { assert(papers.has(id), `Unknown paper: ${id}`); return papers.get(id); });
+      if (selector === 'article.paper') {
+        assert.equal(records.length, 5, 'Expected five expanded first-author papers');
+        const grades = records.map(paper => paper.ccf);
+        assert.deepEqual(grades, [...grades].sort(), `${selector}: CCF-A must precede CCF-B`);
+      } else {
+        for (let i = 0; i < records.length; i++) {
+          assert(Number.isInteger(records[i].year), `Explicit publication year missing: ${records[i].id}`);
+          if (!i) continue;
+          const previous = records[i - 1], current = records[i];
+          assert(previous.year > current.year || (previous.year === current.year && previous.ccf <= current.ccf),
+            `Collaborative publications must sort by descending year, then CCF-A before CCF-B: ${previous.id}, ${current.id}`);
+        }
+      }
     }
     for (const paper of data.publications) {
       const item = page.locator(`article[id="${paper.id}"]`);
@@ -44,6 +57,32 @@ fs.mkdirSync(output, { recursive: true });
         assert(!(await item.evaluate(el => !!el.closest('details'))), `First-author paper inside disclosure: ${paper.id}`);
         assert.equal(await item.locator('figure img').count(), 1);
       }
+    }
+  }
+  async function academicContent(page) {
+    assert.equal(await page.locator('section#projects, .project, .tools').count(), 0, 'Removed project or tools content remains');
+    assert.equal(await page.locator('nav a[href="#projects"]').count(), 0, 'Project navigation remains');
+    assert.equal(await page.locator('nav a[href="#service"]').count(), 1, 'Service navigation missing');
+    const body = await page.locator('body').textContent();
+    for (const removed of [/MinerU/i, /Obsidian/i, /Scientific agents for synthesis process design/i, /Research Skills\s*&\s*knowledge workflows/i, /SUPRA/i]) {
+      assert(!removed.test(body), `Removed project text remains: ${removed}`);
+    }
+    const service = page.locator('section#service');
+    assert.equal(await service.count(), 1, 'Standalone service section missing');
+    const serviceText = await service.textContent();
+    assert(/review|审稿/i.test(serviceText), 'Reviewer service description missing');
+    for (const fact of ['NeurIPS', 'ICLR', 'ICML', 'KDD', 'CIKM', '2024', '2026']) {
+      assert(serviceText.includes(fact), `Academic service missing ${fact}`);
+    }
+    assert(!/\b(?:skills?|Python|PyTorch|PyG|DGL|LaTeX)\b|技能/i.test(serviceText), 'Service still includes technical skills');
+    assert((await page.locator('img.avatar').getAttribute('src')).endsWith('images/homepage/hao-avatar.webp'), 'Old avatar remains');
+    assert((await page.locator('link[rel~="icon"]').getAttribute('href')).endsWith('images/homepage/hao-avatar-icon.png'), 'Old favicon remains');
+    const organizations = page.locator('#background article');
+    assert.equal(await organizations.count(), 5, 'Education or internship record missing');
+    assert.equal(await page.locator('#background .organization-logo').count(), 5, 'Organization logo count');
+    for (const organization of await organizations.all()) {
+      const logo = organization.locator('img.organization-logo');
+      assert.equal(await logo.count(), 1, 'Organization logo missing or duplicated');
     }
   }
   async function layout(page) {
@@ -67,6 +106,7 @@ fs.mkdirSync(output, { recursive: true });
           assert.equal(await page.locator('html').getAttribute('lang'), language === 'zh' ? 'zh-CN' : 'en');
           await theme(page, mode);
           await publications(page);
+          await academicContent(page);
           await layout(page);
           assert(await page.locator('#theme-toggle').isVisible());
           assert(await page.locator('#theme-toggle').getAttribute('aria-label'));
@@ -94,9 +134,9 @@ fs.mkdirSync(output, { recursive: true });
       await page.locator('#language-toggle').focus(); await page.keyboard.press('Enter');
       await page.waitForURL(`${base}/zh/?review=preferences#research`);
       assert.equal(await page.evaluate(() => localStorage.getItem('homepage-language')), 'zh-CN');
-      await page.goto(base + '/?review=return#projects');
-      await page.waitForURL(`${base}/zh/?review=return#projects`);
-      await page.locator('#language-toggle').click(); await page.waitForURL(`${base}/?review=return#projects`);
+      await page.goto(base + '/?review=return#background');
+      await page.waitForURL(`${base}/zh/?review=return#background`);
+      await page.locator('#language-toggle').click(); await page.waitForURL(`${base}/?review=return#background`);
       assert.equal(await page.evaluate(() => localStorage.getItem('homepage-language')), 'en');
       await page.reload(); assert.equal(new URL(page.url()).pathname, '/');
     });
@@ -114,6 +154,7 @@ fs.mkdirSync(output, { recursive: true });
       const biography = await page.locator('#about').textContent();
       for (const text of ['中南大学', '香港理工大学']) assert(biography.includes(text), `Chinese biography missing ${text}`);
       await publications(page);
+      await academicContent(page);
       await page.locator('nav a[href="#research"]').click(); assert.equal(new URL(page.url()).hash, '#research');
       await page.locator('#language-toggle').click(); await page.waitForURL(base + '/');
       assert.equal(await page.locator('html').getAttribute('lang'), 'en');

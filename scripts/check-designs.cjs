@@ -7,8 +7,54 @@ const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'design-demos', 'screenshots');
 fs.mkdirSync(output, { recursive: true });
 const content = JSON.parse(fs.readFileSync(path.join(root, 'design-demos', 'content.json'), 'utf8'));
+const publicationsById = new Map(content.publications.map(paper => [paper.id, paper]));
 const normalize = text => text.replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim().toLowerCase();
 const base = process.env.PREVIEW_URL || 'http://127.0.0.1:8768';
+
+async function academicContent(page, name) {
+  assert.equal(await page.locator('section#projects, .project, .tools').count(), 0, `${name}: removed project or tools content remains`);
+  assert.equal(await page.locator('nav a[href="#projects"]').count(), 0, `${name}: project navigation remains`);
+  assert.equal(await page.locator('nav a[href="#service"]').count(), 1, `${name}: service navigation missing`);
+  const body = await page.locator('body').textContent();
+  for (const removed of [/MinerU/i, /Obsidian/i, /Scientific agents for synthesis process design/i, /Research Skills\s*&\s*knowledge workflows/i, /SUPRA/i]) {
+    assert(!removed.test(body), `${name}: removed project text remains: ${removed}`);
+  }
+  const service = page.locator('section#service');
+  assert.equal(await service.count(), 1, `${name}: standalone service section missing`);
+  const serviceText = await service.textContent();
+  assert(/review|审稿/i.test(serviceText), `${name}: reviewer service description missing`);
+  for (const fact of ['NeurIPS', 'ICLR', 'ICML', 'KDD', 'CIKM', '2024', '2026']) {
+    assert(serviceText.includes(fact), `${name}: service missing ${fact}`);
+  }
+  assert(!/\b(?:skills?|Python|PyTorch|PyG|DGL|LaTeX)\b|技能/i.test(serviceText), `${name}: service still includes technical skills`);
+  const avatar = await page.locator('img.avatar').getAttribute('src');
+  assert(avatar.endsWith('images/homepage/hao-avatar.webp'), `${name}: old avatar remains`);
+  if (process.env.ROOT_MODE) {
+    const favicon = await page.locator('link[rel~="icon"]').getAttribute('href');
+    assert(favicon.endsWith('images/homepage/hao-avatar-icon.png'), `${name}: old favicon remains`);
+  }
+  const organizations = page.locator('#background article');
+  assert.equal(await organizations.count(), 5, `${name}: education or internship record missing`);
+  assert.equal(await page.locator('#background .organization-logo').count(), 5, `${name}: organization logo count`);
+  for (const organization of await organizations.all()) {
+    const logo = organization.locator('img.organization-logo');
+    assert.equal(await logo.count(), 1, `${name}: organization logo missing or duplicated`);
+  }
+  const firstAuthorIds = await page.locator('article.paper').evaluateAll(items => items.map(item => item.id));
+  assert.equal(firstAuthorIds.length, 5, `${name}: expected five expanded first-author papers`);
+  const grades = firstAuthorIds.map(id => publicationsById.get(id).ccf);
+  assert.deepEqual(grades, [...grades].sort(), `${name}: first-author CCF-A papers must precede CCF-B`);
+  const collaborativeIds = await page.locator('article.archive-paper').evaluateAll(items => items.map(item => item.id));
+  assert.equal(firstAuthorIds.length + collaborativeIds.length, 14, `${name}: expected fourteen publications`);
+  const collaborative = collaborativeIds.map(id => publicationsById.get(id));
+  for (let i = 0; i < collaborative.length; i++) {
+    assert(Number.isInteger(collaborative[i].year), `${name}: explicit publication year missing: ${collaborative[i].id}`);
+    if (!i) continue;
+    const previous = collaborative[i - 1], current = collaborative[i];
+    assert(previous.year > current.year || (previous.year === current.year && previous.ccf <= current.ccf),
+      `${name}: collaborative publications must sort by descending year, then CCF-A before CCF-B: ${previous.id}, ${current.id}`);
+  }
+}
 
 (async () => {
   const browser = await chromium.launch({ headless: true, ...(process.env.BROWSER_PATH ? { executablePath: process.env.BROWSER_PATH } : {}) });
@@ -68,9 +114,9 @@ const base = process.env.PREVIEW_URL || 'http://127.0.0.1:8768';
           }
         }
         assert((await page.locator('#magb img').getAttribute('src')).includes('magb-data-example-arxiv-v2.png'), 'KDD thumbnail still uses old figure');
+        await academicContent(page, name);
       }
       assert(text.includes('remote'), `${name}: STCA remote missing`);
-      for (const project of content.projects) assert(text.includes(normalize(project.name)), `${name}: missing project ${project.name}`);
       assert.deepEqual(errors, [], `${name}: browser errors`);
       if (process.env.ROOT_MODE) {
         assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'), 'https://sktsherlock.github.io/');

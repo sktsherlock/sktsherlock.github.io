@@ -102,3 +102,24 @@ html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-heig
 @media(max-width:1000px) and (min-width:701px){.masthead{gap:15px}.masthead nav{gap:16px}.masthead-label{font-size:11px;letter-spacing:.075em}}
 @media(max-width:700px){.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 12px;padding:12px 0 7px}.masthead-label{font-size:10px;letter-spacing:.055em;margin:0;line-height:1.6;max-width:145px}.masthead nav{grid-column:1/-1;grid-row:2;gap:20px}.display-controls{grid-column:2;grid-row:1;gap:6px}.display-control{min-width:48px;padding:7px 9px;font-size:12px}.research-direction{font-size:14px}html[lang="zh-CN"] .section-heading h2{font-size:30px}}
 @media print{:root,:root[data-theme="dark"]{--bg:#fff;--ink:#262623;--muted:#696863;--line:#dedbd5;--accent:#a44a2f}.display-controls{display:none}}
+
+/* Academic affiliations and an independent reviewing section. */
+.history{gap:56px;margin-top:20px;margin-bottom:45px}
+.history-entry{padding-bottom:24px;margin-bottom:25px}
+.history-entry-top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+.history-entry-top .eyebrow{font-size:10px;letter-spacing:.035em}
+.organization-logo-frame{display:flex;align-items:center;justify-content:center;width:178px;height:56px;flex-shrink:0;padding:9px 11px;background:#fff;border:1px solid var(--line);border-radius:5px}
+.organization-logo{display:block;width:100%;height:100%;object-fit:contain}
+.organization-logo-frame--company{width:56px;height:56px;padding:10px}
+.history-entry h3{font-size:24px;margin-top:0}
+.service-body{display:grid;grid-template-columns:180px minmax(0,1fr);gap:42px;padding:3px 0 35px}
+.service-body h3{font:400 15px/1.7 var(--sans);color:var(--muted)}
+.reviewer-venues{display:flex;flex-wrap:wrap;gap:6px 27px}
+.service-body p{font-family:var(--serif);font-size:25px;line-height:1.5;text-wrap:pretty}
+.honors-section{padding-bottom:37px}
+.honors-section .section-heading{padding-bottom:20px}
+.honors-section ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 42px;margin:0;padding-left:19px;font-size:14px;line-height:1.7}
+html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}
+@media(max-width:1000px){.history{gap:35px}.history-entry-top{gap:9px}.organization-logo-frame{width:165px}.organization-logo-frame--company{width:56px}.service-body{grid-template-columns:145px minmax(0,1fr);gap:28px}}
+@media(max-width:700px){.history{margin-top:15px;margin-bottom:30px}.history-entry-top{flex-wrap:nowrap}.organization-logo-frame{width:154px;height:53px}.organization-logo-frame--company{width:53px}.history-entry-top .eyebrow{font-size:9px;letter-spacing:0;text-align:right;max-width:148px}.history-entry h3{font-size:24px}.service-body{display:block;padding-bottom:28px}.service-body p{font-size:24px;margin-top:9px}.honors-section ul{display:block;font-size:14px}.honors-section li+li{margin-top:11px}}
+@media(max-width:380px){.history-entry-top{gap:10px}.organization-logo-frame{width:133px;height:50px;padding:8px}.organization-logo-frame--company{width:50px}.history-entry-top .eyebrow{max-width:128px}}

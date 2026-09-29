@@ -25,7 +25,8 @@
       "ccf": "A",
       "caption": "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
       "code": "https://github.com/sktsherlock/MAGB",
-      "figureLabel": "Figure 1 · arXiv v2"
+      "figureLabel": "Figure 1 · arXiv v2",
+      "year": 2025
     },
     {
       "id": "mokgnn",
@@ -38,7 +39,8 @@
       "code": "https://github.com/sktsherlock/MoKGNN",
       "firstAuthor": true,
       "ccf": "B",
-      "caption": "Generic and task-specific language models meet graph representation learning."
+      "caption": "Generic and task-specific language models meet graph representation learning.",
+      "year": 2025
     },
     {
       "id": "cake",
@@ -51,7 +53,8 @@
       "image": "../images/TKDD.jpg",
       "paper": "https://doi.org/10.1145/3728646",
       "caption": "Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.",
-      "summary": "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity."
+      "summary": "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity.",
+      "year": 2025
     },
     {
       "id": "tag",
@@ -64,7 +67,8 @@
       "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf",
       "firstAuthor": true,
       "ccf": "A",
-      "caption": "Benchmarking language and graph models for text-attributed graph learning."
+      "caption": "Benchmarking language and graph models for text-attributed graph learning.",
+      "year": 2023
     },
     {
       "id": "higcl",
@@ -77,7 +81,8 @@
       "ccf": "B",
       "image": "../images/HIGCL.jpg",
       "caption": "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
-      "summary": "Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy."
+      "summary": "Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy.",
+      "year": 2023
     },
     {
       "id": "ps2",
@@ -86,7 +91,8 @@
       "venue": "CIKM 2026 · Accepted",
       "firstAuthor": false,
       "ccf": "B",
-      "paper": "https://arxiv.org/abs/2602.00850"
+      "paper": "https://arxiv.org/abs/2602.00850",
+      "year": 2026
     },
     {
       "id": "otk",
@@ -95,7 +101,8 @@
       "venue": "IJCAI 2026",
       "firstAuthor": false,
       "ccf": "B",
-      "paper": "https://www.ijcai.org/proceedings/2026/78"
+      "paper": "https://www.ijcai.org/proceedings/2026/78",
+      "year": 2026
     },
     {
       "id": "relmoss",
@@ -104,7 +111,8 @@
       "venue": "ICML 2026 · Accepted",
       "paper": "https://arxiv.org/abs/2603.07916",
       "firstAuthor": false,
-      "ccf": "A"
+      "ccf": "A",
+      "year": 2026
     },
     {
       "id": "proto",
@@ -113,7 +121,8 @@
       "venue": "ICLR 2026",
       "paper": "https://openreview.net/forum?id=X7eYISNf01",
       "firstAuthor": false,
-      "ccf": "A"
+      "ccf": "A",
+      "year": 2026
     },
     {
       "id": "dualindex",
@@ -121,7 +130,8 @@
       "authors": "Jun Yin, Zhengxin Zeng, Mingzheng Li, Hao Yan, et al.",
       "venue": "WWW 2025 · Oral",
       "firstAuthor": false,
-      "ccf": "A"
+      "ccf": "A",
+      "year": 2025
     },
     {
       "id": "adgcl",
@@ -130,7 +140,8 @@
       "venue": "SDM 2023",
       "paper": "https://epubs.siam.org/doi/10.1137/1.9781611977653.ch19",
       "firstAuthor": false,
-      "ccf": "B"
+      "ccf": "B",
+      "year": 2023
     },
     {
       "id": "pignn",
@@ -139,7 +150,8 @@
       "venue": "NeurIPS 2023",
       "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/6ecd51685e2d765bc0ad32a2e73faf62-Paper-Conference.pdf",
       "firstAuthor": false,
-      "ccf": "A"
+      "ccf": "A",
+      "year": 2023
     },
     {
       "id": "wsip",
@@ -148,7 +160,8 @@
       "venue": "AAAI 2023",
       "paper": "https://doi.org/10.1609/aaai.v37i4.25592",
       "firstAuthor": false,
-      "ccf": "A"
+      "ccf": "A",
+      "year": 2023
     },
     {
       "id": "glem",
@@ -157,29 +170,8 @@
       "venue": "ICLR 2023 · Oral",
       "paper": "https://arxiv.org/abs/2210.14709",
       "firstAuthor": false,
-      "ccf": "A"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Scientific agents for synthesis process design",
-      "date": "Jun. 2026–present",
-      "role": "Core contributor",
-      "description": "Built a MinerU-based pipeline for batch PDF-to-Markdown conversion and multimodal chart descriptions. Collaborated on tool interfaces and reusable Skills for correlation analysis and inverse screening of process conditions. Designed visual workflows for inspecting analysis steps and tracing results."
-    },
-    {
-      "name": "SUPRA · Robust multimodal graph learning",
-      "date": "Feb. 2026–present",
-      "role": "Principal investigator · CSU graduate research project",
-      "description": "Investigating robustness to missing modalities and noisy topology. Designed a decoupled, prior-retaining architecture, with theoretical analysis and experimental validation.",
-      "link": "https://arxiv.org/abs/2605.24684",
-      "linkLabel": "Preprint · under review"
-    },
-    {
-      "name": "Research Skills & knowledge workflows",
-      "date": "Ongoing practice",
-      "role": "Personal research workflow",
-      "description": "Developing reusable paper-learning Skills for literature search, close reading, and method evolution analysis, with structured research notes in Obsidian."
+      "ccf": "A",
+      "year": 2023
     }
   ],
   "education": [
@@ -224,7 +216,6 @@
     "Microsoft Research Asia Stars of Tomorrow · Feb. 2023"
   ],
   "service": "Reviewer for NeurIPS, ICLR, ICML, KDD, and CIKM (2024–2026).",
-  "tools": "Python, PyTorch, PyG, DGL, Git, and LaTeX. Agent development and research workflows with reusable Skills.",
   "personal": "Outside research, I enjoy video creation and editing.",
   "englishName": "Sherirto",
   "additionalSupervisor": {
@@ -233,5 +224,6 @@
   },
   "ccfSource": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
   "ccfEdition": "2026 (7th edition)",
-  "researchDirection": "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures."
+  "researchDirection": "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
+  "avatar": "../images/homepage/hao-avatar.webp"
 }

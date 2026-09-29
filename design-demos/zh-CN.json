@@ -13,10 +13,6 @@
       "我是<span lang=\"zh-CN\">颜浩</span>（<strong>Hao Yan</strong>），英文名为 <strong>Sherirto</strong>。目前是<strong>中南大学</strong>计算机科学专业博士生，师从 <a href=\"https://senzhangwangcsu.github.io/index.html\">Senzhang Wang 教授</a>，预计于<strong>2027年6月</strong>毕业。"
     ],
     [
-      "Built a MinerU-based pipeline for batch PDF-to-Markdown conversion and multimodal chart descriptions. Collaborated on tool interfaces and reusable Skills for correlation analysis and inverse screening of process conditions. Designed visual workflows for inspecting analysis steps and tracing results.",
-      "基于 MinerU 搭建 PDF 批量转 Markdown 的处理流程，并利用多模态模型生成图表描述。协作开发相关性分析与工艺条件逆向筛选的工具接口及可复用 Skills，设计可视化工作流，支持检查分析步骤与追溯结果。"
-    ],
-    [
       "<strong>Open to opportunities.</strong> I am seeking suitable <strong>Research Assistant</strong> and <strong>Algorithm Engineer</strong> positions, with interests in LLMs, agents, and reasoning. I expect to graduate in <strong>June 2027</strong>.",
       "<strong>寻找工作机会。</strong>我正在寻找合适的<strong>研究助理</strong>和<strong>算法工程师</strong>岗位，关注大语言模型、智能体与推理方向，预计于<strong>2027年6月</strong>毕业。"
     ],
@@ -27,18 +23,6 @@
     [
       "Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.",
       "构建五个多模态图数据集，统一评测 GNN-as-Predictor 与 VLM-as-Predictor 两类范式，分析领域差异、模态不平衡和图检索对预测的影响。"
-    ],
-    [
-      "Investigating robustness to missing modalities and noisy topology. Designed a decoupled, prior-retaining architecture, with theoretical analysis and experimental validation.",
-      "研究模态缺失与拓扑噪声下的鲁棒学习，设计保留预训练先验的解耦架构，并开展理论分析与实验验证。"
-    ],
-    [
-      "<strong>Looking ahead to 2027.</strong> I am seeking research and engineering opportunities in multimodal learning, graph–language models, and agent systems.",
-      "<strong>面向2027年求职。</strong>我正在寻找多模态学习、图与语言模型、智能体系统方向的研究与工程岗位。"
-    ],
-    [
-      "Developing reusable paper-learning Skills for literature search, close reading, and method evolution analysis, with structured research notes in Obsidian.",
-      "开发可复用的论文学习 Skills，支持文献检索、论文精读与方法演进分析，并在 Obsidian 中组织结构化研究笔记。"
     ],
     [
       "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.",
@@ -73,20 +57,12 @@
       "通过跨尺度图对比学习，兼顾语义一致性与增强多样性。"
     ],
     [
-      "Python, PyTorch, PyG, DGL, Git, and LaTeX. Agent development and research workflows with reusable Skills.",
-      "使用 Python、PyTorch、PyG、DGL、Git 和 LaTeX，结合可复用 Skills 开展智能体开发与科研工作流实践。"
-    ],
-    [
       "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
       "我正将研究拓展至大模型推理、智能体系统与循环 Transformer 架构。"
     ],
     [
       "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
       "由六个节点组成的多模态属性图，以及一个节点对应的鸟类照片和文本描述。"
-    ],
-    [
-      "Hao Yan — graph learning, language models, multimodal learning, and scientific agents.",
-      "颜浩（Hao Yan / Sherirto）——图学习、语言模型、多模态学习与科研智能体。"
     ],
     [
       "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
@@ -105,10 +81,6 @@
       "中南大学一等学业奖学金 · 2024、2025年"
     ],
     [
-      "Reviewer for NeurIPS, ICLR, ICML, KDD, and CIKM (2024–2026).",
-      "担任 NeurIPS、ICLR、ICML、KDD 和 CIKM 审稿人（2024—2026年）。"
-    ],
-    [
       "Joint Ph.D. Supervision Scheme · funded Research Assistant",
       "博士生联合培养 · 获资助科研助理"
     ],
@@ -125,10 +97,6 @@
       "博士研究生国家奖学金 · 2024、2025年"
     ],
     [
-      "Principal investigator · CSU graduate research project",
-      "项目负责人 · 中南大学研究生科研项目"
-    ],
-    [
       "Microsoft Research Asia Stars of Tomorrow · Feb. 2023",
       "微软亚洲研究院“明日之星” · 2023年2月"
     ],
@@ -141,24 +109,12 @@
       "中南大学优秀学生 · 2025年"
     ],
     [
-      "Scientific agents, tool use, and research workflows",
-      "科研智能体、工具调用与科研工作流"
-    ],
-    [
-      "Multimodal learning, benchmarking, and robustness",
-      "多模态学习、基准评测与鲁棒性"
-    ],
-    [
       "Large language models, agents, and LLM reasoning",
       "大语言模型、智能体与大模型推理"
     ],
     [
       "5 first-author papers · 14 publications in total",
       "5篇第一作者论文 · 共14篇论文"
-    ],
-    [
-      "Scientific agents for synthesis process design",
-      "面向合成工艺设计的科研智能体"
     ],
     [
       "Looped Transformers and iterative computation",
@@ -169,16 +125,8 @@
       "数学与应用数学 · 理学学士"
     ],
     [
-      "Ongoing projects &amp; research workflows",
-      "在研项目与科研工作流"
-    ],
-    [
-      "Research Skills &amp; knowledge workflows",
-      "科研 Skills 与知识工作流"
-    ],
-    [
-      "SUPRA · Robust multimodal graph learning",
-      "SUPRA · 鲁棒多模态图学习"
+      "The Hong Kong Polytechnic University logo",
+      "香港理工大学标识"
     ],
     [
       "Research Intern · Social Computing Group",
@@ -189,8 +137,8 @@
       "香港理工大学"
     ],
     [
-      "Academic service, tools, and awards",
-      "学术服务、技术与荣誉"
+      "Hefei University of Technology logo",
+      "合肥工业大学标识"
     ],
     [
       "Multimodal learning and robustness",
@@ -213,16 +161,16 @@
       "导师：Senzhang Wang 教授。"
     ],
     [
+      "Central South University logo",
+      "中南大学标识"
+    ],
+    [
       "Feb. 2023–Jan. 2024 · Remote",
       "2023年2月—2024年1月 · 远程"
     ],
     [
       "Hao Yan’s illustrated avatar",
       "颜浩的插画头像"
-    ],
-    [
-      "Personal research workflow",
-      "个人科研工作流"
     ],
     [
       "Education and experience",
@@ -233,16 +181,8 @@
       "中南大学"
     ],
     [
-      "Preprint · under review",
-      "预印本 · 在审"
-    ],
-    [
       "Microsoft Research Asia",
       "微软亚洲研究院"
-    ],
-    [
-      "Research &amp; Practice",
-      "研究与实践"
     ],
     [
       "Graduating in June 2027",
@@ -261,10 +201,6 @@
       "查看完整论文配图："
     ],
     [
-      "Research in practice",
-      "研究与实践"
-    ],
-    [
       "Sep. 2025–Aug. 2026",
       "2025年9月—2026年8月"
     ],
@@ -281,10 +217,6 @@
       "研究经历"
     ],
     [
-      "Service &amp; tools",
-      "学术服务与技术"
-    ],
-    [
       "Display preferences",
       "显示偏好"
     ],
@@ -293,32 +225,20 @@
       "图 1 · arXiv 第2版"
     ],
     [
-      "Technical practice",
-      "技术实践"
-    ],
-    [
       "More Publications",
       "更多论文"
     ],
     [
-      "Jun. 2026–present",
-      "2026年6月至今"
-    ],
-    [
-      "Feb. 2026–present",
-      "2026年2月至今"
-    ],
-    [
-      "Core contributor",
-      "核心参与者"
-    ],
-    [
-      "Ongoing practice",
-      "持续实践"
-    ],
-    [
       " · Ph.D. student",
       " · 博士研究生"
+    ],
+    [
+      "Academic Profile",
+      "学术主页"
+    ],
+    [
+      "Academic service",
+      "学术服务"
     ],
     [
       "Research Intern",
@@ -339,6 +259,10 @@
     [
       "Microsoft STCA",
       "微软 STCA"
+    ],
+    [
+      "Microsoft logo",
+      "微软标识"
     ],
     [
       ">Read paper <",
@@ -373,8 +297,12 @@
       ">论文<"
     ],
     [
-      ">Projects<",
-      ">项目<"
+      ">Reviewer<",
+      ">审稿人<"
+    ],
+    [
+      ">Service<",
+      ">学术服务<"
     ],
     [
       " · Oral<",

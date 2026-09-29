@@ -12,7 +12,7 @@ const links = paper => [
 const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge">CCF-${escape(paper.ccf)}</span>`;
 const byTier = (a, b) => a.ccf.localeCompare(b.ccf);
 const firstAuthor = content.publications.filter(paper => paper.firstAuthor).sort(byTier);
-const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort(byTier);
+const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort((a, b) => b.year - a.year || byTier(a, b));
 const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
   <figure><a href="${escape(paper.image)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.image)}" alt="${escape(paper.caption)}" loading="lazy"></a>${paper.figureLabel ? `<figcaption>${escape(paper.figureLabel)}</figcaption>` : ''}</figure>
   <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
@@ -24,7 +24,7 @@ const publications = `<section id="research" aria-labelledby="research-title">
 ${featured}
 <details class="publication-record" open><summary>More Publications <span>${collaborations.length} collaborative works</span></summary>${archive}</details>
 </section>`;
-html = html.replace(/<section id="research"[\s\S]*?(?=<section id="projects")/, publications);
+html = html.replace(/<section id="research"[\s\S]*?(?=<section class="history")/, publications);
 // Keep the chosen design preview and the production page on the same publication record.
 await writeFile(new URL('design-demos/editorial.html', root), html);
 const style = html.match(/<style>([\s\S]*?)<\/style>/);
@@ -41,18 +41,18 @@ const metadata = `
 <link rel="alternate" hreflang="en" href="https://sktsherlock.github.io/">
 <link rel="alternate" hreflang="zh-CN" href="https://sktsherlock.github.io/zh/">
 <link rel="alternate" hreflang="x-default" href="https://sktsherlock.github.io/">
-<link rel="icon" href="images/hao.jpg" type="image/jpeg">
+<link rel="icon" href="images/homepage/hao-avatar-icon.png" type="image/png" sizes="64x64">
 <meta name="google-site-verification" content="zApo4ExUOx1XT93yiBoTFltC1NrryrT4B3w7h8EmDU0">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sktsherlock.github.io/">
 <meta property="og:title" content="Hao Yan (颜浩) · Sherirto">
 <meta property="og:description" content="Ph.D. student at Central South University. Graph–language models, multimodal learning, LLMs, agents, and reasoning. Seeking Research Assistant and Algorithm Engineer opportunities. Expected graduation: June 2027.">
-<meta property="og:image" content="https://sktsherlock.github.io/images/hao.jpg">
+<meta property="og:image" content="https://sktsherlock.github.io/images/homepage/hao-avatar.webp">
 <meta name="twitter:card" content="summary">
 `;
 html = html.replace('</head>', metadata + '</head>');
 // Keep old homepage section bookmarks useful after the redesign.
-for (const [legacy, current] of Object.entries({ 'about-me': 'about', '-education': 'background', '-publication': 'research', '-experience': 'background', '-news': 'projects', '-honor-and-award': 'recognition', '-after-research': 'life' })) {
+for (const [legacy, current] of Object.entries({ 'about-me': 'about', '-education': 'background', '-publication': 'research', '-experience': 'background', '-news': 'research', 'projects': 'research', '-honor-and-award': 'recognition', '-after-research': 'life' })) {
   const needle = new RegExp(`(<[^>]+id="${current}"[^>]*>)`);
   html = html.replace(needle, `$1<span id="${legacy}" class="legacy-anchor" aria-hidden="true"></span>`);
 }

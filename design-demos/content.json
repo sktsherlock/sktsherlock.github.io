@@ -4,11 +4,12 @@
   "email": "csuyh1999@csu.edu.cn",
   "github": "https://github.com/sktsherlock",
   "bio": "My name is Hao Yan (颜浩), and I also go by Sherirto. I am a Ph.D. student in Computer Science at Central South University, supervised by Prof. Senzhang Wang, with expected graduation in June 2027. From September 2025 to August 2026, I participated in the Joint Ph.D. Supervision Scheme at The Hong Kong Polytechnic University as a fully funded Research Assistant, supervised by Prof. Chengqi Zhang. I also receive research supervision from Prof. Shirui Pan.",
-  "availability": "Seeking research and engineering opportunities for 2027 in multimodal learning, graph–language models, and agent systems.",
+  "availability": "Seeking suitable Research Assistant and Algorithm Engineer positions, with interests in LLMs, agents, and reasoning. Expected graduation: June 2027.",
   "topics": [
-    "Graph & language models",
-    "Multimodal learning",
-    "Scientific agents"
+    "Graph representation learning and graph–language models",
+    "Multimodal learning and robustness",
+    "Large language models, agents, and LLM reasoning",
+    "Looped Transformers and iterative computation"
   ],
   "publications": [
     {
@@ -230,5 +231,6 @@
     "url": "https://shiruipan.github.io/"
   },
   "ccfSource": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
-  "ccfEdition": "2026 (7th edition)"
+  "ccfEdition": "2026 (7th edition)",
+  "researchDirection": "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures."
 }

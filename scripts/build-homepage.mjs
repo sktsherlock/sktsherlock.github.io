@@ -10,8 +10,9 @@ const links = paper => [
   paper.code && `<a class="text-link" href="${escape(paper.code)}">View code <span aria-hidden="true">↗</span></a>`
 ].filter(Boolean).join('');
 const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge">CCF-${escape(paper.ccf)}</span>`;
-const firstAuthor = content.publications.filter(paper => paper.firstAuthor);
-const collaborations = content.publications.filter(paper => !paper.firstAuthor);
+const byTier = (a, b) => a.ccf.localeCompare(b.ccf);
+const firstAuthor = content.publications.filter(paper => paper.firstAuthor).sort(byTier);
+const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort(byTier);
 const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
   <figure><a href="${escape(paper.image)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.image)}" alt="${escape(paper.caption)}" loading="lazy"></a><figcaption>${escape(paper.caption)}</figcaption></figure>
   <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3>${escape(paper.title)}</h3><p class="authors">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
@@ -33,15 +34,19 @@ await writeFile(new URL('css/homepage.css', root), style[1].trim() + '\n');
 html = html.replace(/<!--[\s\S]*?-->/g, '')
   .replace(/<meta name="robots" content="[^"]*">/, '')
   .replace(/<style>[\s\S]*?<\/style>/, '<link rel="stylesheet" href="css/homepage.css">')
+  .replaceAll('../js/', 'js/')
   .replaceAll('../images/', 'images/');
 const metadata = `
 <link rel="canonical" href="https://sktsherlock.github.io/">
+<link rel="alternate" hreflang="en" href="https://sktsherlock.github.io/">
+<link rel="alternate" hreflang="zh-CN" href="https://sktsherlock.github.io/zh/">
+<link rel="alternate" hreflang="x-default" href="https://sktsherlock.github.io/">
 <link rel="icon" href="images/hao.jpg" type="image/jpeg">
 <meta name="google-site-verification" content="zApo4ExUOx1XT93yiBoTFltC1NrryrT4B3w7h8EmDU0">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sktsherlock.github.io/">
 <meta property="og:title" content="Hao Yan (颜浩) · Sherirto">
-<meta property="og:description" content="Ph.D. student at Central South University. Graph–language models, multimodal learning, and scientific agents. Expected graduation: June 2027.">
+<meta property="og:description" content="Ph.D. student at Central South University. Graph–language models, multimodal learning, LLMs, agents, and reasoning. Seeking Research Assistant and Algorithm Engineer opportunities. Expected graduation: June 2027.">
 <meta property="og:image" content="https://sktsherlock.github.io/images/hao.jpg">
 <meta name="twitter:card" content="summary">
 `;
@@ -52,4 +57,21 @@ for (const [legacy, current] of Object.entries({ 'about-me': 'about', '-educatio
   html = html.replace(needle, `$1<span id="${legacy}" class="legacy-anchor" aria-hidden="true"></span>`);
 }
 await writeFile(new URL('index.html', root), html.trim() + '\n');
-console.log('Built index.html and css/homepage.css from the selected editorial design.');
+const chinese = JSON.parse(await readFile(new URL('design-demos/zh-CN.json', root), 'utf8'));
+let zh = html;
+for (const [english, translation] of chinese.replacements) zh = zh.replaceAll(english, translation);
+zh = zh.replace('<html lang="en">', '<html lang="zh-CN">')
+  .replace(/<title>.*?<\/title>/, '<title>颜浩 Hao Yan · Sherirto · 学术主页</title>')
+  .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="颜浩（Hao Yan / Sherirto），中南大学博士生，研究图与语言模型、多模态学习，正拓展至大模型推理、智能体和循环 Transformer，寻找研究助理与算法工程师岗位。">')
+  .replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="中南大学博士生，预计2027年6月毕业。研究图与语言模型、多模态学习，关注大模型推理、智能体及循环 Transformer，寻找研究助理与算法工程师岗位。">')
+  .replace('<link rel="canonical" href="https://sktsherlock.github.io/">', '<link rel="canonical" href="https://sktsherlock.github.io/zh/">')
+  .replace('<meta property="og:url" content="https://sktsherlock.github.io/">', '<meta property="og:url" content="https://sktsherlock.github.io/zh/">')
+  .replace(/<a id="language-toggle"[^>]*>.*?<\/a>/, '<a id="language-toggle" class="display-control" href="/" hreflang="en" lang="en" aria-label="View homepage in English">English</a>')
+  .replaceAll('data-theme-label>Dark', 'data-theme-label>夜间')
+  .replaceAll('href="css/', 'href="../css/')
+  .replaceAll('src="js/', 'src="../js/')
+  .replaceAll('href="images/', 'href="../images/')
+  .replaceAll('src="images/', 'src="../images/');
+await mkdir(new URL('zh/', root), { recursive: true });
+await writeFile(new URL('zh/index.html', root), zh.trim() + '\n');
+console.log('Built English and Chinese homepages with shared styles and preferences.');

@@ -23,7 +23,7 @@ asset is supplied. Native disclosure keeps the full paper record usable without 
 /* Selected editorial direction: compact bilingual identity and a readable biography. */
 @font-face{font-family:'Noto Sans SC Name';src:url('../fonts/homepage/NotoSansSC-Name.ttf') format('truetype');font-weight:500;font-display:swap;unicode-range:U+989C,U+6D69}
 .hero{display:block;padding:35px 0 37px}
-.identity-row{display:flex;align-items:center;justify-content:space-between;gap:28px;padding-bottom:30px}
+.identity-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 28px;padding-bottom:30px}
 .identity{display:flex;align-items:center;gap:20px;min-width:0}
 .identity .avatar{width:66px;height:66px;flex-shrink:0}
 .name-line{display:block}
@@ -32,8 +32,8 @@ asset is supplied. Native disclosure keeps the full paper record usable without 
 .name-separator{font-family:var(--sans);font-size:20px;font-weight:400;color:#8b817b;align-self:center}
 .english-name{font-size:15px;line-height:1.6;color:var(--muted);margin-top:7px}
 .english-name strong{font-weight:500;color:var(--ink)}
-.contact-links{margin:0;gap:22px;flex-shrink:0}
-.contact-links .text-link{padding:9px 0;min-height:44px}
+.contact-links{margin:0;gap:6px 22px;flex-wrap:wrap;max-width:100%}
+.contact-links .text-link{padding:9px 0;min-height:44px;white-space:nowrap}
 .about{display:grid;grid-template-columns:180px minmax(0,1fr);gap:42px;padding-top:28px;border-top:1px solid var(--line)}
 .about-heading h2{font-size:31px;letter-spacing:-.015em}
 .about-heading p{font-size:13px;color:var(--muted);line-height:1.65;margin-top:11px}
@@ -105,7 +105,7 @@ body{background:var(--bg)}
 .display-control[lang="zh-CN"]{font-family:var(--zh-sans)}
 .research-direction{font-size:14px;line-height:1.75;color:var(--muted);margin-top:13px}
 html[lang="zh-CN"] body{font-family:'IBM Plex Sans',var(--zh-sans);line-height:1.8}
-html[lang="zh-CN"] h2,html[lang="zh-CN"] .about h3,html[lang="zh-CN"] .project h3,html[lang="zh-CN"] .history h3,html[lang="zh-CN"] .tools h3{font-family:var(--zh-sans);font-weight:500;line-height:1.4;letter-spacing:0}
+html[lang="zh-CN"] h2,html[lang="zh-CN"] .about h3,html[lang="zh-CN"] .project h3,html[lang="zh-CN"] .history h3,html[lang="zh-CN"] .tools h3,html[lang="zh-CN"] .personal-grid h3{font-family:var(--zh-sans);font-weight:500;line-height:1.4;letter-spacing:0}
 html[lang="zh-CN"] .section-heading h2{font-size:34px}
 html[lang="zh-CN"] .hero-bio>p{line-height:1.9}
 html[lang="zh-CN"] .hero-bio [lang="zh-CN"]{font-family:var(--zh-sans)}
@@ -129,6 +129,13 @@ html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-heig
 .reviewer-venues{display:flex;flex-wrap:wrap;gap:6px 27px}
 .service-body p{font-family:var(--serif);font-size:25px;line-height:1.5;text-wrap:pretty}
 .honors-section{padding-bottom:37px}
+.personal-section{padding-bottom:38px}
+.personal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.personal-grid article+article{border-left:1px solid var(--line);padding-left:30px}
+.personal-grid h3{font-size:25px;line-height:1.25;margin-bottom:10px}
+.personal-grid p{font-size:14px;line-height:1.8;color:var(--muted)}
+.personal-grid em{font-style:normal;color:var(--ink)}
+@media(max-width:700px){.personal-section{padding-bottom:28px}.personal-grid{grid-template-columns:1fr;gap:18px}.personal-grid article+article{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.personal-grid h3{font-size:24px;margin-bottom:6px}.contact-links{row-gap:4px;column-gap:20px}}
 .honors-section .section-heading{padding-bottom:20px}
 .honors-section ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 42px;margin:0;padding-left:19px;font-size:14px;line-height:1.7}
 html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}
@@ -144,7 +151,7 @@ html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}
         <p class="english-name"><strong>Sherirto</strong> · Ph.D. student</p>
       </div>
     </div>
-    <div class="contact-links"><a class="text-link" href="mailto:csuyh1999@csu.edu.cn">Email <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/sktsherlock">GitHub <span aria-hidden="true">↗</span></a></div>
+    <div class="contact-links"><a class="text-link" href="mailto:csuyh1999@csu.edu.cn">Email <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/sktsherlock">GitHub <span aria-hidden="true">↗</span></a><a class="text-link" href="tel:+8615869732997" aria-label="Call +86 158 6973 2997">+86 158-6973-2997 <span aria-hidden="true">↗</span></a></div>
   </div>
   <div class="about" id="about">
     <div class="about-heading"><h2>About me</h2><p>Central South University<br>Graduating in June 2027</p></div>
@@ -192,4 +199,13 @@ html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}
 <article class="history-entry"><div class="history-entry-top"><div class="organization-logo-frame"><img class="organization-logo" src="../images/homepage/organizations/polyu.png" alt="The Hong Kong Polytechnic University logo" loading="lazy"></div><p class="eyebrow">Sep. 2025–Aug. 2026</p></div><h3>The Hong Kong Polytechnic University</h3><p class="role">Joint Ph.D. Supervision Scheme · funded Research Assistant</p><p class="detail">Joint supervisor: <a href="https://chengqi-zhang.github.io/">Prof. Chengqi Zhang</a>. Additional research supervision: <a href="https://shiruipan.github.io/">Prof. Shirui Pan</a>.</p></article>
 <article class="history-entry"><div class="history-entry-top"><div class="organization-logo-frame"><img class="organization-logo" src="../images/homepage/organizations/hfut.png" alt="Hefei University of Technology logo" loading="lazy"></div><p class="eyebrow">Sep. 2017–Jun. 2021</p></div><h3>Hefei University of Technology</h3><p class="role">B.Sc. in Mathematics and Applied Mathematics</p></article></div><div><h2>Research experience</h2><article class="history-entry"><div class="history-entry-top"><div class="organization-logo-frame organization-logo-frame--company"><img class="organization-logo" src="../images/homepage/organizations/microsoft.svg" alt="Microsoft logo" loading="lazy"></div><p class="eyebrow">Feb. 2023–Jan. 2024 · Remote</p></div><h3>Microsoft STCA</h3><p class="role">Research Intern</p><p class="detail">Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han.</p></article>
 <article class="history-entry"><div class="history-entry-top"><div class="organization-logo-frame organization-logo-frame--company"><img class="organization-logo" src="../images/homepage/organizations/microsoft.svg" alt="Microsoft logo" loading="lazy"></div><p class="eyebrow">Jul. 2022–Jan. 2023</p></div><h3>Microsoft Research Asia</h3><p class="role">Research Intern · Social Computing Group</p><p class="detail">Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.</p></article></div></section><section id="service" class="academic-service" aria-labelledby="service-title"><div class="section-heading"><h2 id="service-title">Academic service</h2><p>2024–2026</p></div><div class="service-body"><h3>Reviewer</h3><p class="reviewer-venues"><span>NeurIPS</span><span>ICLR</span><span>ICML</span><span>KDD</span><span>CIKM</span></p></div></section>
-<section id="recognition" class="honors-section" aria-labelledby="honors-title"><div class="section-heading"><h2 id="honors-title">Selected honors</h2></div><ul><li>National Scholarship for Doctoral Students · 2024, 2025</li><li>Outstanding Student, Central South University · 2025</li><li>First-class Academic Scholarship, Central South University · 2024, 2025</li><li>Microsoft Research Asia Stars of Tomorrow · Feb. 2023</li></ul></section></main><footer id="life" class="footer"><div><p>Hao Yan · Central South University</p><p class="personal">Outside research, I enjoy video creation and editing.</p></div><a href="#name">Back to top ↑</a></footer></div></body></html>
+<section id="recognition" class="honors-section" aria-labelledby="honors-title"><div class="section-heading"><h2 id="honors-title">Selected honors</h2></div><ul><li>National Scholarship for Doctoral Students · 2024, 2025</li><li>Outstanding Student, Central South University · 2025</li><li>First-class Academic Scholarship, Central South University · 2024, 2025</li><li>Microsoft Research Asia Stars of Tomorrow · Feb. 2023</li></ul></section>
+<section id="life" class="personal-section" aria-labelledby="life-title">
+  <div class="section-heading"><h2 id="life-title">Beyond research</h2><p>A few personal interests</p></div>
+  <div class="personal-grid">
+    <article><h3>Video &amp; editing</h3><p>Outside research, I enjoy video creation and editing.</p></article>
+    <article><h3>Animation</h3><p><em>Hyouka</em> and <em>Arcane</em> are among my favorite animated series.</p></article>
+    <article><h3>Games</h3><p>I also enjoy playing <em>League of Legends</em> and <em>Arknights</em>.</p></article>
+  </div>
+</section>
+</main><footer class="footer"><p>Hao Yan · Central South University</p><a href="#name">Back to top ↑</a></footer></div></body></html>

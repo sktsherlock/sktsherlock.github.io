@@ -11,7 +11,7 @@
 /* Selected editorial direction: compact bilingual identity and a readable biography. */
 @font-face{font-family:'Noto Sans SC Name';src:url('../fonts/homepage/NotoSansSC-Name.ttf') format('truetype');font-weight:500;font-display:swap;unicode-range:U+989C,U+6D69}
 .hero{display:block;padding:35px 0 37px}
-.identity-row{display:flex;align-items:center;justify-content:space-between;gap:28px;padding-bottom:30px}
+.identity-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 28px;padding-bottom:30px}
 .identity{display:flex;align-items:center;gap:20px;min-width:0}
 .identity .avatar{width:66px;height:66px;flex-shrink:0}
 .name-line{display:block}
@@ -20,8 +20,8 @@
 .name-separator{font-family:var(--sans);font-size:20px;font-weight:400;color:#8b817b;align-self:center}
 .english-name{font-size:15px;line-height:1.6;color:var(--muted);margin-top:7px}
 .english-name strong{font-weight:500;color:var(--ink)}
-.contact-links{margin:0;gap:22px;flex-shrink:0}
-.contact-links .text-link{padding:9px 0;min-height:44px}
+.contact-links{margin:0;gap:6px 22px;flex-wrap:wrap;max-width:100%}
+.contact-links .text-link{padding:9px 0;min-height:44px;white-space:nowrap}
 .about{display:grid;grid-template-columns:180px minmax(0,1fr);gap:42px;padding-top:28px;border-top:1px solid var(--line)}
 .about-heading h2{font-size:31px;letter-spacing:-.015em}
 .about-heading p{font-size:13px;color:var(--muted);line-height:1.65;margin-top:11px}
@@ -93,7 +93,7 @@ body{background:var(--bg)}
 .display-control[lang="zh-CN"]{font-family:var(--zh-sans)}
 .research-direction{font-size:14px;line-height:1.75;color:var(--muted);margin-top:13px}
 html[lang="zh-CN"] body{font-family:'IBM Plex Sans',var(--zh-sans);line-height:1.8}
-html[lang="zh-CN"] h2,html[lang="zh-CN"] .about h3,html[lang="zh-CN"] .project h3,html[lang="zh-CN"] .history h3,html[lang="zh-CN"] .tools h3{font-family:var(--zh-sans);font-weight:500;line-height:1.4;letter-spacing:0}
+html[lang="zh-CN"] h2,html[lang="zh-CN"] .about h3,html[lang="zh-CN"] .project h3,html[lang="zh-CN"] .history h3,html[lang="zh-CN"] .tools h3,html[lang="zh-CN"] .personal-grid h3{font-family:var(--zh-sans);font-weight:500;line-height:1.4;letter-spacing:0}
 html[lang="zh-CN"] .section-heading h2{font-size:34px}
 html[lang="zh-CN"] .hero-bio>p{line-height:1.9}
 html[lang="zh-CN"] .hero-bio [lang="zh-CN"]{font-family:var(--zh-sans)}
@@ -117,6 +117,13 @@ html[lang="zh-CN"] .paper-copy h3,html[lang="zh-CN"] .archive-paper h3{line-heig
 .reviewer-venues{display:flex;flex-wrap:wrap;gap:6px 27px}
 .service-body p{font-family:var(--serif);font-size:25px;line-height:1.5;text-wrap:pretty}
 .honors-section{padding-bottom:37px}
+.personal-section{padding-bottom:38px}
+.personal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.personal-grid article+article{border-left:1px solid var(--line);padding-left:30px}
+.personal-grid h3{font-size:25px;line-height:1.25;margin-bottom:10px}
+.personal-grid p{font-size:14px;line-height:1.8;color:var(--muted)}
+.personal-grid em{font-style:normal;color:var(--ink)}
+@media(max-width:700px){.personal-section{padding-bottom:28px}.personal-grid{grid-template-columns:1fr;gap:18px}.personal-grid article+article{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.personal-grid h3{font-size:24px;margin-bottom:6px}.contact-links{row-gap:4px;column-gap:20px}}
 .honors-section .section-heading{padding-bottom:20px}
 .honors-section ul{display:grid;grid-template-columns:1fr 1fr;gap:12px 42px;margin:0;padding-left:19px;font-size:14px;line-height:1.7}
 html[lang="zh-CN"] .service-body h3{font-family:var(--zh-sans)}

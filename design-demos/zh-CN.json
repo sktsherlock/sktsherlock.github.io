@@ -1,0 +1,320 @@
+{
+  "replacements": [
+    [
+      "I received my B.Sc. in Mathematics and Applied Mathematics from <strong>Hefei University of Technology</strong> in 2021. Previously, I was a research intern in the Social Computing Group at <strong>Microsoft Research Asia</strong> (July 2022–January 2023), mentored by <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a>, and a remote research intern at <strong>Microsoft STCA</strong> (February 2023–January 2024), mentored by <strong>Weihao Han</strong>.",
+      "我于2021年获得<strong>合肥工业大学</strong>数学与应用数学专业理学学士学位。此前，我曾在<strong>微软亚洲研究院</strong>社会计算组实习（2022年7月至2023年1月），接受 <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a> 的指导；随后在<strong>微软 STCA</strong>远程实习（2023年2月至2024年1月），接受 <strong>Weihao Han</strong> 的指导。"
+    ],
+    [
+      "From September 2025 to August 2026, I participated in the Joint Ph.D. Supervision Scheme at <strong>The Hong Kong Polytechnic University</strong> as a fully funded Research Assistant, supervised by <a href=\"https://chengqi-zhang.github.io/\">Prof. Chengqi Zhang</a>. I also receive research supervision from <a href=\"https://shiruipan.github.io/\">Prof. Shirui Pan</a>.",
+      "2025年9月至2026年8月，我参加了<strong>香港理工大学</strong>博士生联合培养计划，以全额资助科研助理的身份开展研究，接受 <a href=\"https://chengqi-zhang.github.io/\">Chengqi Zhang 教授</a>的指导。同时，我也接受 <a href=\"https://shiruipan.github.io/\">Shirui Pan 教授</a>的研究指导。"
+    ],
+    [
+      "My name is <strong>Hao Yan</strong> (<span lang=\"zh-CN\">颜浩</span>), and I also go by <strong>Sherirto</strong>. I am a Ph.D. student in Computer Science at <strong>Central South University</strong>, under the supervision of <a href=\"https://senzhangwangcsu.github.io/index.html\">Prof. Senzhang Wang</a>. I expect to graduate in <strong>June 2027</strong>.",
+      "我是<span lang=\"zh-CN\">颜浩</span>（<strong>Hao Yan</strong>），英文名为 <strong>Sherirto</strong>。目前是<strong>中南大学</strong>计算机科学专业博士生，师从 <a href=\"https://senzhangwangcsu.github.io/index.html\">Senzhang Wang 教授</a>，预计于<strong>2027年6月</strong>毕业。"
+    ],
+    [
+      "<strong>Open to opportunities.</strong> I am seeking suitable <strong>Research Assistant</strong> and <strong>Algorithm Engineer</strong> positions, with interests in LLMs, agents, and reasoning. I expect to graduate in <strong>June 2027</strong>.",
+      "<strong>寻找工作机会。</strong>我正在寻找合适的<strong>研究助理</strong>和<strong>算法工程师</strong>岗位，关注大语言模型、智能体与推理方向，预计于<strong>2027年6月</strong>毕业。"
+    ],
+    [
+      "Joint supervisor: <a href=\"https://chengqi-zhang.github.io/\">Prof. Chengqi Zhang</a>. Additional research supervision: <a href=\"https://shiruipan.github.io/\">Prof. Shirui Pan</a>.",
+      "联合培养导师：<a href=\"https://chengqi-zhang.github.io/\">Chengqi Zhang 教授</a>；同时接受 <a href=\"https://shiruipan.github.io/\">Shirui Pan 教授</a>的研究指导。"
+    ],
+    [
+      "Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.",
+      "构建五个多模态图数据集，统一评测 GNN-as-Predictor 与 VLM-as-Predictor 两类范式，分析领域差异、模态不平衡和图检索对预测的影响。"
+    ],
+    [
+      "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.",
+      "实现 GLEM 模型的核心代码，开展大规模文本属性图实验，以共同作者身份发表 ICLR 2023 口头报告论文。实习导师：Chaozhuo Li。"
+    ],
+    [
+      "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han.",
+      "主导文本属性图学习的系统性基准评测，以第一作者身份发表 NeurIPS 2023 论文。实习导师：Weihao Han。"
+    ],
+    [
+      "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity.",
+      "结合语义子图提取与跨尺度混合增强，平衡语义一致性和数据增强的多样性。"
+    ],
+    [
+      "Venue ratings follow the <a href=\"https://www.ccf.org.cn/Academic_Evaluation/By_category/\">CCF 2026 catalogue</a>.",
+      "会议与期刊评级依据 <a href=\"https://www.ccf.org.cn/Academic_Evaluation/By_category/\">CCF 2026 版目录</a>。"
+    ],
+    [
+      "Combining generic and task-specific language models to improve representation learning on text-attributed graphs.",
+      "融合通用语言模型与任务专用语言模型，提升文本属性图的表示学习能力。"
+    ],
+    [
+      "Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy.",
+      "在图层次结构中设置同层与跨层对比目标，学习图表示。"
+    ],
+    [
+      "A systematic benchmark for evaluating language models and graph neural networks on text-attributed graphs.",
+      "构建系统性评测基准，比较语言模型与图神经网络在文本属性图上的表现。"
+    ],
+    [
+      "Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.",
+      "通过跨尺度图对比学习，兼顾语义一致性与增强多样性。"
+    ],
+    [
+      "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
+      "我正将研究拓展至大模型推理、智能体系统与循环 Transformer 架构。"
+    ],
+    [
+      "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
+      "由六个节点组成的多模态属性图，以及一个节点对应的鸟类照片和文本描述。"
+    ],
+    [
+      "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
+      "在池化形成的图层次结构上，开展同层与跨层对比学习。"
+    ],
+    [
+      "Generic and task-specific language models meet graph representation learning.",
+      "将通用语言模型、任务专用语言模型与图表示学习相结合。"
+    ],
+    [
+      "Benchmarking language and graph models for text-attributed graph learning.",
+      "面向文本属性图学习，系统评测语言模型与图模型。"
+    ],
+    [
+      "First-class Academic Scholarship, Central South University · 2024, 2025",
+      "中南大学一等学业奖学金 · 2024、2025年"
+    ],
+    [
+      "Joint Ph.D. Supervision Scheme · funded Research Assistant",
+      "博士生联合培养 · 获资助科研助理"
+    ],
+    [
+      "Graph representation learning and graph–language models",
+      "图表示学习与图—语言模型"
+    ],
+    [
+      "Combined M.Sc./Ph.D. in Computer Science and Technology",
+      "计算机科学与技术 · 硕博连读"
+    ],
+    [
+      "National Scholarship for Doctoral Students · 2024, 2025",
+      "博士研究生国家奖学金 · 2024、2025年"
+    ],
+    [
+      "Microsoft Research Asia Stars of Tomorrow · Feb. 2023",
+      "微软亚洲研究院“明日之星” · 2023年2月"
+    ],
+    [
+      "Outside research, I enjoy video creation and editing.",
+      "科研之外，我喜欢视频创作与剪辑。"
+    ],
+    [
+      "Outstanding Student, Central South University · 2025",
+      "中南大学优秀学生 · 2025年"
+    ],
+    [
+      "Large language models, agents, and LLM reasoning",
+      "大语言模型、智能体与大模型推理"
+    ],
+    [
+      "5 first-author papers · 14 publications in total",
+      "5篇第一作者论文 · 共14篇论文"
+    ],
+    [
+      "Looped Transformers and iterative computation",
+      "循环 Transformer 与迭代计算"
+    ],
+    [
+      "B.Sc. in Mathematics and Applied Mathematics",
+      "数学与应用数学 · 理学学士"
+    ],
+    [
+      "The Hong Kong Polytechnic University logo",
+      "香港理工大学标识"
+    ],
+    [
+      "Research Intern · Social Computing Group",
+      "研究实习生 · 社会计算组"
+    ],
+    [
+      "The Hong Kong Polytechnic University",
+      "香港理工大学"
+    ],
+    [
+      "Hefei University of Technology logo",
+      "合肥工业大学标识"
+    ],
+    [
+      "Multimodal learning and robustness",
+      "多模态学习与鲁棒性"
+    ],
+    [
+      "My research interests include:",
+      "我的研究兴趣包括："
+    ],
+    [
+      "Sep. 2021–Jun. 2027 (expected)",
+      "2021年9月—2027年6月（预计）"
+    ],
+    [
+      "Hefei University of Technology",
+      "合肥工业大学"
+    ],
+    [
+      "Advisor: Prof. Senzhang Wang.",
+      "导师：Senzhang Wang 教授。"
+    ],
+    [
+      "Central South University logo",
+      "中南大学标识"
+    ],
+    [
+      "Feb. 2023–Jan. 2024 · Remote",
+      "2023年2月—2024年1月 · 远程"
+    ],
+    [
+      "Hao Yan’s illustrated avatar",
+      "颜浩的插画头像"
+    ],
+    [
+      "Education and experience",
+      "教育与研究经历"
+    ],
+    [
+      "Central South University",
+      "中南大学"
+    ],
+    [
+      "Microsoft Research Asia",
+      "微软亚洲研究院"
+    ],
+    [
+      "Graduating in June 2027",
+      "预计2027年6月毕业"
+    ],
+    [
+      "9 collaborative works",
+      "9篇合作论文"
+    ],
+    [
+      "First-author research",
+      "第一作者论文"
+    ],
+    [
+      "Open full figure for ",
+      "查看完整论文配图："
+    ],
+    [
+      "Sep. 2025–Aug. 2026",
+      "2025年9月—2026年8月"
+    ],
+    [
+      "Sep. 2017–Jun. 2021",
+      "2017年9月—2021年6月"
+    ],
+    [
+      "Jul. 2022–Jan. 2023",
+      "2022年7月—2023年1月"
+    ],
+    [
+      "Research experience",
+      "研究经历"
+    ],
+    [
+      "Display preferences",
+      "显示偏好"
+    ],
+    [
+      "Figure 1 · arXiv v2",
+      "图 1 · arXiv 第2版"
+    ],
+    [
+      "More Publications",
+      "更多论文"
+    ],
+    [
+      " · Ph.D. student",
+      " · 博士研究生"
+    ],
+    [
+      "Academic Profile",
+      "学术主页"
+    ],
+    [
+      "Academic service",
+      "学术服务"
+    ],
+    [
+      "Research Intern",
+      "研究实习生"
+    ],
+    [
+      "Selected honors",
+      "主要荣誉"
+    ],
+    [
+      "Skip to content",
+      "跳至正文"
+    ],
+    [
+      "Main navigation",
+      "主导航"
+    ],
+    [
+      "Microsoft STCA",
+      "微软 STCA"
+    ],
+    [
+      "Microsoft logo",
+      "微软标识"
+    ],
+    [
+      ">Read paper <",
+      ">阅读论文 <"
+    ],
+    [
+      "Back to top ↑",
+      "返回顶部 ↑"
+    ],
+    [
+      ">View code <",
+      ">查看代码 <"
+    ],
+    [
+      " · Accepted<",
+      " · 已录用<"
+    ],
+    [
+      ">Background<",
+      ">经历<"
+    ],
+    [
+      ">Education<",
+      ">教育经历<"
+    ],
+    [
+      ">About me<",
+      ">关于我<"
+    ],
+    [
+      ">Research<",
+      ">论文<"
+    ],
+    [
+      ">Reviewer<",
+      ">审稿人<"
+    ],
+    [
+      ">Service<",
+      ">学术服务<"
+    ],
+    [
+      " · Oral<",
+      " · 口头报告<"
+    ],
+    [
+      ">Email <",
+      ">邮箱 <"
+    ],
+    [
+      ">About<",
+      ">关于<"
+    ]
+  ]
+}

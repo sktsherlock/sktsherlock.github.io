@@ -77,16 +77,8 @@
       "面向文本属性图学习，系统评测语言模型与图模型。"
     ],
     [
-      "<em>Hyouka</em> and <em>Arcane</em> are among my favorite animated series.",
-      "我喜欢的动画作品包括<em>《冰菓》</em>和<em>《双城之战》</em>。"
-    ],
-    [
       "First-class Academic Scholarship, Central South University · 2024, 2025",
       "中南大学一等学业奖学金 · 2024、2025年"
-    ],
-    [
-      "I also enjoy playing <em>League of Legends</em> and <em>Arknights</em>.",
-      "游戏方面，我喜欢<em>《英雄联盟》</em>和<em>《明日方舟》</em>。"
     ],
     [
       "Joint Ph.D. Supervision Scheme · funded Research Assistant",
@@ -117,6 +109,10 @@
       "中南大学优秀学生 · 2025年"
     ],
     [
+      "Hyouka characters walking beneath cherry blossoms",
+      "《冰菓》角色走在樱花树下"
+    ],
+    [
       "Large language models, agents, and LLM reasoning",
       "大语言模型、智能体与大模型推理"
     ],
@@ -129,8 +125,16 @@
       "循环 Transformer 与迭代计算"
     ],
     [
+      "Arcane ensemble artwork with the series title",
+      "《双城之战》角色群像与剧名字标"
+    ],
+    [
       "B.Sc. in Mathematics and Applied Mathematics",
       "数学与应用数学 · 理学学士"
+    ],
+    [
+      "<figcaption>League of Legends</figcaption>",
+      "<figcaption>英雄联盟</figcaption>"
     ],
     [
       "The Hong Kong Polytechnic University logo",
@@ -139,6 +143,10 @@
     [
       "Research Intern · Social Computing Group",
       "研究实习生 · 社会计算组"
+    ],
+    [
+      "League of Legends gold and teal emblem",
+      "《英雄联盟》金色与青色标识"
     ],
     [
       "The Hong Kong Polytechnic University",
@@ -151,6 +159,18 @@
     [
       "Multimodal learning and robustness",
       "多模态学习与鲁棒性"
+    ],
+    [
+      "<figcaption>Arknights</figcaption>",
+      "<figcaption>明日方舟</figcaption>"
+    ],
+    [
+      "<figcaption>Hyouka</figcaption>",
+      "<figcaption>冰菓</figcaption>"
+    ],
+    [
+      "<figcaption>Arcane</figcaption>",
+      "<figcaption>双城之战</figcaption>"
     ],
     [
       "My research interests include:",
@@ -181,6 +201,10 @@
       "颜浩的插画头像"
     ],
     [
+      "View League of Legends icon",
+      "查看《英雄联盟》图标"
+    ],
+    [
       "Education and experience",
       "教育与研究经历"
     ],
@@ -191,6 +215,10 @@
     [
       "A few personal interests",
       "我的一些兴趣爱好"
+    ],
+    [
+      "Arknights character icon",
+      "《明日方舟》角色图标"
     ],
     [
       "Microsoft Research Asia",
@@ -241,8 +269,20 @@
       "图 1 · arXiv 第2版"
     ],
     [
-      "Video &amp; editing",
-      "视频与剪辑"
+      "View Hyouka artwork",
+      "查看《冰菓》原图"
+    ],
+    [
+      "View Arcane artwork",
+      "查看《双城之战》原图"
+    ],
+    [
+      "View Arknights icon",
+      "查看《明日方舟》图标"
+    ],
+    [
+      "Favorite animation",
+      "喜欢的动画"
     ],
     [
       "More Publications",
@@ -289,6 +329,10 @@
       "微软标识"
     ],
     [
+      "Favorite games",
+      "喜欢的游戏"
+    ],
+    [
       ">Read paper <",
       ">阅读论文 <"
     ],
@@ -311,10 +355,6 @@
     [
       ">Education<",
       ">教育经历<"
-    ],
-    [
-      ">Animation<",
-      ">动画<"
     ],
     [
       ">About me<",
@@ -343,10 +383,6 @@
     [
       ">About<",
       ">关于<"
-    ],
-    [
-      ">Games<",
-      ">游戏<"
     ]
   ]
 }

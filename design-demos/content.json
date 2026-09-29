@@ -234,11 +234,31 @@
     },
     {
       "title": "Animation",
-      "description": "Hyouka and Arcane are among my favorite animated series."
+      "description": "Hyouka and Arcane are among my favorite animated series.",
+      "artwork": [
+        {
+          "name": "Hyouka",
+          "image": "../images/冰菓图片1.jpg"
+        },
+        {
+          "name": "Arcane",
+          "image": "../images/Arcane3.jpg"
+        }
+      ]
     },
     {
       "title": "Games",
-      "description": "I also enjoy playing League of Legends and Arknights."
+      "description": "I also enjoy playing League of Legends and Arknights.",
+      "artwork": [
+        {
+          "name": "League of Legends",
+          "image": "../images/league-of-legends.png"
+        },
+        {
+          "name": "Arknights",
+          "image": "../images/Arknights.png"
+        }
+      ]
     }
   ]
 }

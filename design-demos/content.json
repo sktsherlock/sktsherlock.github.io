@@ -180,19 +180,28 @@
       "date": "Sep. 2021–Jun. 2027 (expected)",
       "role": "Combined M.Sc./Ph.D. in Computer Science and Technology",
       "description": "Advisor: Prof. Senzhang Wang.",
-      "link": "https://senzhangwangcsu.github.io/index.html"
+      "link": "https://senzhangwangcsu.github.io/index.html",
+      "photo": "../images/homepage/places/csu-gallery.jpg",
+      "photoSource": "https://jyxybgs.csu.edu.cn/xyfg.htm",
+      "photoCaption": "Central South University campus"
     },
     {
       "organization": "The Hong Kong Polytechnic University",
       "date": "Sep. 2025–Aug. 2026",
       "role": "Joint Ph.D. Supervision Scheme · funded Research Assistant",
-      "description": "Joint supervisor: Prof. Chengqi Zhang. Additional research supervision: Prof. Shirui Pan."
+      "description": "Joint supervisor: Prof. Chengqi Zhang. Additional research supervision: Prof. Shirui Pan.",
+      "photo": "../images/homepage/places/polyu-campus.jpg",
+      "photoSource": "https://www.polyu.edu.hk/publications/excel/issue/201910/snapshots/where-does-polyu-s-signature-red-brick-architecture-come-from",
+      "photoCaption": "PolyU campus"
     },
     {
       "organization": "Hefei University of Technology",
       "date": "Sep. 2017–Jun. 2021",
       "role": "B.Sc. in Mathematics and Applied Mathematics",
-      "description": ""
+      "description": "",
+      "photo": "../images/homepage/places/hfut-campus.jpg",
+      "photoSource": "https://international.hfut.edu.cn/en/info/1051/1073.htm",
+      "photoCaption": "HFUT · Tunxi Road campus"
     }
   ],
   "experience": [
@@ -200,13 +209,19 @@
       "organization": "Microsoft STCA",
       "date": "Feb. 2023–Jan. 2024 · Remote",
       "role": "Research Intern",
-      "description": "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han."
+      "description": "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han.",
+      "photo": "../images/homepage/places/microsoft-beijing.jpg",
+      "photoSource": "https://careers.microsoft.com/v2/global/en/locations/beijing.html",
+      "photoCaption": "Microsoft Beijing campus · institution photo"
     },
     {
       "organization": "Microsoft Research Asia",
       "date": "Jul. 2022–Jan. 2023",
       "role": "Research Intern · Social Computing Group",
-      "description": "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li."
+      "description": "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.",
+      "photo": "../images/homepage/places/msra-building.jpg",
+      "photoSource": "https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/",
+      "photoCaption": "Microsoft Research Asia · Beijing"
     }
   ],
   "awards": [

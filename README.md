@@ -34,11 +34,11 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 
 ## Identity and organization images
 
-The portrait and favicon are optimized web-size copies of the user-supplied anime avatar. Institutional marks are unaltered assets from official CSU, PolyU, HFUT, and Microsoft sources; see `design-demos/organization-assets.md`. Preserve their aspect ratios and colors, with a white logo area in both themes. The two Microsoft internships remain distinct entries.
+The portrait and favicon are optimized web-size copies of the user-supplied anime avatar. Institutional marks are unaltered assets from official CSU, PolyU, HFUT, and Microsoft sources; see `design-demos/organization-assets.md`. Preserve their aspect ratios and colors, with a white logo area in both themes. The two Microsoft internships remain distinct entries. Campus and institution photographs lead the entries, with the logos retained as smaller identifiers. Every photograph links to its official source; see `design-demos/campus-assets.md`. STCA remains explicitly remote, and its Beijing-campus photograph is labeled as institutional context.
 
 ## Typography
 
-Newsreader and IBM Plex Sans are self-hosted under `fonts/homepage/`, with their OFL licenses. The Chinese name prefers the installed PingFang SC font on Apple devices. A small, licensed Noto Sans SC subset containing only 颜浩 provides a consistent fallback elsewhere. It is not a general Chinese body font; regenerate the subset if changing the Chinese name.
+The masthead retains self-hosted Newsreader. Section titles, publication titles, and body text use a platform sans-serif stack: Apple system fonts on Apple devices, Segoe UI on Windows, with PingFang SC / Microsoft YaHei Chinese fallbacks. The section/body scale is 28/16 px on desktop and 25/16 px on mobile; publication titles are 20–21 px. IBM Plex Sans remains in the repository as a historical asset; its OFL license is retained. No Apple font files are redistributed. The Chinese name prefers the installed PingFang SC font on Apple devices. A small, licensed Noto Sans SC subset containing only 颜浩 provides a consistent fallback elsewhere. It is not a general Chinese body font; regenerate the subset if changing the Chinese name.
 
 The selected editorial design was developed with huashu-design. Font hierarchy was refined with the [Apple design analysis](https://getdesign.md/apple/design-md) as a reference; the [Apple system font list](https://developer.apple.com/fonts/system-fonts/) identifies PingFang SC. This site is not affiliated with Apple or Distill.
 

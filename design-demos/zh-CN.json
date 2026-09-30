@@ -65,6 +65,10 @@
       "由六个节点组成的多模态属性图，以及一个节点对应的鸟类照片和文本描述。"
     ],
     [
+      "<span class=\"honor-name\">First-class Academic Scholarship, Central South University</span>",
+      "<span class=\"honor-name\">中南大学一等学业奖学金</span>"
+    ],
+    [
       "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
       "在池化形成的图层次结构上，开展同层与跨层对比学习。"
     ],
@@ -73,12 +77,36 @@
       "将通用语言模型、任务专用语言模型与图表示学习相结合。"
     ],
     [
+      "<span class=\"honor-name\">Outstanding Student, Central South University</span>",
+      "<span class=\"honor-name\">中南大学优秀学生</span>"
+    ],
+    [
       "Benchmarking language and graph models for text-attributed graph learning.",
       "面向文本属性图学习，系统评测语言模型与图模型。"
     ],
     [
+      "<span class=\"honor-name\">National Scholarship for Doctoral Students</span>",
+      "<span class=\"honor-name\">博士研究生国家奖学金</span>"
+    ],
+    [
+      "<span class=\"honor-name\">Microsoft Research Asia Stars of Tomorrow</span>",
+      "<span class=\"honor-name\">微软亚洲研究院“明日之星”</span>"
+    ],
+    [
+      "Central South University campus with a bridge, lake, and flowering trees",
+      "中南大学校园中的桥、湖面与开花的树木"
+    ],
+    [
       "First-class Academic Scholarship, Central South University · 2024, 2025",
       "中南大学一等学业奖学金 · 2024、2025年"
+    ],
+    [
+      "Red-brick campus architecture at The Hong Kong Polytechnic University",
+      "香港理工大学的红砖校园建筑"
+    ],
+    [
+      "Main building at Hefei University of Technology, Tunxi Road campus",
+      "合肥工业大学屯溪路校区主楼"
     ],
     [
       "Joint Ph.D. Supervision Scheme · funded Research Assistant",
@@ -103,6 +131,10 @@
     [
       "Outside research, I enjoy video creation and editing.",
       "科研之外，我喜欢视频创作与剪辑。"
+    ],
+    [
+      "Microsoft Research Asia building illuminated at night",
+      "夜间灯光下的微软亚洲研究院大楼"
     ],
     [
       "Outstanding Student, Central South University · 2025",
@@ -133,12 +165,24 @@
       "数学与应用数学 · 理学学士"
     ],
     [
+      "Microsoft Beijing campus · institution photo",
+      "微软北京园区 · 机构配图"
+    ],
+    [
       "<figcaption>League of Legends</figcaption>",
       "<figcaption>英雄联盟</figcaption>"
     ],
     [
       "The Hong Kong Polytechnic University logo",
       "香港理工大学标识"
+    ],
+    [
+      "Microsoft Beijing campus building at dusk",
+      "暮色中的微软北京园区大楼"
+    ],
+    [
+      "<span class=\"honor-date\">Feb. 2023</span>",
+      "<span class=\"honor-date\">2023 年 2 月</span>"
     ],
     [
       "Research Intern · Social Computing Group",
@@ -165,12 +209,20 @@
       "<figcaption>明日方舟</figcaption>"
     ],
     [
+      "Microsoft Research Asia · Beijing",
+      "微软亚洲研究院 · 北京"
+    ],
+    [
       "<figcaption>Hyouka</figcaption>",
       "<figcaption>冰菓</figcaption>"
     ],
     [
       "<figcaption>Arcane</figcaption>",
       "<figcaption>双城之战</figcaption>"
+    ],
+    [
+      "Central South University campus",
+      "中南大学校园"
     ],
     [
       "My research interests include:",
@@ -219,6 +271,10 @@
     [
       "Arknights character icon",
       "《明日方舟》角色图标"
+    ],
+    [
+      "HFUT · Tunxi Road campus",
+      "合肥工业大学 · 屯溪路校区"
     ],
     [
       "Microsoft Research Asia",
@@ -333,6 +389,10 @@
       "喜欢的游戏"
     ],
     [
+      "Photo source: ",
+      "图片来源："
+    ],
+    [
       ">Read paper <",
       ">阅读论文 <"
     ],
@@ -351,6 +411,10 @@
     [
       ">Background<",
       ">经历<"
+    ],
+    [
+      "PolyU campus",
+      "香港理工大学校园"
     ],
     [
       ">Education<",

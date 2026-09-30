@@ -103,7 +103,7 @@ async function academicContent(page, name) {
       for (const paper of content.publications) assert(text.includes(normalize(paper.title)), `${name}: missing publication ${paper.id}`);
       assert(text.includes('2027'), `${name}: graduation missing`);
       if (name === 'editorial') {
-        for (const fact of ['Sherirto', 'Senzhang Wang', 'Chengqi Zhang', 'Shirui Pan', 'July 2022', 'June 2027']) assert(text.includes(normalize(fact)), `Missing confirmed biographical fact: ${fact}`);
+        for (const fact of ['Sherirto', 'Senzhang Wang', 'Chengqi Zhang', 'Shirui Pan', 'Jul. 2022', 'June 2027']) assert(text.includes(normalize(fact)), `Missing confirmed biographical fact: ${fact}`);
         for (const paper of content.publications) {
           const item = page.locator(`article[id="${paper.id}"]`);
           assert.equal(await item.count(), 1, `Publication missing or duplicated: ${paper.id}`);

@@ -1,7 +1,15 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { renderLife, renderCorner } from './homepage-corner.mjs';
 
 const root = new URL('../', import.meta.url);
 let html = await readFile(new URL('design-demos/editorial.html', root), 'utf8');
+// The personal corner shares its verified interest record with the static section.
+html = html.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/, renderLife());
+html = html.replace(/<dialog id="personal-corner"[\s\S]*?<\/dialog><div class="style-notice"[\s\S]*?<\/div>/, '');
+html = html.replace('</body>', renderCorner() + '</body>');
+if (!html.includes('homepage-corner.css')) html = html.replace('</head>', '<link rel="stylesheet" href="../css/homepage-corner.css"><script src="../js/homepage-corner.js" defer></script></head>');
+if (!html.includes('id="personal-corner-trigger"')) html = html.replace(/(<img class="avatar"[^>]*>)/, '<a id="personal-corner-trigger" class="avatar-link" href="#life" aria-label="Explore Sherirto’s personal interests" title="A little detour">$1</a>');
+if (!html.includes('id="style-lab-trigger"')) html = html.replace('<a href="#name">Back to top ↑</a>', '<div class="footer-detour"><button type="button" id="style-lab-trigger" class="footer-style-trigger" hidden>Style lab</button><a href="#name">Back to top ↑</a></div>');
 const content = JSON.parse(await readFile(new URL('design-demos/content.json', root), 'utf8'));
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const authors = value => escape(value).replace(/\bHao Yan\b/g, '<strong>Hao Yan</strong>');
@@ -36,6 +44,7 @@ html = html.replace(/<!--[\s\S]*?-->/g, '')
   .replace(/<meta name="robots" content="[^"]*">/, '')
   .replace(/<style>[\s\S]*?<\/style>/, '<link rel="stylesheet" href="css/homepage.css">')
   .replaceAll('../js/', 'js/')
+  .replaceAll('../css/', 'css/')
   .replaceAll('../images/', 'images/');
 const metadata = `
 <link rel="canonical" href="https://sktsherlock.github.io/">
@@ -61,6 +70,11 @@ await writeFile(new URL('index.html', root), html.trim() + '\n');
 const chinese = JSON.parse(await readFile(new URL('design-demos/zh-CN.json', root), 'utf8'));
 let zh = html;
 for (const [english, translation] of chinese.replacements) zh = zh.replaceAll(english, translation);
+zh = zh.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/, renderLife('zh'))
+  .replace(/<dialog id="personal-corner"[\s\S]*?<\/dialog><div class="style-notice"[\s\S]*?<\/div>/, renderCorner('zh'))
+  .replace('aria-label="Explore Sherirto’s personal interests" title="A little detour"', 'aria-label="探索 Sherirto 的个人兴趣" title="一个小惊喜"')
+  .replace('class="footer-style-trigger" hidden>Style lab', 'class="footer-style-trigger" hidden>风格实验室');
+zh = zh.replace(/(<section id="life"[^>]*>)/, '$1<span id="-after-research" class="legacy-anchor" aria-hidden="true"></span>');
 zh = zh.replace('<html lang="en">', '<html lang="zh-CN">')
   .replace(/<title>.*?<\/title>/, '<title>颜浩 Hao Yan · Sherirto · 学术主页</title>')
   .replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="颜浩（Hao Yan / Sherirto），中南大学博士生，研究图与语言模型、多模态学习，正拓展至大模型推理、智能体和循环 Transformer，寻找研究助理与算法工程师岗位。">')

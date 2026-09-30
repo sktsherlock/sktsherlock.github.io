@@ -2,6 +2,7 @@
   'use strict';
 
   var THEME_KEY = 'homepage-theme';
+  var STYLE_KEY = 'homepage-style';
   var LANGUAGE_KEY = 'homepage-language';
   var root = document.documentElement;
   var themeButton;
@@ -25,6 +26,9 @@
   }
 
   var savedTheme = readPreference(THEME_KEY);
+  var savedStyle = readPreference(STYLE_KEY);
+  root.dataset.style = ['editorial', 'apple', 'claude', 'linear', 'spotify'].indexOf(savedStyle) >= 0
+    ? savedStyle : 'editorial';
   var themeOverride = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : null;
   var systemTheme = typeof window.matchMedia === 'function'
     ? window.matchMedia('(prefers-color-scheme: dark)')

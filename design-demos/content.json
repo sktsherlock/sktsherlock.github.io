@@ -19,7 +19,7 @@
       "venue": "KDD 2025",
       "selected": true,
       "image": "../images/homepage/magb-data-example-arxiv-v2.png",
-      "summary": "Five multimodal graph datasets and a unified evaluation of GNN-as-Predictor and VLM-as-Predictor, examining how domain, modality imbalance, and graph retrieval affect prediction.",
+      "summary": "Introduces five multimodal graph datasets and a unified comparison of GNN- and VLM-based predictors, examining the effects of domain, modality imbalance, and graph retrieval.",
       "paper": "https://doi.org/10.1145/3711896.3737404",
       "firstAuthor": true,
       "ccf": "A",
@@ -35,12 +35,13 @@
       "venue": "WSDM 2025 · Oral",
       "selected": true,
       "image": "../images/MokGNN.jpg",
-      "summary": "Combining generic and task-specific language models to improve representation learning on text-attributed graphs.",
+      "summary": "Combines general-purpose language knowledge with task-specific text representations to improve learning on text-attributed graphs.",
       "code": "https://github.com/sktsherlock/MoKGNN",
       "firstAuthor": true,
       "ccf": "B",
       "caption": "Generic and task-specific language models meet graph representation learning.",
-      "year": 2025
+      "year": 2025,
+      "paper": "https://doi.org/10.1145/3701551.3703571"
     },
     {
       "id": "cake",
@@ -53,7 +54,7 @@
       "image": "../images/TKDD.jpg",
       "paper": "https://doi.org/10.1145/3728646",
       "caption": "Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.",
-      "summary": "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity.",
+      "summary": "Uses semantic subgraphs and cross-scale mix-up to balance diverse graph augmentations with preservation of semantic information.",
       "year": 2025
     },
     {
@@ -63,12 +64,13 @@
       "venue": "NeurIPS 2023",
       "selected": true,
       "image": "../images/CSTAG.png",
-      "summary": "A systematic benchmark for evaluating language models and graph neural networks on text-attributed graphs.",
+      "summary": "Introduces CS-TAG, a benchmark with standardized evaluation for language models, graph neural networks, and their combinations on text-attributed graphs.",
       "paper": "https://papers.neurips.cc/paper_files/paper/2023/file/37d00f567a18b478065f1a91b95622a0-Paper-Datasets_and_Benchmarks.pdf",
       "firstAuthor": true,
       "ccf": "A",
       "caption": "Benchmarking language and graph models for text-attributed graph learning.",
-      "year": 2023
+      "year": 2023,
+      "code": "https://github.com/sktsherlock/TAG-Benchmark"
     },
     {
       "id": "higcl",
@@ -81,7 +83,7 @@
       "ccf": "B",
       "image": "../images/HIGCL.jpg",
       "caption": "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
-      "summary": "Learning graph representations with contrastive objectives both within and across levels of a graph hierarchy.",
+      "summary": "Learns graph representations at multiple scales through contrastive objectives both within and across levels of a graph hierarchy.",
       "year": 2023
     },
     {
@@ -239,7 +241,7 @@
   },
   "ccfSource": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
   "ccfEdition": "2026 (7th edition)",
-  "researchDirection": "I am extending my research toward LLM reasoning, agent systems, and looped Transformer architectures.",
+  "researchDirection": "I am extending this foundation toward LLM reasoning, agents, and looped Transformers.",
   "avatar": "../images/homepage/hao-avatar.webp",
   "phone": "+86 158-6973-2997",
   "personalInterests": [
@@ -275,5 +277,6 @@
         }
       ]
     }
-  ]
+  ],
+  "researchStatement": "My work brings together graph structure, language, and multimodal information. I develop benchmarks and representation learning methods to study how these sources of information complement one another."
 }

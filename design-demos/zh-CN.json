@@ -9,12 +9,28 @@
       "2025年9月至2026年8月，我参加了<strong>香港理工大学</strong>博士生联合培养计划，以全额资助科研助理的身份开展研究，接受 <a href=\"https://chengqi-zhang.github.io/\">Chengqi Zhang 教授</a>的指导。同时，我也接受 <a href=\"https://shiruipan.github.io/\">Shirui Pan 教授</a>的研究指导。"
     ],
     [
+      "From September 2025 to August 2026, I joined the Joint Ph.D. Supervision Scheme at <strong>The Hong Kong Polytechnic University</strong> as a fully funded Research Assistant, supervised by <a href=\"https://chengqi-zhang.github.io/\">Prof. Chengqi Zhang</a>. I also receive research supervision from <a href=\"https://shiruipan.github.io/\">Prof. Shirui Pan</a>.",
+      "2025年9月至2026年8月，我参加了<strong>香港理工大学</strong>博士生联合培养计划，以全额资助科研助理的身份开展研究，接受 <a href=\"https://chengqi-zhang.github.io/\">Chengqi Zhang 教授</a>的指导。同时，我也接受 <a href=\"https://shiruipan.github.io/\">Shirui Pan 教授</a>的研究指导。"
+    ],
+    [
       "My name is <strong>Hao Yan</strong> (<span lang=\"zh-CN\">颜浩</span>), and I also go by <strong>Sherirto</strong>. I am a Ph.D. student in Computer Science at <strong>Central South University</strong>, under the supervision of <a href=\"https://senzhangwangcsu.github.io/index.html\">Prof. Senzhang Wang</a>. I expect to graduate in <strong>June 2027</strong>.",
       "我是<span lang=\"zh-CN\">颜浩</span>（<strong>Hao Yan</strong>），英文名为 <strong>Sherirto</strong>。目前是<strong>中南大学</strong>计算机科学专业博士生，师从 <a href=\"https://senzhangwangcsu.github.io/index.html\">Senzhang Wang 教授</a>，预计于<strong>2027年6月</strong>毕业。"
     ],
     [
+      "Previously, I interned at <strong>Microsoft Research Asia</strong> and <strong>Microsoft STCA</strong> (remote), mentored by <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a> and <strong>Weihao Han</strong>, respectively. I received my B.Sc. in Mathematics from <strong>Hefei University of Technology</strong> in 2021.",
+      "此前，我曾在<strong>微软亚洲研究院</strong>和<strong>微软 STCA</strong>（远程）实习，分别接受 <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a> 和 <strong>Weihao Han</strong> 的指导。我于2021年获得<strong>合肥工业大学</strong>数学与应用数学专业理学学士学位。"
+    ],
+    [
       "<strong>Open to opportunities.</strong> I am seeking suitable <strong>Research Assistant</strong> and <strong>Algorithm Engineer</strong> positions, with interests in LLMs, agents, and reasoning. I expect to graduate in <strong>June 2027</strong>.",
       "<strong>寻找工作机会。</strong>我正在寻找合适的<strong>研究助理</strong>和<strong>算法工程师</strong>岗位，关注大语言模型、智能体与推理方向，预计于<strong>2027年6月</strong>毕业。"
+    ],
+    [
+      "I am a Ph.D. student in Computer Science at <strong>Central South University</strong>, advised by <a href=\"https://senzhangwangcsu.github.io/index.html\">Prof. Senzhang Wang</a>. I expect to graduate in <strong>June 2027</strong>.",
+      "目前，我是<strong>中南大学</strong>计算机科学专业博士生，师从 <a href=\"https://senzhangwangcsu.github.io/index.html\">Senzhang Wang 教授</a>，预计于<strong>2027年6月</strong>毕业。"
+    ],
+    [
+      "My work brings together <strong>graph structure, language, and multimodal information</strong>. I develop benchmarks and representation learning methods to study how these sources of information complement one another.",
+      "我的研究围绕<strong>图结构、语言与多模态信息</strong>展开，通过构建评测基准和设计表示学习方法，探索不同信息来源如何相互补充。"
     ],
     [
       "Joint supervisor: <a href=\"https://chengqi-zhang.github.io/\">Prof. Chengqi Zhang</a>. Additional research supervision: <a href=\"https://shiruipan.github.io/\">Prof. Shirui Pan</a>.",
@@ -25,12 +41,36 @@
       "构建五个多模态图数据集，统一评测 GNN-as-Predictor 与 VLM-as-Predictor 两类范式，分析领域差异、模态不平衡和图检索对预测的影响。"
     ],
     [
+      "Introduces five multimodal graph datasets and a unified comparison of GNN- and VLM-based predictors, examining the effects of domain, modality imbalance, and graph retrieval.",
+      "构建五个多模态图数据集，在统一协议下比较 GNN 与 VLM 两类预测范式，分析领域差异、模态不平衡及图检索的影响。"
+    ],
+    [
+      "<strong>Open to opportunities.</strong> I am seeking <strong>Research Assistant</strong> and <strong>Algorithm Engineer</strong> positions in LLMs, agents, and reasoning.",
+      "<strong>寻找工作机会。</strong>我正在寻找大语言模型、智能体与推理方向的<strong>研究助理</strong>和<strong>算法工程师</strong>岗位。"
+    ],
+    [
+      "Introduces CS-TAG, a benchmark with standardized evaluation for language models, graph neural networks, and their combinations on text-attributed graphs.",
+      "提出 CS-TAG 基准，通过标准化评测比较语言模型、图神经网络及其结合方式在文本属性图上的表现。"
+    ],
+    [
       "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.",
       "实现 GLEM 模型的核心代码，开展大规模文本属性图实验，以共同作者身份发表 ICLR 2023 口头报告论文。实习导师：Chaozhuo Li。"
     ],
     [
       "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han.",
       "主导文本属性图学习的系统性基准评测，以第一作者身份发表 NeurIPS 2023 论文。实习导师：Weihao Han。"
+    ],
+    [
+      "Combines general-purpose language knowledge with task-specific text representations to improve learning on text-attributed graphs.",
+      "融合通用语言知识与任务专用文本表示，提升文本属性图上的学习效果。"
+    ],
+    [
+      "Learns graph representations at multiple scales through contrastive objectives both within and across levels of a graph hierarchy.",
+      "在图层次结构中设置同层与跨层对比目标，学习不同尺度的图表示。"
+    ],
+    [
+      "Uses semantic subgraphs and cross-scale mix-up to balance diverse graph augmentations with preservation of semantic information.",
+      "通过语义子图与跨尺度混合增强，在丰富图增强方式的同时保留语义信息。"
     ],
     [
       "Combining semantic subgraph extraction and cross-scale mix-up to balance semantic consistency with augmentation diversity.",
@@ -69,6 +109,14 @@
       "<span class=\"honor-name\">中南大学一等学业奖学金</span>"
     ],
     [
+      "I am extending this foundation toward LLM reasoning, agents, and looped Transformers.",
+      "在上述研究基础上，我正进一步探索大模型推理、智能体与循环 Transformer。"
+    ],
+    [
+      "How can graph views preserve semantics while capturing structure at different scales?",
+      "如何在保留语义的同时，学习不同尺度的图结构？"
+    ],
+    [
       "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
       "在池化形成的图层次结构上，开展同层与跨层对比学习。"
     ],
@@ -101,12 +149,20 @@
       "中南大学一等学业奖学金 · 2024、2025年"
     ],
     [
+      "How should text, images, and graph structure be combined and evaluated?",
+      "如何融合文本、图像与图结构，并系统评测其作用？"
+    ],
+    [
       "Red-brick campus architecture at The Hong Kong Polytechnic University",
       "香港理工大学的红砖校园建筑"
     ],
     [
       "Main building at Hefei University of Technology, Tunxi Road campus",
       "合肥工业大学屯溪路校区主楼"
+    ],
+    [
+      "How can language models and graph structure complement each other?",
+      "语言模型与图结构如何相互补充？"
     ],
     [
       "Joint Ph.D. Supervision Scheme · funded Research Assistant",
@@ -245,6 +301,10 @@
       "中南大学标识"
     ],
     [
+      "Graph representation learning",
+      "图表示学习"
+    ],
+    [
       "Feb. 2023–Jan. 2024 · Remote",
       "2023年2月—2024年1月 · 远程"
     ],
@@ -253,8 +313,16 @@
       "颜浩的插画头像"
     ],
     [
+      "Education &amp; experience ↓",
+      "教育与研究经历 ↓"
+    ],
+    [
       "View League of Legends icon",
       "查看《英雄联盟》图标"
+    ],
+    [
+      "Multimodal graph learning",
+      "多模态图学习"
     ],
     [
       "Education and experience",
@@ -283,6 +351,10 @@
     [
       "Graduating in June 2027",
       "预计2027年6月毕业"
+    ],
+    [
+      "Graph–language learning",
+      "图与语言模型"
     ],
     [
       "Call +86 158 6973 2997",
@@ -393,6 +465,14 @@
       "图片来源："
     ],
     [
+      "Research focus",
+      "研究主线"
+    ],
+    [
+      "Exploring next",
+      "正在探索"
+    ],
+    [
       ">Read paper <",
       ">阅读论文 <"
     ],
@@ -433,8 +513,16 @@
       ">审稿人<"
     ],
     [
+      "Read paper",
+      "阅读论文"
+    ],
+    [
       ">Service<",
       ">学术服务<"
+    ],
+    [
+      "View code",
+      "查看代码"
     ],
     [
       " · Oral<",

@@ -6,8 +6,9 @@
   "bio": "My name is Hao Yan (颜浩), and I also go by Sherirto. I am a Ph.D. student in Computer Science at Central South University, supervised by Prof. Senzhang Wang, with expected graduation in June 2027. From September 2025 to August 2026, I participated in the Joint Ph.D. Supervision Scheme at The Hong Kong Polytechnic University as a fully funded Research Assistant, supervised by Prof. Chengqi Zhang. I also receive research supervision from Prof. Shirui Pan.",
   "availability": "Seeking suitable Research Assistant and Algorithm Engineer positions, with interests in LLMs, agents, and reasoning. Expected graduation: June 2027.",
   "topics": [
-    "Graph representation learning and graph–language models",
-    "Multimodal learning and robustness",
+    "Graph contrastive learning with sparse labels",
+    "Text- and multimodal-attributed graph learning",
+    "Graph–LLM architectures",
     "Large language models, agents, and LLM reasoning",
     "Looped Transformers and iterative computation"
   ],
@@ -278,5 +279,5 @@
       ]
     }
   ],
-  "researchStatement": "My work brings together graph structure, language, and multimodal information. I develop benchmarks and representation learning methods to study how these sources of information complement one another."
+  "researchStatement": "My research began with graph contrastive learning under sparse supervision and has expanded to text- and multimodal-attributed graphs. I develop learning methods and benchmarks, and am now moving toward Graph–LLM architectures."
 }

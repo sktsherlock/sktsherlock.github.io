@@ -27,7 +27,9 @@
       "caption": "A six-node multimodal graph and an expanded node showing a bird photograph with its text description.",
       "code": "https://github.com/sktsherlock/MAGB",
       "figureLabel": "Figure 1 · arXiv v2",
-      "year": 2025
+      "year": 2025,
+      "shortName": "MAGB",
+      "thumbnail": "../images/homepage/previews/magb.webp"
     },
     {
       "id": "mokgnn",
@@ -42,7 +44,9 @@
       "ccf": "B",
       "caption": "Generic and task-specific language models meet graph representation learning.",
       "year": 2025,
-      "paper": "https://doi.org/10.1145/3701551.3703571"
+      "paper": "https://doi.org/10.1145/3701551.3703571",
+      "shortName": "MoKGNN",
+      "thumbnail": "../images/homepage/previews/mokgnn.webp"
     },
     {
       "id": "cake",
@@ -56,7 +60,9 @@
       "paper": "https://doi.org/10.1145/3728646",
       "caption": "Balancing semantic consistency and augmentation diversity through cross-scale graph contrastive learning.",
       "summary": "Uses semantic subgraphs and cross-scale mix-up to balance diverse graph augmentations with preservation of semantic information.",
-      "year": 2025
+      "year": 2025,
+      "shortName": "CAKE",
+      "thumbnail": "../images/homepage/previews/cake.webp"
     },
     {
       "id": "tag",
@@ -71,7 +77,9 @@
       "ccf": "A",
       "caption": "Benchmarking language and graph models for text-attributed graph learning.",
       "year": 2023,
-      "code": "https://github.com/sktsherlock/TAG-Benchmark"
+      "code": "https://github.com/sktsherlock/TAG-Benchmark",
+      "shortName": "CS-TAG",
+      "thumbnail": "../images/homepage/previews/tag.webp"
     },
     {
       "id": "higcl",
@@ -85,7 +93,9 @@
       "image": "../images/HIGCL.jpg",
       "caption": "Within-level and cross-level contrastive learning over a hierarchy of pooled graphs.",
       "summary": "Learns graph representations at multiple scales through contrastive objectives both within and across levels of a graph hierarchy.",
-      "year": 2023
+      "year": 2023,
+      "shortName": "HiGCL",
+      "thumbnail": "../images/homepage/previews/higcl.webp"
     },
     {
       "id": "ps2",

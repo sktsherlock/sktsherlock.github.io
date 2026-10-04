@@ -90,7 +90,7 @@ body:has(.corner-dialog[open]){overflow:hidden}
 [data-style=apple] .paper figure>a{border:0;border-radius:12px;height:190px}
 [data-style=apple] .display-control,[data-style=apple] .availability{border-radius:20px}
 /* Claude: a warmer, more literary journal. */
-:root[data-style=claude]{--bg:#faf9f5;--ink:#141413;--muted:#6c6a64;--line:#e6dfd8;--accent:#a9583e;--wash:#f5f0e8;--figure-bg:#fff;--figure-line:#e6dfd8;--link-line:#cc785c}
+:root[data-style=claude]{--bg:#faf9f5;--ink:#141413;--muted:#6c6a64;--line:#e6dfd8;--accent:#a04d34;--wash:#f5f0e8;--figure-bg:#fff;--figure-line:#e6dfd8;--link-line:#cc785c}
 :root[data-style=claude][data-theme=dark]{--bg:#181715;--ink:#faf9f5;--muted:#bab5ac;--line:#49443c;--accent:#e0a088;--wash:#252320;--figure-bg:#faf9f5;--figure-line:#49443c;--link-line:#997565}
 [data-style=claude] .section-heading h2,[data-style=claude] .history h2{font-family:var(--serif);font-weight:450;font-size:30px}
 [data-style=claude] .paper-title-link{font-family:var(--serif);font-size:23px;font-weight:500;letter-spacing:0}

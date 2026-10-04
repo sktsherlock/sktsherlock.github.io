@@ -10,7 +10,7 @@ const card = (item, language) => `<figure class="interest-card interest-${item.i
 export function renderLife(language = 'en') {
   const [animation, series, music, games] = interests.groups;
   return `<section id="life" class="personal-section" aria-labelledby="life-title">
-  <div class="section-heading"><h2 id="life-title">${copy(language, 'Beyond research', '研究之外')}</h2><p>${copy(language, 'Stories, music & a little play', '故事、音乐与一点游戏时光')}</p></div>
+  <div class="section-heading"><h2 id="life-title"><span class="chapter-index" aria-hidden="true">06</span><span>${copy(language, 'Beyond research', '研究之外')}</span></h2><p>${copy(language, 'Stories, music & a little play', '故事、音乐与一点游戏时光')}</p></div>
   <p class="personal-intro">${copy(language, 'Outside research, I enjoy video creation and editing, animation, TV series, and games. I also enjoy the music of Jay Chou and Hebe Tien.', '研究之外，我喜欢视频创作与剪辑，也喜欢动漫、剧集和游戏。音乐方面，我喜欢周杰伦与田馥甄的作品。')}</p>
   <div class="life-gallery"><article class="life-animation"><h3>${animation.label[language]}</h3><div class="life-animation-strip">${animation.items.map(item => card(item, language)).join('')}</div></article>
   <div class="life-side"><article><h3>${series.label[language]}</h3><div class="life-mini-row">${series.items.map(item => card(item, language)).join('')}</div></article>

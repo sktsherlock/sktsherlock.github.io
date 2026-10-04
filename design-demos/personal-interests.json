@@ -3,11 +3,11 @@
     {"id":"animation","label":{"en":"Animation","zh":"动漫"},"items":[
       {"id":"hyouka","name":{"en":"Hyouka","zh":"冰菓"},"image":"../images/冰菓图片1.jpg","alt":{"en":"Hyouka characters beneath cherry blossoms","zh":"樱花下的冰菓角色"},"source":"../images/冰菓图片1.jpg","credit":"Existing personal website asset"},
       {"id":"arcane","name":{"en":"Arcane","zh":"双城之战"},"image":"../images/Arcane3.jpg","alt":{"en":"Arcane ensemble artwork","zh":"双城之战群像海报"},"source":"../images/Arcane3.jpg","credit":"Existing personal website asset"},
-      {"id":"sao","name":{"en":"Sword Art Online","zh":"刀剑神域"},"image":"../images/homepage/interests/sword-art-online.jpg","alt":{"en":"Sword Art Online official key visual with Kirito and Asuna","zh":"刀剑神域官方主视觉：桐人与亚丝娜"},"source":"https://www.aniplex.co.jp/lineup/swordartonline/","credit":"Aniplex"},
-      {"id":"oregairu","name":{"en":"My Teen Romantic Comedy SNAFU","zh":"我的青春恋爱物语果然有问题"},"image":"../images/homepage/interests/oregairu.png","alt":{"en":"My Teen Romantic Comedy SNAFU official animation artwork","zh":"我的青春恋爱物语果然有问题官方动画插画"},"source":"https://www.tbs.co.jp/anime/oregairu/","credit":"TBS"}
+      {"id":"sao","name":{"en":"Sword Art Online","zh":"刀剑神域"},"image":"../images/homepage/previews/sao.webp","alt":{"en":"Sword Art Online official key visual with Kirito and Asuna","zh":"刀剑神域官方主视觉：桐人与亚丝娜"},"source":"https://www.aniplex.co.jp/lineup/swordartonline/","credit":"Aniplex"},
+      {"id":"oregairu","name":{"en":"My Teen Romantic Comedy SNAFU","zh":"我的青春恋爱物语果然有问题"},"image":"../images/homepage/previews/oregairu.webp","alt":{"en":"My Teen Romantic Comedy SNAFU official animation artwork","zh":"我的青春恋爱物语果然有问题官方动画插画"},"source":"https://www.tbs.co.jp/anime/oregairu/","credit":"TBS"}
     ]},
     {"id":"series","label":{"en":"TV series","zh":"剧集"},"items":[
-      {"id":"sherlock","name":{"en":"Sherlock","zh":"神探夏洛克"},"image":"../images/homepage/interests/sherlock.jpg","alt":{"en":"Sherlock and John Watson in official series artwork","zh":"神探夏洛克官方剧照：夏洛克与华生"},"source":"https://www.pbs.org/wgbh/masterpiece/shows/sherlock/","credit":"PBS Masterpiece"}
+      {"id":"sherlock","name":{"en":"Sherlock","zh":"神探夏洛克"},"image":"../images/homepage/previews/sherlock.webp","alt":{"en":"Sherlock and John Watson in official series artwork","zh":"神探夏洛克官方剧照：夏洛克与华生"},"source":"https://www.pbs.org/wgbh/masterpiece/shows/sherlock/","credit":"PBS Masterpiece"}
     ]},
     {"id":"music","label":{"en":"Music","zh":"音乐"},"items":[
       {"id":"jay","name":{"en":"Jay Chou","zh":"周杰伦"},"image":"../images/homepage/interests/jay-chou.jpg","alt":{"en":"Jay Chou's official JVR Music artist photograph","zh":"杰威尔音乐官网的周杰伦照片"},"source":"https://www.jvrmusic.com/artist/profile/1150822038412333056","credit":"JVR Music"},

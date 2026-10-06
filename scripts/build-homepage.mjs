@@ -69,13 +69,13 @@ const metadata = `
 <link rel="alternate" hreflang="en" href="https://sktsherlock.github.io/">
 <link rel="alternate" hreflang="zh-CN" href="https://sktsherlock.github.io/zh/">
 <link rel="alternate" hreflang="x-default" href="https://sktsherlock.github.io/">
-<link rel="icon" href="images/homepage/hao-avatar-icon.png" type="image/png" sizes="64x64">
+<link rel="icon" href="images/hao.jpg" type="image/jpeg" sizes="500x500">
 <meta name="google-site-verification" content="zApo4ExUOx1XT93yiBoTFltC1NrryrT4B3w7h8EmDU0">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sktsherlock.github.io/">
 <meta property="og:title" content="Hao Yan (颜浩) · Sherirto">
 <meta property="og:description" content="Ph.D. student at Central South University. Graph–language models, multimodal learning, LLMs, agents, and reasoning. Seeking Research Assistant and Algorithm Engineer opportunities. Expected graduation: June 2027.">
-<meta property="og:image" content="https://sktsherlock.github.io/images/homepage/hao-avatar.webp">
+<meta property="og:image" content="https://sktsherlock.github.io/images/hao.jpg">
 <meta name="twitter:card" content="summary">
 `;
 html = html.replace('</head>', metadata + '</head>');

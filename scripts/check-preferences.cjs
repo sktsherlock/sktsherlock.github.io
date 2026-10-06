@@ -75,8 +75,8 @@ fs.mkdirSync(output, { recursive: true });
       assert(serviceText.includes(fact), `Academic service missing ${fact}`);
     }
     assert(!/\b(?:skills?|Python|PyTorch|PyG|DGL|LaTeX)\b|技能/i.test(serviceText), 'Service still includes technical skills');
-    assert((await page.locator('img.avatar').getAttribute('src')).endsWith('images/homepage/hao-avatar.webp'), 'Old avatar remains');
-    assert((await page.locator('link[rel~="icon"]').getAttribute('href')).endsWith('images/homepage/hao-avatar-icon.png'), 'Old favicon remains');
+    assert((await page.locator('img.avatar').getAttribute('src')).endsWith('images/hao.jpg'), 'Previous anime avatar is missing');
+    assert((await page.locator('link[rel~="icon"]').getAttribute('href')).endsWith('images/hao.jpg'), 'Favicon does not match the restored avatar');
     const organizations = page.locator('#background article');
     assert.equal(await organizations.count(), 5, 'Education or internship record missing');
     assert.equal(await page.locator('#background .organization-logo').count(), 5, 'Organization logo count');

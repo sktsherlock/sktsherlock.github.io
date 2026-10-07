@@ -25,6 +25,8 @@ fs.mkdirSync(output, { recursive: true });
       await document.fonts.ready;
       await Promise.all([...document.images].map(async image => { image.loading = 'eager'; try { await image.decode(); } catch {} }));
     });
+    // Switching a lazy image to eager may abort its first decode candidate.
+    await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0));
     const result = await page.locator(selector).evaluate(el => ({
       overflow: el.scrollWidth > el.clientWidth + 1,
       broken: [...document.images].filter(image => !image.naturalWidth).map(image => image.src)

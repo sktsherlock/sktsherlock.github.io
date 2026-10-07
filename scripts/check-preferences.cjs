@@ -146,7 +146,7 @@ fs.mkdirSync(output, { recursive: true });
       await page.goto(base + '/'); await theme(page, 'light');
       await page.locator('#theme-toggle').click(); await theme(page, 'dark');
       await page.locator('#language-toggle').click(); await page.waitForURL(base + '/zh/');
-      await theme(page, 'light'); await page.locator('#theme-toggle').click(); await theme(page, 'dark');
+      await theme(page, 'dark'); await page.locator('#theme-toggle').click(); await theme(page, 'light');
     }, () => {
       for (const method of ['getItem', 'setItem']) Object.defineProperty(Storage.prototype, method, { configurable: true, value() { throw new DOMException('Storage blocked', 'SecurityError'); } });
     });

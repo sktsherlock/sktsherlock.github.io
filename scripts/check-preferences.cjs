@@ -90,6 +90,8 @@ fs.mkdirSync(output, { recursive: true });
       await document.fonts.ready;
       await Promise.all([...document.images].map(async image => { image.loading = 'eager'; try { await image.decode(); } catch {} }));
     });
+    // A lazy request can replace the decode candidate; wait for the final load state.
+    await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0));
     const state = await page.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth, broken: [...document.images].filter(image => !image.complete || !image.naturalWidth).map(image => image.src) }));
     assert.equal(state.overflow, false, 'Horizontal overflow');
     assert.deepEqual(state.broken, [], 'Broken images');

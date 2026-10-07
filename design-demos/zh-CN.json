@@ -53,20 +53,20 @@
       "提出 CS-TAG 基准，通过标准化评测比较语言模型、图神经网络及其结合方式在文本属性图上的表现。"
     ],
     [
-      "My early work addresses label sparsity through graph contrastive learning, with hierarchical views and augmentations that preserve semantic information.",
-      "早期围绕图上标签稀疏问题，设计图对比学习方法，探索层次化视图与保留语义信息的图增强。"
+      "My early work studies graph contrastive learning with sparse labels, using hierarchical views and augmentations that preserve semantics.",
+      "早期工作围绕标签稀疏条件下的图对比学习，设计层次化视图与保留语义的图增强方法。"
     ],
     [
       "Implemented core GLEM model code and conducted large-scale text-attributed graph experiments. Co-authored an ICLR 2023 oral paper. Mentor: Chaozhuo Li.",
       "实现 GLEM 模型的核心代码，开展大规模文本属性图实验，以共同作者身份发表 ICLR 2023 口头报告论文。实习导师：Chaozhuo Li。"
     ],
     [
-      "I am moving toward Graph–LLM architectures, building on methods that combine general-purpose and task-specific language representations with GNNs.",
-      "在属性图研究基础上，结合通用语言知识、任务相关文本表示与 GNN，并逐步向 Graph–LLM 架构拓展。"
+      "I am moving toward Graph–LLM architectures, combining general-purpose and task-specific language representations with GNNs.",
+      "模型架构正向 Graph–LLM 拓展，将通用与任务相关的语言表示同 GNN 结合。"
     ],
     [
-      "I then expanded to text- and multimodal-attributed graphs, developing benchmarks to compare graph, language, and vision–language models.",
-      "随后转向文本属性图与多模态属性图，构建评测基准，系统比较图模型、语言模型与视觉语言模型。"
+      "I develop benchmarks for text- and multimodal-attributed graphs, comparing graph, language, and vision–language models.",
+      "随后拓展到文本属性图与多模态属性图，通过基准比较图模型、语言模型与视觉语言模型。"
     ],
     [
       "Led systematic benchmarking of text-attributed graph learning, resulting in a first-author NeurIPS 2023 paper. Mentor: Weihao Han.",

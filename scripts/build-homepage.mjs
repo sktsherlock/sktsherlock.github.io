@@ -12,6 +12,9 @@ html = html.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/, renderLife());
 html = html.replace(/<dialog id="personal-corner"[\s\S]*?<\/dialog><div class="style-notice"[\s\S]*?<\/div>/, '');
 html = html.replace('</body>', renderCorner() + '</body>');
 if (!html.includes('homepage-corner.css')) html = html.replace('</head>', '<link rel="stylesheet" href="../css/homepage-corner.css"><script src="../js/homepage-corner.js" defer></script></head>');
+// Shared reading rules follow the optional brand styles in every generated page.
+const editorialStyle = '<link rel="stylesheet" href="../css/homepage-editorial.css">';
+html = html.replace(editorialStyle, '').replace('</head>', editorialStyle + '</head>');
 if (!html.includes('id="personal-corner-trigger"')) html = html.replace(/(<img class="avatar"[^>]*>)/, '<a id="personal-corner-trigger" class="avatar-link" href="#life" aria-label="Explore Sherirto’s personal interests" title="A little detour">$1</a>');
 if (!html.includes('id="style-lab-trigger"')) html = html.replace('<a href="#name">Back to top ↑</a>', '<div class="footer-detour"><button type="button" id="style-lab-trigger" class="footer-style-trigger" hidden>Style lab</button><a href="#name">Back to top ↑</a></div>');
 const content = JSON.parse(await readFile(new URL('design-demos/content.json', root), 'utf8'));
@@ -22,7 +25,7 @@ const links = paper => [
   paper.code && `<a class="text-link" href="${escape(paper.code)}">View code <span aria-hidden="true">↗</span></a>`
 ].filter(Boolean).join('');
 const title = paper => paper.paper ? `<a class="paper-title-link" href="${escape(paper.paper)}">${escape(paper.title)}</a>` : escape(paper.title);
-const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge">CCF-${escape(paper.ccf)}</span>`;
+const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge" data-tier="${escape(paper.ccf)}">CCF-${escape(paper.ccf)}</span>`;
 const byTier = (a, b) => a.ccf.localeCompare(b.ccf);
 const firstAuthor = content.publications.filter(paper => paper.firstAuthor).sort(byTier);
 const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort((a, b) => b.year - a.year || byTier(a, b));
@@ -30,9 +33,9 @@ const chapter = (label, index, id = '') => `<h2${id ? ` id="${id}"` : ''}><span 
 const paperIndex = `<nav class="paper-index" aria-label="Jump to a first-author paper">${firstAuthor.map((paper, index) => `<a href="#${escape(paper.id)}"><span aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${escape(paper.shortName)}</a>`).join('')}</nav>`;
 const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
   <figure><a href="${escape(paper.image)}" data-figure-view data-figure-label="${escape(paper.shortName)} · ${escape(paper.venue)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.thumbnail || paper.image)}" alt="${escape(paper.caption)}" loading="lazy" decoding="async"><span class="figure-hint" aria-hidden="true">View figure ↗</span></a><figcaption><span class="figure-index">${String(index + 1).padStart(2, '0')} / ${escape(paper.shortName)}</span>${paper.figureLabel ? `<span>${escape(paper.figureLabel)}</span>` : ''}</figcaption></figure>
-  <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3>${title(paper)}</h3><p class="authors">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
+  <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3 lang="en">${title(paper)}</h3><p class="authors" lang="en">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
 </article>`).join('\n');
-const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><h3>${title(paper)}</h3><p class="authors">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');
+const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><h3 lang="en">${title(paper)}</h3><p class="authors" lang="en">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');
 const publications = `<section id="research" aria-labelledby="research-title">
 <div class="section-heading">${chapter('First-author research', '01', 'research-title')}<p>${firstAuthor.length} first-author papers · ${content.publications.length} publications in total</p></div>
 <p class="publication-note">Venue ratings follow the <a href="${escape(content.ccfSource)}">CCF 2026 catalogue</a>.</p>

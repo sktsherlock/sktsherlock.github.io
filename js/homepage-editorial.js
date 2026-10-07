@@ -1,6 +1,9 @@
 (function () {
   'use strict';
   var root = document.documentElement;
+  // Keyboard interactions and their anchor navigation respond immediately.
+  window.addEventListener('keydown', function () { root.dataset.input = 'keyboard'; }, { capture: true });
+  window.addEventListener('pointerdown', function () { root.dataset.input = 'pointer'; }, { capture: true, passive: true });
   var chinese = /^zh(?:-|$)/i.test(root.lang);
   var header = document.querySelector('.masthead');
   var links = Array.from(document.querySelectorAll('.masthead nav a'));

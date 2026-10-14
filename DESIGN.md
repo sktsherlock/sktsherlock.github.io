@@ -1,48 +1,41 @@
-# Academic folio
+# The research stage
 
-## 1. Visual theme
-Warm white paper, precise typography, and a restrained rust accent. Publications and real institutional photography carry the visual weight. Preserve the established anime portrait as the personal signature.
+## Concept and content
 
-## 2. Palette
-Editorial light: canvas `#fcfbf8`, ink `#272c29`, secondary `#62685f`, dividers `#dddfd6`, accent `#93472f`, quiet surface `#f0f1ea`. Editorial dark: canvas `#151916`, ink `#eceee5`, secondary `#b1b8ab`, dividers `#39433a`, accent `#e6ad8e`, quiet surface `#202820`. Existing Apple, Claude, Linear and Spotify adaptations retain their tokens. Reading text must meet 4.5:1 contrast.
+The five first-author works, from HiGCL and CAKE through CS-TAG, MAGB and MoKGNN, are the visual material. Their real figures become a fixed research display beside a readable academic record. The same frame changes to official campus/institution photographs beside education and internships, then to existing interest artwork near the end. Readers can preview a paper through the research links and open its original figure.
 
-## 3. Typography
-Retain the intentionally selected, locally hosted Newsreader for the Latin name. Do not introduce another display family. Use the platform sans-serif stack for research titles and section headings to make long technical titles easy to scan. Keep the Noto Sans SC name subset and system Chinese body fallbacks.
+Preserve all 14 publications, five first-author records, CCF ordering, complete scientific titles, supervisors, dates, telephone, original anime avatar and verified sources. A short paper name is the heading; its complete official title is a citation paragraph. It is never truncated or rewritten.
 
-| Role | Desktop | Phone | Weight |
-| --- | --- | --- | --- |
-| Name | 50px | 36px, 32px at minimum width | 450 |
-| Section | 28px | 24px | 550 |
-| Publication | 23px | 21px | 600 |
-| Reading text | 16px / 1.8 | 16px / 1.8 | 400 |
-| Research trajectory | 14px / 1.75 | 14px / 1.75 | 400 |
-| Metadata | 12px / 1.65 | 12px / 1.65 | 400 |
+## Layout
 
-CJK paragraphs use line-height 1.9 and no negative tracking. Tag official English paper titles with `lang=en` in both locales.
+A full-width page uses 24px margins, a 36px gap and a 48/52 split above 1100px. The left frame stays within the viewport; the right column carries the biography and academic record. A screen contains real research or institutional imagery rather than empty decorative space. Below 1100px, the frame becomes inline pictures; paper names precede figures and their full citations. At 700px the header wraps into two rows, and institutional records become a vertical image/text composition.
 
-## 4. Components
-Cardless paper rows, white uncropped figure plates, compact venue and CCF labels. Display controls use a 4px radius, photo plates 4px, and the focused personal dialog 12px. Pointer controls acknowledge a press through a small scale change. Keyboard interactions do not animate. Retain focus rings and native modal containment.
+Use one anchor inset: scroll-margin-top 104px on desktop, 128px on phones. Do not add a second scroll-padding inset. Navigation, reading position and the frame must all use the same layout after fonts/images load.
 
-## 5. Layout
-One CSS strategy: existing plain CSS, with shared reading rules in `homepage-editorial.css` loaded after the preference/theme stylesheet. No new framework or runtime library. Spacing ladder: 4/8/12/16/24/32/48/64px. A 1248px page includes responsive margins. Biography and the three-step trajectory form an asymmetric spread. All five papers share an image/text grid. Align dates and captions consistently.
+## Type and palette
 
-## 6. Depth
-Solid canvas surfaces and fine rules. No glass header or generic shadow-card system. Scientific figures retain a white surface in night mode. Figure and interest dialogs retain their focused backdrops.
+Keep self-hosted Newsreader for the name and short research names. Use the system sans-serif for reading and technical citations. The Noto Sans SC two-character subset gives the Chinese name consistent glyphs; full Chinese prose uses platform fallbacks. English and Chinese names remain together, with the intentionally restrained 50px Latin / 34px Chinese desktop sizes and 36px / 26px phone sizes.
 
-## 7. Guardrails
-- Preserve 14 papers, five first-author papers, ordering and CCF claims.
-- Preserve bilingual content, telephone, preference persistence and both dialogs.
-- Preserve real photos, logos, provenance and the old anime avatar.
-- Do not invent research, metrics, training experience or biography claims.
-- Avoid oversized names, tiny reading text and scroll-jacking.
-- Do not truncate titles, authors or localized controls.
+Five principal sizes: 50px display, 32px headings, 22px subheads, 16px reading, 14px metadata. Phone headings are 28px. Use full ink for running text; labels and reading text have normal sentence case.
 
-## 8. Responsive behavior
-1000px: tighten gutters and figure column. 760px: stack the introduction and use horizontal institution entries. 540px: stack paper figures and institution photos above their copy. Verify both sides of each breakpoint, both locales, all five styles and both modes. Maintain 40px controls, reduced motion and static content without scripts.
+Default light: white canvas, gray #ededed stage/surfaces, deep red #7d0c14 ink/action. Default dark: #1b1b1d canvas, #2a292c surfaces, #f3eded ink, #f0bac0 accent. Scientific figures and official organization marks retain white plates and their original colors. Optional Apple, Claude, Linear and Spotify adaptations retain their own palettes; their colors are an explicit existing user preference.
 
-## 9. Future editing guide
-- Add a paper through `content.json`: title 23px/1.4 weight 600, venue 12px, contained white figure plate.
-- Add an academic section: heading 28px/1.3 weight 550, chapter number 11px rust, 1px `#dddfd6` rule, 48px spacing.
-- Compact controls: 40px minimum height, 4px radius, 13px type, 2px accent focus ring and pointer-only 0.96 press feedback.
+Separate sections with space or a flat tone change. Remove decorative numbering, eyebrow labels, hairlines, resting shadows, glass and invented motifs. Keep the functional reading-progress indicator as a 4px filled bar.
 
-Award-level craft is a review target, not an award claim. Judge actual screenshots, reading hierarchy, responsive behavior, accessibility and interactions before publishing.
+## Behavior and motion
+
+The frame reads its title, image, credit, venue/date and source from existing page records; there is no second translation or publication database. It crossfades after the next image has decoded, discards old image nodes, and retains the last loaded picture if a request fails. Original figure viewing, zoom, Escape, focus restoration and photo-source navigation are preserved.
+
+Entrances animate already-visible elements in reading order: names, copy and photographs use separate movements. A script failure never hides content. Reduced motion and keyboard input suppress travel. The frame changes with reading rather than running an unrelated autoplay slideshow.
+
+Keep bilingual navigation and position restoration, remembered themes/styles, native dialogs, disclosures, telephone, email, keyboard controls and the no-JavaScript page.
+
+## Editing
+
+- Change biographical copy in design-demos/editorial.html and its matching translation in design-demos/zh-CN.json.
+- Add publications in content.json. First-author thumbnails need their actual thumbnailWidth/thumbnailHeight; reserved intrinsic size prevents lazy-load scroll drift. Keep original figures untouched.
+- Rebuild with node scripts/build-homepage.mjs and commit both generated language pages and homepage.css.
+- Keep campus and interest sources beside the image or on the frame's source link. Source records are documented in the existing campus-assets, organization-assets and personal-assets notes.
+- Review with the design-taste inspector plus check-editorial, check-preferences, check-corner and check-language-position.
+
+The design review and limitations are documented in design-demos/taste-design-review.md. Its score is a self-assessment, not an award or external jury result.

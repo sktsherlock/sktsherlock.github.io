@@ -5,10 +5,10 @@ const root = new URL('../', import.meta.url);
 let html = await readFile(new URL('design-demos/editorial.html', root), 'utf8');
 if (!html.includes('homepage-editorial.css')) html = html.replace('<link rel="stylesheet" href="../css/homepage-corner.css">', '<link rel="stylesheet" href="../css/homepage-editorial.css"><script src="../js/homepage-editorial.js" defer></script><link rel="stylesheet" href="../css/homepage-corner.css">');
 if (!html.includes('class="reading-progress"')) html = html.replace('</header>', '<span class="reading-progress" aria-hidden="true"></span></header>');
-html = html.replace(/<span class="(?:focus-step|chapter-index)" aria-hidden="true">\d+<\/span>/g, '');
+let focusStep = 0;
+html = html.replace(/<div class="focus-item">(?:<span class="focus-step" aria-hidden="true">\d+<\/span>)?/g, () => `<div class="focus-item"><span class="focus-step" aria-hidden="true">${String(++focusStep).padStart(2, '0')}</span>`);
 // The personal corner shares its verified interest record with the static section.
-html = html.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/,
-  renderLife() + (html.includes('class="folio-reading"') ? '</div>' : ''));
+html = html.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/, renderLife());
 html = html.replace(/<dialog id="personal-corner"[\s\S]*?<\/dialog><div class="style-notice"[\s\S]*?<\/div>/, '');
 html = html.replace('</body>', renderCorner() + '</body>');
 if (!html.includes('homepage-corner.css')) html = html.replace('</head>', '<link rel="stylesheet" href="../css/homepage-corner.css"><script src="../js/homepage-corner.js" defer></script></head>');
@@ -21,26 +21,21 @@ const content = JSON.parse(await readFile(new URL('design-demos/content.json', r
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const authors = value => escape(value).replace(/\bHao Yan\b/g, '<strong>Hao Yan</strong>');
 const links = paper => [
-  paper.paper && `<a class="text-link" href="${escape(paper.paper)}">Read paper</a>`,
-  paper.code && `<a class="text-link" href="${escape(paper.code)}">View code</a>`
+  paper.paper && `<a class="text-link" href="${escape(paper.paper)}">Read paper <span aria-hidden="true">↗</span></a>`,
+  paper.code && `<a class="text-link" href="${escape(paper.code)}">View code <span aria-hidden="true">↗</span></a>`
 ].filter(Boolean).join('');
 const title = paper => paper.paper ? `<a class="paper-title-link" href="${escape(paper.paper)}">${escape(paper.title)}</a>` : escape(paper.title);
 const venue = paper => `<span>${escape(paper.venue)}</span><span class="ccf-badge" data-tier="${escape(paper.ccf)}">CCF-${escape(paper.ccf)}</span>`;
 const byTier = (a, b) => a.ccf.localeCompare(b.ccf);
 const firstAuthor = content.publications.filter(paper => paper.firstAuthor).sort(byTier);
-for (const paper of firstAuthor) {
-  if (!Number.isInteger(paper.thumbnailWidth) || !Number.isInteger(paper.thumbnailHeight) || paper.thumbnailWidth <= 0 || paper.thumbnailHeight <= 0) {
-    throw new Error('First-author thumbnail dimensions missing: ' + paper.id);
-  }
-}
 const collaborations = content.publications.filter(paper => !paper.firstAuthor).sort((a, b) => b.year - a.year || byTier(a, b));
-const chapter = (label, index, id = '') => `<h2${id ? ` id="${id}"` : ''}>${label}</h2>`;
-const paperIndex = `<nav class="paper-index" aria-label="Jump to a first-author paper">${firstAuthor.map(paper => `<a href="#${escape(paper.id)}">${escape(paper.shortName)}</a>`).join('')}</nav>`;
-const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}" data-stage-key="${escape(paper.id)}" aria-labelledby="${escape(paper.id)}-heading">
-  <figure><a href="${escape(paper.image)}" data-figure-view data-figure-label="${escape(paper.shortName)} · ${escape(paper.venue)}" data-figure-title="${escape(paper.title)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.thumbnail || paper.image)}" alt="${escape(paper.caption)}" width="${paper.thumbnailWidth}" height="${paper.thumbnailHeight}" loading="lazy" decoding="async"><span class="figure-hint">View figure</span></a>${paper.figureLabel ? `<figcaption>${escape(paper.figureLabel)}</figcaption>` : ''}</figure>
-  <div class="paper-copy"><h3 id="${escape(paper.id)}-heading" lang="en">${escape(paper.shortName)}</h3><p class="paper-citation" lang="en">${title(paper)}</p><p class="venue">${venue(paper)}</p><p class="authors" lang="en">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
+const chapter = (label, index, id = '') => `<h2${id ? ` id="${id}"` : ''}><span class="chapter-index" aria-hidden="true">${index}</span><span>${label}</span></h2>`;
+const paperIndex = `<nav class="paper-index" aria-label="Jump to a first-author paper">${firstAuthor.map((paper, index) => `<a href="#${escape(paper.id)}"><span aria-hidden="true">${String(index + 1).padStart(2, '0')}</span>${escape(paper.shortName)}</a>`).join('')}</nav>`;
+const featured = firstAuthor.map((paper, index) => `<article class="paper paper-${index}" id="${escape(paper.id)}">
+  <figure><a href="${escape(paper.image)}" data-figure-view data-figure-label="${escape(paper.shortName)} · ${escape(paper.venue)}" aria-label="Open full figure for ${escape(paper.title)}"><img src="${escape(paper.thumbnail || paper.image)}" alt="${escape(paper.caption)}" width="${paper.thumbnailWidth}" height="${paper.thumbnailHeight}" loading="lazy" decoding="async"><span class="figure-hint" aria-hidden="true">View figure ↗</span></a><figcaption><span class="figure-index">${String(index + 1).padStart(2, '0')} / ${escape(paper.shortName)}</span>${paper.figureLabel ? `<span>${escape(paper.figureLabel)}</span>` : ''}</figcaption></figure>
+  <div class="paper-copy"><p class="eyebrow venue">${venue(paper)}</p><h3 lang="en">${title(paper)}</h3><p class="authors" lang="en">${authors(paper.authors)}</p><p class="paper-summary">${escape(paper.summary)}</p><div class="paper-links">${links(paper)}</div></div>
 </article>`).join('\n');
-const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><p class="paper-citation" lang="en">${title(paper)}</p><p class="authors" lang="en">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');
+const archive = collaborations.map(paper => `<article class="archive-paper" id="${escape(paper.id)}"><p class="archive-venue">${venue(paper)}</p><div><h3 lang="en">${title(paper)}</h3><p class="authors" lang="en">${authors(paper.authors)}</p><div class="paper-links">${links(paper)}</div></div></article>`).join('\n');
 const publications = `<section id="research" aria-labelledby="research-title">
 <div class="section-heading">${chapter('First-author research', '01', 'research-title')}<p>${firstAuthor.length} first-author papers · ${content.publications.length} publications in total</p></div>
 <p class="publication-note">Venue ratings follow the <a href="${escape(content.ccfSource)}">CCF 2026 catalogue</a>.</p>
@@ -49,16 +44,6 @@ ${featured}
 <details class="publication-record" open><summary>More Publications <span>${collaborations.length} collaborative works</span></summary>${archive}</details>
 </section>`;
 html = html.replace(/<section id="research"[\s\S]*?(?=<section class="history")/, publications);
-// A real research figure leads the fixed half. Inline figures remain the no-script
-// and phone presentation; the reader updates the stage from those same records.
-const lead = firstAuthor[0];
-const stage = `<aside id="research-stage" class="folio-stage" aria-labelledby="stage-title">
-<div class="stage-heading"><h2 id="stage-title">${escape(lead.shortName)}</h2><p data-stage-context>${escape(lead.venue)}</p></div>
-<a id="stage-image-link" class="stage-image-link" href="${escape(lead.image)}" data-figure-view data-figure-label="${escape(lead.shortName)} · ${escape(lead.venue)}" data-figure-title="${escape(lead.title)}" aria-label="Open full figure for ${escape(lead.title)}"><img class="stage-image" src="${escape(lead.image)}" alt="${escape(lead.caption)}" decoding="async"></a>
-<p class="stage-caption"><span data-stage-credit>${escape(lead.figureLabel || lead.shortName)}</span><span data-stage-action>View figure</span></p>
-</aside>`;
-html = html.includes('<!--folio-stage-->') ? html.replace('<!--folio-stage-->', stage)
-  : html.replace(/<aside id="research-stage"[\s\S]*?<\/aside>/, stage);
 for (const [label, number, id] of [['Education', '02', ''], ['Research experience', '03', ''], ['Academic service', '04', 'service-title'], ['Selected honors', '05', 'honors-title']]) {
   html = html.replace(new RegExp(`<h2${id ? ` id="${id}"` : ''}>[\\s\\S]*?<\\/h2>`, 'g'), heading => {
     if (!heading.includes(label)) return heading;
@@ -106,8 +91,7 @@ await writeFile(new URL('index.html', root), html.trim() + '\n');
 const chinese = JSON.parse(await readFile(new URL('design-demos/zh-CN.json', root), 'utf8'));
 let zh = html;
 for (const [english, translation] of chinese.replacements) zh = zh.replaceAll(english, translation);
-zh = zh.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/,
-  renderLife('zh') + (zh.includes('class="folio-reading"') ? '</div>' : ''))
+zh = zh.replace(/<section id="life"[\s\S]*?(?=\s*<\/main>)/, renderLife('zh'))
   .replace(/<dialog id="personal-corner"[\s\S]*?<\/dialog><div class="style-notice"[\s\S]*?<\/div>/, renderCorner('zh'))
   .replace('aria-label="Explore Sherirto’s personal interests" title="A little detour"', 'aria-label="探索 Sherirto 的个人兴趣" title="一个小惊喜"')
   .replace('class="footer-style-trigger" hidden>Style lab', 'class="footer-style-trigger" hidden>风格实验室');

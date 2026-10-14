@@ -1,54 +1,6 @@
 {
   "replacements": [
     [
-      "<strong>Sherirto</strong>, Ph.D. student at CSU",
-      "<strong>Sherirto</strong>，中南大学博士生"
-    ],
-    [
-      "Hao Yan, Central South University",
-      "颜浩，中南大学"
-    ],
-    [
-      "Read my research",
-      "查看研究工作"
-    ],
-    [
-      "Sparse supervision</h3>",
-      "稀疏监督</h3>"
-    ],
-    [
-      "Attributed graphs</h3>",
-      "属性图学习</h3>"
-    ],
-    [
-      "Graph–LLM</h3>",
-      "Graph–LLM 架构</h3>"
-    ],
-    [
-      "<a href=\"#life\">Life</a>",
-      "<a href=\"#life\">生活</a>"
-    ],
-    [
-      "<strong>Sherirto</strong>, Ph.D. student",
-      "<strong>Sherirto</strong>，博士研究生"
-    ],
-    [
-      "A multimodal graph from MAGB, with node images and text",
-      "MAGB 中同时带有图像和文本的多模态属性图"
-    ],
-    [
-      "MAGB, KDD 2025. Figure 1.",
-      "MAGB，KDD 2025，图 1。"
-    ],
-    [
-      "Research figure</h2>",
-      "论文配图</h2>"
-    ],
-    [
-      "View figure</span>",
-      "查看配图</span>"
-    ],
-    [
       "I received my B.Sc. in Mathematics and Applied Mathematics from <strong>Hefei University of Technology</strong> in 2021. Previously, I was a research intern in the Social Computing Group at <strong>Microsoft Research Asia</strong> (July 2022–January 2023), mentored by <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a>, and a remote research intern at <strong>Microsoft STCA</strong> (February 2023–January 2024), mentored by <strong>Weihao Han</strong>.",
       "我于2021年获得<strong>合肥工业大学</strong>数学与应用数学专业理学学士学位。此前，我曾在<strong>微软亚洲研究院</strong>社会计算组实习（2022年7月至2023年1月），接受 <a href=\"https://whatsname1991.github.io/\">Chaozhuo Li</a> 的指导；随后在<strong>微软 STCA</strong>远程实习（2023年2月至2024年1月），接受 <strong>Weihao Han</strong> 的指导。"
     ],

@@ -26,16 +26,12 @@ const luminance = values => values.map(value => {
         page.on('pageerror', error => errors.push(error.message));
         page.on('response', response => { if (response.url().startsWith(base) && response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
         await page.goto(base + (language === 'zh' ? '/zh/' : '/'), { waitUntil: 'networkidle' });
-        await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(async image => { image.loading = 'eager'; try { await image.decode(); } catch {} })); });
+        await page.evaluate(async () => { await Promise.all([...document.images].map(async image => { image.loading = 'eager'; try { await image.decode(); } catch {} })); });
         await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth));
-        assert.equal(await page.locator('.chapter-index').count(), 0);
+        assert.equal(await page.locator('#research-stage').count(), 0, 'Rejected split layout returned');
+        assert.equal(await page.locator('.chapter-index').count(), 6);
         assert.equal(await page.locator('.paper-index a').count(), 5);
-        assert.equal(await page.locator('.focus-step').count(), 0);
-        assert.equal(await page.locator('#research-stage').count(), 1);
-        for (const record of data.publications.filter(paper => paper.firstAuthor)) {
-          assert.equal((await page.locator(`#${record.id} .paper-title-link`).textContent()).trim(), record.title, 'Full scientific title changed');
-          assert.equal((await page.locator(`#${record.id} h3`).textContent()).trim(), record.shortName);
-        }
+        assert.equal(await page.locator('.focus-step').count(), 3);
         for (const style of styles) {
           for (const mode of ['light', 'dark']) {
             await page.evaluate(({ style, mode }) => { document.documentElement.dataset.style = style; document.documentElement.dataset.theme = mode; }, { style, mode });
@@ -67,14 +63,6 @@ const luminance = values => values.map(value => {
         }
         await page.evaluate(() => { document.documentElement.dataset.style = 'editorial'; document.documentElement.dataset.theme = 'light'; });
         await page.locator('.paper-index a[href="#magb"]').click();
-        if (width === 1440) {
-          await page.waitForFunction(() => document.querySelector('#stage-title').textContent === 'MAGB');
-          assert((await page.locator('#stage-image-link').getAttribute('href')).endsWith('magb-data-example-arxiv-v2.png'));
-          await page.locator('#stage-image-link').click();
-          assert(await page.locator('#figure-viewer').isVisible(), 'Fixed research frame did not open the original figure');
-          await page.keyboard.press('Escape');
-          assert(await page.locator('#stage-image-link').evaluate(el => document.activeElement === el), 'Stage focus was not restored');
-        }
         const top = await page.locator('#magb').evaluate(element => element.getBoundingClientRect().top);
         const headerBottom = await page.locator('.masthead').evaluate(element => element.getBoundingClientRect().bottom);
         assert(top >= headerBottom, 'Anchor target obscured by sticky navigation');
@@ -107,11 +95,6 @@ const luminance = values => values.map(value => {
         await page.waitForFunction(() => document.querySelector('a[href="#background"][aria-current="location"]'));
         const education = await page.locator('#background h2').first().boundingBox();
         assert(education.y >= headerBottom, 'Education heading obscured by navigation');
-        if (width === 1440) {
-          await page.waitForFunction(() => document.querySelector('#stage-image-link').href.includes('jyxybgs.csu.edu.cn'));
-          assert.equal(await page.locator('#stage-image-link').getAttribute('data-figure-view'), null, 'Campus credit link opened a research dialog');
-          assert.equal(await page.locator('#stage-image-link img').count(), 1, 'Frame retained obsolete images');
-        }
         await page.evaluate(() => window.scrollTo(0, 0));
         await page.screenshot({ path: path.join(output, `craft-final-${language}-${width}.png`), fullPage: true });
         if (width === 1440) {
@@ -130,6 +113,6 @@ const luminance = values => values.map(value => {
     assert.equal(await page.locator('#figure-viewer').isVisible(), false);
     assert.equal(await page.locator('article.paper').count(), 5);
     await noJS.close();
-    console.log(JSON.stringify({ passed: true, layoutCombinations: scenarios, contrastSamples, lowestContrast: lowestContrast.toFixed(2), checks: 'Bilingual academic record and contextual frame; all five styles and both modes at desktop/tablet/mobile; sticky anchors; original KDD Fig. 1; figure zoom; native focus containment and restoration; two consecutive figures; image decoding; no JavaScript fallback; no page errors.' }));
+    console.log(JSON.stringify({ passed: true, layoutCombinations: scenarios, contrastSamples, lowestContrast: lowestContrast.toFixed(2), checks: 'Bilingual chapter hierarchy; all five styles and both modes at desktop/tablet/mobile; sticky anchors; original KDD Fig. 1; figure zoom; native focus containment and restoration; two consecutive figures; image decoding; no JavaScript fallback; no page errors.' }));
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exit(1); });

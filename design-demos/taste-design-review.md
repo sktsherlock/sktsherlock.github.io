@@ -1,4 +1,6 @@
-# Design-taste frontend review, 14 October 2026
+# Historical design experiment, 14 October 2026
+
+This split-stage experiment was retired at the user’s request. Production returned to the previous editorial design with subtle motion. See DESIGN.md for the current direction.
 
 ## Brief, inventory and argument
 

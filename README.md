@@ -4,7 +4,7 @@ Static homepage for [sktsherlock.github.io](https://sktsherlock.github.io/), wit
 
 ## Edit and preview
 
-The selected, editable source is `design-demos/editorial.html`. It contains the semantic layout, biography, local font declarations, and reset. The shared typography, responsive spacing and visual polish are in `css/homepage-editorial.css`, loaded after the optional brand styles in `css/homepage-corner.css`. See `DESIGN.md` for the current visual system. Publications are maintained in `design-demos/content.json`: the build updates the publication section in both the design preview and production page. Other biographical fields in the JSON remain a factual reference; update both files when changing those facts.
+The selected, editable source is `design-demos/editorial.html`. It contains the layout, biography, and base styles. The shared typography, responsive spacing and visual polish are in `css/homepage-editorial.css`, loaded after the optional brand styles in `css/homepage-corner.css`. See `DESIGN.md` for the current visual system. Publications are maintained in `design-demos/content.json`: the build updates the publication section in both the design preview and production page. Other biographical fields in the JSON remain a factual reference; update both files when changing those facts.
 
 ```sh
 node scripts/build-homepage.mjs
@@ -18,7 +18,7 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 ## Content conventions
 
 - Focus on publications, education, internships, academic service, and honors. Project details and tool-skills lists belong in the CV and are not shown on this academic homepage.
-- Show every first-author publication with an uncropped thumbnail and summary, regardless of venue tier. The desktop split stage displays the active original figure beside the academic record. Phone/tablet entries show the short paper name, figure, and complete citation inline. Reserve each thumbnail’s measured width and height to prevent lazy-load layout shifts. Clicking a thumbnail opens the full figure. Keep collaborative work in More Publications, expanded by default.
+- Show every first-author publication with an uncropped thumbnail and summary, regardless of venue tier. Default desktop rows reserve 320px for figures and give the remaining width to titles and authors; mobile rows stack figure first. Clicking a thumbnail opens the full figure. Keep collaborative work in More Publications, expanded by default.
 - First-author papers retain CCF-A-first ordering. More Publications sorts by publication year descending, then CCF-A before CCF-B within each year; publication years are explicit in the JSON record.
 - CCF badges use the 2026 seventh edition consistently, including IJCAI B and ICLR A. See `design-demos/publication-sources.md` for verification and the original catalogue PDF.
 - The MAGB thumbnail is Figure 1 from arXiv:2410.09132v2; see `design-demos/kdd-figure-notes.md` for provenance and the publisher-version limitation.
@@ -36,11 +36,11 @@ Chinese copy is maintained in `design-demos/zh-CN.json` as ordered exact replace
 
 The portrait, favicon and sharing preview use the restored original anime avatar, `images/hao.jpg`. Institutional marks are unaltered assets from official CSU, PolyU, HFUT, and Microsoft sources; see `design-demos/organization-assets.md`. Preserve their aspect ratios and colors, with a white logo area in both themes. The two Microsoft internships remain distinct entries. Campus and institution photographs lead the entries, with the logos retained as smaller identifiers. Every photograph links to its official source; see `design-demos/campus-assets.md`. STCA remains explicitly remote, and its Beijing-campus photograph is labeled as institutional context.
 
-## Typography and visual direction
+## Typography
 
-The current split-stage design uses Newsreader for the bilingual identity’s Latin name and short research names, and platform sans-serif for running text, technical citations and section headings. The two-character Noto Sans SC subset provides the Chinese name; full Chinese prose uses system fallbacks. Five principal steps are 50/32/22/16/14px, with 36px Latin / 26px Chinese names on phones. Complete official titles are citation paragraphs, never truncated. See DESIGN.md for tokens, motion, image sizing, source editing and breakpoints.
+The name retains self-hosted Newsreader as its serif signature. Default section titles, publication titles, and body text use a platform sans-serif stack: Apple system fonts on Apple devices, Segoe UI on Windows, with PingFang SC / Microsoft YaHei Chinese fallbacks. The section/body scale is 28/16 px on desktop and 24/16 px on mobile; publication titles are 23/21 px. The optional Claude style retains serif section headings. IBM Plex Sans remains in the repository as a historical asset; its OFL license is retained. No Apple font files are redistributed. The Chinese name prefers the installed PingFang SC font on Apple devices. A small, licensed Noto Sans SC subset containing only 颜浩 provides a consistent fallback elsewhere. It is not a general Chinese body font; regenerate the subset if changing the Chinese name. Chinese paragraphs use more line-height, and official English paper titles and author lines are tagged with `lang=en` in both locales.
 
-The direction was developed with design-taste-frontend, seed 146532596. The final screenshot critique, intentional exceptions, inherited asset sources and verification are in design-demos/taste-design-review.md. Optional Apple, Claude, Linear and Spotify palette adaptations remain available from the personal corner.
+The selected editorial design was developed with huashu-design. Font hierarchy was refined with the [Apple design analysis](https://getdesign.md/apple/design-md) as a reference; the [Apple system font list](https://developer.apple.com/fonts/system-fonts/) identifies PingFang SC. This site is not affiliated with Apple or Distill.
 
 ## Checks
 
@@ -49,5 +49,4 @@ The direction was developed with design-taste-frontend, seed 146532596. The fina
 `scripts/check-preferences.cjs` additionally checks both languages and themes, preference persistence, system-theme behavior, navigation between languages, unavailable browser storage, keyboard controls, static Chinese content, and CCF ordering.
 
 `scripts/check-language-position.cjs` checks language switching at desktop and mobile reading positions, with absent or stale hashes, collapsed publications, history navigation, and blocked storage. It uses pointer clicks on the sticky controls to avoid automation scrolling the header before the click. This regression reproduced the former top-of-page jump before the fix; copying only the URL hash cannot preserve manually scrolled positions.
-
-`scripts/check-editorial.cjs` checks 60 language/style/theme/layout combinations, scientific-figure zoom and focus, fixed-frame source links, disclosure behavior, keyboard navigation and contrast. The design-taste skill’s `lint.mjs` and `inspect.mjs` provide the source and screenshot review; generated inspection artifacts stay local in `.taste-skill/`.
+`scripts/check-motion.cjs` checks the subtle editorial entrances, stable reading geometry, mouse feedback for both native dialogs, immediate keyboard interactions, and reduced-motion behavior.
